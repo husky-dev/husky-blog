@@ -6,11 +6,12 @@ theme: "PaperMod"
 
 taxonomies:
   category: categories
+  tag: tags
 
 menu:
   main:
     - identifier: travel
-      name: "🏔️ Кіліманджаро"
+      name: "🇹🇿 Кіліманджаро"
       url: /categories/kilimanjaro/
 
 params:
