@@ -2,9 +2,7 @@
 
 > Date: 19 January 2021, 21:09
 
-> Category: travel
-
-> Subcategory: kilimanjaro
+> Category: kilimanjaro
 
 > Language: UA
 
