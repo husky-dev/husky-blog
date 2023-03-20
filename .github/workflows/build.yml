@@ -28,7 +28,7 @@ jobs:
         password: ${{ secrets.CR_PAT }}
     - name: 'Blog: download assets'
       run: |
-        docker run --rm -v "$(pwd)/services/blog:/usr/src/app" -w "/usr/src/app" node:16-alpine sh -c "cd import && yarn install && yarn start"
+        docker run --rm -v "$(pwd):/usr/src/app" -w "/usr/src/app" node:16-alpine sh -c "cd import && yarn install && yarn start"
     - name: 'Docker: build'
       run: |
         docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
