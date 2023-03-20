@@ -1,0 +1,50 @@
+name: 'Build'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Caching Gatsby
+      id: blog-cache-build
+      uses: actions/cache@v3
+      with:
+        path: |
+          content
+        key: ${{ runner.os }}-blog-build-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-blog-build-
+    - name: 'Docker: login'
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.CR_PAT }}
+    - name: 'Blog: download assets'
+      run: |
+        docker run --rm -v "$(pwd)/services/blog:/usr/src/app" -w "/usr/src/app" node:16-alpine sh -c "cd import && yarn install && yarn start"
+    - name: 'Docker: build'
+      run: |
+        docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
+    - name: 'Docker: push'
+      run: |
+        docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
+    # - name: 'SSH: deploy'
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.SSH_HOST_DEV }}
+    #     username: ${{ secrets.SSH_USER }}
+    #     key: ${{ secrets.SSH_KEY }}
+    #     script: |
+    #       set -ex
+    #       cd /var/platform
+    #       docker-compose pull
+    #       docker-compose down --remove-orphans
+    #       docker-compose up -d
+    #       docker image prune -f

@@ -1,0 +1,32 @@
+baseURL: "https://husky-dev.me"
+languageCode: "uk"
+defaultContentLanguage: "uk"
+title: "#husky-dev"
+theme: "PaperMod"
+
+taxonomies:
+  category: categories
+
+menu:
+  main:
+    - identifier: travel
+      name: Подорожі
+      url: /categories/travel/
+
+params:
+  defaultTheme: auto
+  homeInfoParams:
+    Title: "Привіт 🤚"
+    Content: "Мене звати Ярослав. Я програміст, люблю спорт і подорожі. А це мій персональний блог"
+  showReadingTime: true
+  socialIcons:
+    - name: "instagram"
+      url: "https://www.instagram.com/husky.dev/"
+    - name: "facebook"
+      url: "https://www.facebook.com/snipter"
+    - name: "twitter"
+      url: "https://twitter.com/HuskyDevUA"
+    - name: "github"
+      url: "https://github.com/husky-dev"
+    - name: "email"
+      url: "mailto:hello@husky-dev.me"
