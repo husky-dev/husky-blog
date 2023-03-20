@@ -34,7 +34,7 @@ jobs:
         docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
     - name: 'Docker: push'
       run: |
-        docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
+        docker push ghcr.io/husky-dev/husky-blog/web:latest .
     # - name: 'SSH: deploy'
     #   uses: appleboy/ssh-action@master
     #   with:
