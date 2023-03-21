@@ -47,7 +47,7 @@ interface MdFileData {
   title?: string;
   category?: string;
   subcategory?: string;
-  language?: string;
+  lang?: string;
   suffix?: string;
   cover?: MdFileDataCover;
   content: string;
@@ -94,11 +94,11 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     content = content.replace(subcategoryMatch[0], "");
   }
   // Language
-  let language: string | undefined;
-  const languageMatch = /> Language: (.+?)\n/g.exec(content);
-  if (languageMatch) {
-    language = languageMatch[1];
-    content = content.replace(languageMatch[0], "");
+  let lang: string | undefined;
+  const langMatch = /> Language: (.+?)\n/g.exec(content);
+  if (langMatch) {
+    lang = langMatch[1];
+    content = content.replace(langMatch[0], "");
   }
   // Suffix
   let suffix: string | undefined;
@@ -126,7 +126,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     date,
     category,
     subcategory,
-    language,
+    lang,
     suffix,
     cover,
   };
@@ -264,6 +264,7 @@ const mdDataToPostFrontMatter = (data: MdFileData): string => {
   if (data.date) {
     lines.push(`date: ${data.date.toISOString()}`);
   }
+  lines.push(`lang: "${!!data.lang ? data.lang?.toLowerCase() : "ua"}"`);
   if (data.category) {
     lines.push(`categories:`);
     lines.push(`  - ${firstToUpper(data.category)}`);
