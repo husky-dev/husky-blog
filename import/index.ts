@@ -46,6 +46,7 @@ interface MdFileData {
   date?: Date;
   title?: string;
   category?: string;
+  series?: string;
   subcategory?: string;
   lang?: string;
   suffix?: string;
@@ -93,6 +94,13 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     subcategory = subcategoryMatch[1];
     content = content.replace(subcategoryMatch[0], "");
   }
+  // Series
+  let series: string | undefined;
+  const seriesMatch = /> Series: (.+?)\n/g.exec(content);
+  if (seriesMatch) {
+    series = seriesMatch[1];
+    content = content.replace(seriesMatch[0], "");
+  }
   // Language
   let lang: string | undefined;
   const langMatch = /> Language: (.+?)\n/g.exec(content);
@@ -126,6 +134,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     date,
     category,
     subcategory,
+    series,
     lang,
     suffix,
     cover,
@@ -268,6 +277,10 @@ const mdDataToPostFrontMatter = (data: MdFileData): string => {
   if (data.category) {
     lines.push(`categories:`);
     lines.push(`  - ${firstToUpper(data.category)}`);
+  }
+  if (data.series) {
+    lines.push(`series:`);
+    lines.push(`  - "${data.series}"`);
   }
   if (data.cover) {
     lines.push("cover:");

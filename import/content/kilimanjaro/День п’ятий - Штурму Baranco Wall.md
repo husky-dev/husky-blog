@@ -2,11 +2,11 @@
 
 > Date: 19 January 2021, 21:09
 
-> Category: kilimanjaro
+> Category: travel
+
+> Series: 🇹🇿 Похід на вершину Кіліманджаро
 
 > Language: UA
-
-> Suffix: 🇹🇿 Похід на вершину Кіліманджаро
 
 ![IMG_2208.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/72CB7FE0-5489-4934-A1F9-60712AD3192F/E66D71D9-3DD6-4F16-8470-7808CF59F9DB_2/IMG_2208.jpeg)
 
