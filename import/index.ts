@@ -344,7 +344,7 @@ const titleToSlug = (title: string): string => {
 const cyrToLat = (str: string): string => {
   const a: Record<string, string> = {};
   a["а"] = "a";
-  a["А"] = "А";
+  a["А"] = "A";
   a["Б"] = "B";
   a["б"] = "b";
   a["В"] = "V";
