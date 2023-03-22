@@ -3,6 +3,7 @@ languageCode: "uk"
 defaultContentLanguage: "uk"
 title: "👨‍💻 Husky Dev"
 theme: "PaperMod"
+timeout: "5m"
 
 taxonomies:
   category: categories
