@@ -1,5 +1,6 @@
 import {
   accessSync,
+  copyFileSync,
   createWriteStream,
   mkdirSync,
   readdirSync,
@@ -14,6 +15,7 @@ import https from "https";
 
 const srcPath = path.join(__dirname, "content");
 const distPath = path.join(__dirname, "../content");
+const cachePath = path.join(__dirname, ".cache");
 
 // =====================
 // Main
@@ -320,19 +322,28 @@ const downloadAssetWithFolder = async (
 ): Promise<{ fileName: string; filePath: string }> =>
   new Promise((resolve, reject) => {
     mkdirp(assetsFolder);
+    mkdirp(cachePath);
     const fileName = path.basename(url);
     const filePath = path.join(assetsFolder, fileName);
     if (isFileExists(filePath)) {
-      log.trace("File already exists: ", filePath);
+      log.trace("File exists already: ", fileName);
+      return resolve({ fileName, filePath });
+    }
+    const cacheFilePath = path.join(cachePath, fileName);
+    if (isFileExists(cacheFilePath)) {
+      log.trace("File found at the cache: ", fileName);
+      copyFileSync(cacheFilePath, filePath);
       return resolve({ fileName, filePath });
     }
     log.info("Downloading asset: ", url);
-    const file = createWriteStream(filePath);
+    const file = createWriteStream(cacheFilePath);
     https
       .get(url, (response) => {
         response.pipe(file);
         file.on("finish", () => {
           file.close();
+
+          copyFileSync(cacheFilePath, filePath);
           resolve({ fileName, filePath });
         });
       })

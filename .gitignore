@@ -17,4 +17,6 @@ hugo_stats.json
 # NodeJS
 node_modules
 
+# Generated files
 content/blog
+import/.cache

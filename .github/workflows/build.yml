@@ -16,7 +16,8 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          resources
+          resources/_gen
+          import/.cache
         key: ${{ runner.os }}-blog-build-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-blog-build-
