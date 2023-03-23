@@ -1,8 +1,14 @@
-- id: prev_page
+- id: prev_post
   translation: "Попередній пост"
 
-- id: next_page
+- id: next_post
   translation: "Наступний пост"
+
+- id: prev_page
+  translation: "Попередня сторінка"
+
+- id: next_page
+  translation: "Наступна сторінка"
 
 - id: read_time
   translation:
@@ -23,3 +29,6 @@
 
 - id: code_copied
   translation: "скопійовано!"
+
+- id: kilimanjaro
+  translation: "🇹🇿 Похід на вершину Кіліманджаро"

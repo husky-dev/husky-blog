@@ -14,7 +14,7 @@ menu:
   main:
     - identifier: kilimanjaro
       name: "🇹🇿 Кіліманджаро"
-      url: "/series/похід-на-вершину-кіліманджаро/"
+      url: "/series/kilimanjaro/"
 
 params:
   defaultTheme: auto

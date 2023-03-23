@@ -8,7 +8,7 @@
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
   <h1>
-    {{ .Title }}
+    {{ i18n .Title | default .Title }}
     {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
     <a href="index.xml" title="RSS" aria-label="RSS">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -74,7 +74,9 @@
     </h2>
   </header>
   {{- if .Params.Series | and (not $term) }}
-    {{- partial "entry_series.html" . -}}
+    <div class="entry-series series">
+      {{- partial "post_series.html" . -}}
+    </div>
   {{- end }}
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">

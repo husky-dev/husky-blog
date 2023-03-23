@@ -22,7 +22,9 @@
     {{- end }}
     {{/* Series */}}
     {{- if .Params.Series }}
-    {{- partial "post_series.html" .}}
+      <div class="post-series series">
+        {{- partial "post_series.html" .}}
+      </div>
     {{- end }}
     {{/* Series End */}}
   </header>

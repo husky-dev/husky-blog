@@ -241,8 +241,6 @@ const createPostWithMdData = async (data: MdFileData): Promise<string> => {
 
 const getPostFolderPath = (data: MdFileData): string => {
   const parts: string[] = [distPath, "blog"];
-  if (data.category) parts.push(data.category);
-  if (data.subcategory) parts.push(data.subcategory);
   if (data.title) parts.push(titleToSlug(data.title));
   return path.join(...parts);
 };

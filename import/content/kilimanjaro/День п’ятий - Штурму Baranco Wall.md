@@ -4,7 +4,7 @@
 
 > Category: travel
 
-> Series: 🇹🇿 Похід на вершину Кіліманджаро
+> Series: kilimanjaro
 
 > Language: UA
 
