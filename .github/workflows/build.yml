@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    # - name: Caching Assets
-    #   id: blog-cache-build
-    #   uses: actions/cache@v3
-    #   with:
-    #     path: |
-    #       resources/_gen
-    #       import/.cache
-    #     key: ${{ runner.os }}-blog-build-${{ github.run_id }}
-    #     restore-keys: |
-    #       ${{ runner.os }}-blog-build-
+    - name: Caching Assets
+      id: blog-cache-assets
+      uses: actions/cache@v3
+      with:
+        path: |
+          resources/_gen
+          import/.cache
+        key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-blog-assets-
     - name: 'Docker: login'
       uses: docker/login-action@v1
       with:
