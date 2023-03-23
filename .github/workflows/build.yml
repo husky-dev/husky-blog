@@ -21,15 +21,21 @@ jobs:
         key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-blog-assets-
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.111.3+extended'
+    - name: 'Download assets'
+      run: |
+        docker run --rm -v "$(pwd):/usr/src/app" -w "/usr/src/app" node:16-alpine sh -c "cd import && yarn install && yarn start"
+    - name: Build
+      run: hugo --minify
     - name: 'Docker: login'
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.CR_PAT }}
-    - name: 'Blog: download assets'
-      run: |
-        docker run --rm -v "$(pwd):/usr/src/app" -w "/usr/src/app" node:16-alpine sh -c "cd import && yarn install && yarn start"
     - name: 'Docker: build'
       run: |
         docker build -t ghcr.io/husky-dev/husky-blog/web:latest .

@@ -4,6 +4,8 @@
 hugo server
 ```
 
-TODO:
+Run container:
 
-- Download and cache media
+```bash
+docker run --rm -p "8080:80" ghcr.io/husky-dev/husky-blog/web:latest
+```
