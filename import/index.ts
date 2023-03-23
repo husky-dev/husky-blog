@@ -119,8 +119,9 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
   }
   // Clear
   content = clearContent(content);
-  // Fix image captions
-  content = fixImageCaptions(content);
+  // Format content
+  content = changeImageCaptions(content);
+  content = changeYoutubeEmbeds(content);
   // Cover
   let cover: MdFileDataCover | undefined;
   const coverMatch = contentToCover(content);
@@ -197,7 +198,7 @@ const contentToCover = (
   return { data: { image, caption }, content: newContent };
 };
 
-const fixImageCaptions = (content: string): string => {
+const changeImageCaptions = (content: string): string => {
   let mod = content;
   const imgWithCaptionReg =
     /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)\n\n\*\*(.+?)\*\*/g;
@@ -207,6 +208,20 @@ const fixImageCaptions = (content: string): string => {
     const caption = match[3].replace(/"/gm, '\\"');
     const newImg = `![${caption}](${image} "${caption}")`;
     mod = mod.replace(match[0], newImg);
+  }
+  return mod;
+};
+
+const changeYoutubeEmbeds = (content: string): string => {
+  const reg =
+    /\n\[(.*?)\]\((?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})\)\n/g;
+  const matches = content.matchAll(reg);
+  let mod = content;
+  for (const match of matches) {
+    const title = match[1];
+    const id = match[2];
+    const newEmbed = `\n{{< youtube id="${id}" title="${title}" >}}\n`;
+    mod = mod.replace(match[0], newEmbed);
   }
   return mod;
 };

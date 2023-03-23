@@ -264,6 +264,10 @@
     font-weight: 500;
 }
 
+.post-content > div {
+    margin-bottom: var(--content-gap);
+}
+
 .toc {
     margin: 0 2px 40px 2px;
     border: 1px solid var(--border);
