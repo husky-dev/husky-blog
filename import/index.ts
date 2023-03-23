@@ -336,7 +336,7 @@ const downloadAssetWithFolder = async (
   new Promise((resolve, reject) => {
     mkdirp(assetsFolder);
     mkdirp(cachePath);
-    const fileName = path.basename(url);
+    const fileName = checkAssetFileName(path.basename(url));
     const filePath = path.join(assetsFolder, fileName);
     if (isFileExists(filePath)) {
       log.trace("File exists already: ", fileName);
@@ -365,6 +365,17 @@ const downloadAssetWithFolder = async (
         reject(err);
       });
   });
+
+const checkAssetFileName = (fileName: string): string => {
+  let mod = fileName.toLocaleLowerCase();
+  // Replace all not allowed symbols
+  mod = mod.replace(/[^a-z0-9_\-\.]/gi, "_");
+  // Replace all double underscores
+  mod = mod.replace(/_+/g, "_");
+  // Remove first and last underscore
+  mod = mod.replace(/^_|_$/g, "");
+  return mod;
+};
 
 // =====================
 // Strings
