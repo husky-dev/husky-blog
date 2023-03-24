@@ -35,3 +35,9 @@ params:
       url: "https://github.com/husky-dev"
     - name: "email"
       url: "mailto:hello@husky-dev.me"
+      
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON 
