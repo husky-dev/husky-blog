@@ -46,7 +46,7 @@ jobs:
       run: |
         curl -X POST -H 'Content-type: application/json' \
         -H "Authorization: Bearer ${{ secrets.NOTIFIER_ACCESS_TOKEN }}" \
-        --data '{"message":"🏁 *Husky-api*: build finished"}' \
+        --data '{"message":"🏁 *Husky-blog*: build finished"}' \
         https://notifier.husky-dev.me/notify
     - name: 'SSH: deploy'
       uses: appleboy/ssh-action@master
