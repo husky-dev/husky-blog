@@ -75,7 +75,7 @@
   </header>
   {{- if .Params.Series | and (not $term) }}
     <div class="entry-series series">
-      {{- partial "post_series.html" . -}}
+      {{- partial "series.html" . -}}
     </div>
   {{- end }}
   {{- if (ne (.Param "hideSummary") true) }}

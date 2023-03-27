@@ -1,0 +1,4 @@
+{{- range .Params.Series }}
+  <a class="series-entry series-{{- . -}}" href="/series/{{- . -}}" >{{- i18n . | default . -}}</a>
+{{- end }}
+

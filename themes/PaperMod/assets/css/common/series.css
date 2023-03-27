@@ -11,13 +11,16 @@
 .series-entry:link {
   display: block;
   padding: 0px 8px;
-  background-color: #62C69880;
   font-size: 14px;
   font-weight: normal;
   height: 24px;
   line-height: 24px;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
+}
+
+.series-kilimanjaro {
+  background-color: #62C69880;
 }
 
 .series-entry:hover {
