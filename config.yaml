@@ -15,6 +15,9 @@ menu:
     - identifier: kilimanjaro
       name: "🇹🇿 Кіліманджаро"
       url: "/series/kilimanjaro/"
+    - identifier: books
+      name: "📚 Книги"
+      url: "/categories/books/"
 
 params:
   defaultTheme: auto

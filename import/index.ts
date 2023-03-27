@@ -51,9 +51,9 @@ interface MdFileData {
   series?: string;
   subcategory?: string;
   lang?: string;
-  suffix?: string;
   cover?: MdFileDataCover;
   content: string;
+  tags?: string[];
 }
 
 interface MdFileDataCover {
@@ -95,6 +95,13 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
   if (subcategoryMatch) {
     subcategory = subcategoryMatch[1];
     content = content.replace(subcategoryMatch[0], "");
+  }
+  // Tags
+  let tags: string[] | undefined;
+  const tagsMatch = /> Tags: (.+?)\n/g.exec(content);
+  if (tagsMatch) {
+    tags = tagsMatch[1].split(",").map((t) => t.trim());
+    content = content.replace(tagsMatch[0], "");
   }
   // Series
   let series: string | undefined;
@@ -139,7 +146,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     subcategory,
     series,
     lang,
-    suffix,
+    tags,
     cover,
   };
 };
@@ -280,10 +287,7 @@ const getPostFolderPath = (data: MdFileData): string => {
 const mdDataToPostFrontMatter = (data: MdFileData): string => {
   const lines: string[] = ["---"];
   if (data.title) {
-    const titleStr = data.suffix
-      ? `${data.title} | ${data.suffix}`
-      : data.title;
-    lines.push(`title: "${titleStr}"`);
+    lines.push(`title: "${data.title}"`);
   }
   if (data.date) {
     lines.push(`date: ${data.date.toISOString()}`);
@@ -292,6 +296,12 @@ const mdDataToPostFrontMatter = (data: MdFileData): string => {
   if (data.category) {
     lines.push(`categories:`);
     lines.push(`  - ${firstToUpper(data.category)}`);
+  }
+  if (data.tags) {
+    lines.push(`tags:`);
+    data.tags.forEach((tag) => {
+      lines.push(`  - ${firstToUpper(tag)}`);
+    });
   }
   if (data.series) {
     lines.push(`series:`);
