@@ -66,10 +66,17 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
   if (!content) return undefined;
   // Title
   let title: string | undefined;
-  const titleMatch = /^# (.+?)\n/g.exec(content);
-  if (titleMatch) {
-    title = removeMarkdown(titleMatch[1]);
-    content = content.replace(titleMatch[0], "");
+  // H1 title
+  const h1TitleMatch = /^# (.+?)\n/g.exec(content);
+  if (h1TitleMatch) {
+    title = removeMarkdown(h1TitleMatch[1]);
+    content = content.replace(h1TitleMatch[0], "");
+  }
+  // Frontmatter title
+  const frontmatterTitleMatch = /> Title: (.+?)\n/g.exec(content);
+  if (frontmatterTitleMatch) {
+    title = removeMarkdown(frontmatterTitleMatch[1]);
+    content = content.replace(frontmatterTitleMatch[0], "");
   }
   // Date
   let date: Date | undefined;
