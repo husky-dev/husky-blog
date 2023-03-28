@@ -58,6 +58,11 @@ jobs:
           set -ex
           cd /var/platform
           docker-compose pull
-          docker-compose down --remove-orphans
           docker-compose up -d
           docker image prune -f
+    - name: 'Notify: deployded'
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        -H "Authorization: Bearer ${{ secrets.NOTIFIER_ACCESS_TOKEN }}" \
+        --data '{"message":"⬆️ *Husky-blog*: deployed"}' \
+        https://notifier.husky-dev.me/notify
