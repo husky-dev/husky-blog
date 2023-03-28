@@ -15,9 +15,15 @@ menu:
     - identifier: kilimanjaro
       name: "🇹🇿 Кіліманджаро"
       url: "/series/kilimanjaro/"
+    - identifier: sport
+      name: "🏃‍♂️ Спорт"
+      url: "/categories/sport/"
     - identifier: books
       name: "📚 Книги"
       url: "/categories/books/"
+    - identifier: diy
+      name: "🛠️ DIY"
+      url: "/categories/diy/"
 
 params:
   defaultTheme: auto

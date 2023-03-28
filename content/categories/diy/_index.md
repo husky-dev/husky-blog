@@ -1,3 +1,3 @@
 ---
-title: "🛠️ Do It Yourself"
+title: "🛠️ DIY"
 ---
