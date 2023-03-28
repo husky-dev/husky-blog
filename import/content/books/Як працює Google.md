@@ -6,7 +6,7 @@
 
 > Category: books
 
-> Tags: programming
+> Tags: programming, personal development
 
 > Language: UA
 
