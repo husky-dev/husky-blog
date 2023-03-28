@@ -47,13 +47,12 @@ const run = async () => {
 interface MdFileData {
   date?: Date;
   title?: string;
-  category?: string;
-  series?: string;
-  subcategory?: string;
   lang?: string;
   cover?: MdFileDataCover;
-  content: string;
+  series?: string[];
+  categories?: string[];
   tags?: string[];
+  content: string;
 }
 
 interface MdFileDataCover {
@@ -90,18 +89,11 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     }
   }
   // Category
-  let category: string | undefined;
-  const categoryMatch = /> Category: (.+?)\n/g.exec(content);
-  if (categoryMatch) {
-    category = categoryMatch[1];
-    content = content.replace(categoryMatch[0], "");
-  }
-  // Subcategory
-  let subcategory: string | undefined;
-  const subcategoryMatch = /> Subcategory: (.+?)\n/g.exec(content);
-  if (subcategoryMatch) {
-    subcategory = subcategoryMatch[1];
-    content = content.replace(subcategoryMatch[0], "");
+  let categories: string[] | undefined;
+  const categoriesMatch = /> Category: (.+?)\n/g.exec(content);
+  if (categoriesMatch) {
+    categories = categoriesMatch[1].split(",").map((t) => t.trim());
+    content = content.replace(categoriesMatch[0], "");
   }
   // Tags
   let tags: string[] | undefined;
@@ -111,10 +103,10 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     content = content.replace(tagsMatch[0], "");
   }
   // Series
-  let series: string | undefined;
+  let series: string[] | undefined;
   const seriesMatch = /> Series: (.+?)\n/g.exec(content);
   if (seriesMatch) {
-    series = seriesMatch[1];
+    series = seriesMatch[1].split(",").map((t) => t.trim());
     content = content.replace(seriesMatch[0], "");
   }
   // Language
@@ -149,8 +141,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     title,
     content,
     date,
-    category,
-    subcategory,
+    categories,
     series,
     lang,
     tags,
@@ -300,19 +291,24 @@ const mdDataToPostFrontMatter = (data: MdFileData): string => {
     lines.push(`date: ${data.date.toISOString()}`);
   }
   lines.push(`lang: "${!!data.lang ? data.lang?.toLowerCase() : "ua"}"`);
-  if (data.category) {
+  if (data.categories) {
     lines.push(`categories:`);
-    lines.push(`  - ${firstToUpper(data.category)}`);
+    for (const category of data.categories) {
+      const str = category.toLocaleLowerCase() !== "diy" ? category : "DIY";
+      lines.push(`  - ${str}`);
+    }
   }
   if (data.tags) {
     lines.push(`tags:`);
-    data.tags.forEach((tag) => {
+    for (const tag of data.tags) {
       lines.push(`  - ${firstToUpper(tag)}`);
-    });
+    }
   }
   if (data.series) {
     lines.push(`series:`);
-    lines.push(`  - "${data.series}"`);
+    for (const itm of data.series) {
+      lines.push(`  - "${itm}"`);
+    }
   }
   if (data.cover) {
     lines.push("cover:");
