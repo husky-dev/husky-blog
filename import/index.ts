@@ -12,6 +12,18 @@ import {
 } from "fs";
 import * as path from "path";
 import https from "https";
+import {
+  clearContent,
+  firstToUpper,
+  isFileExists,
+  listFilesInFolder,
+  log,
+  md5,
+  mkdirp,
+  removeMarkdown,
+  textToSlug,
+  urlToFileName,
+} from "./utils";
 
 const srcPath = path.join(__dirname, "content");
 const distPath = path.join(__dirname, "../content");
@@ -149,43 +161,6 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
   };
 };
 
-const clearContent = (content: string): string => {
-  let mod = content;
-  // Remove empty lines at the beginning
-  mod = mod.replace(/^(?:[\t ]*(?:\r?\n|\r))+/g, "");
-  // Remove empty lines between paragraphs
-  mod = mod.replace(/\n\n+/gm, "\n\n");
-  // Remove empty lines at the end
-  mod = mod.replace(/(?:[\t ]*(?:\r?\n|\r))+$/g, "");
-  // Remove extra spaces
-  mod = mod.replace(/ {2,}/g, " ");
-  // Add one empty line at the end
-  mod = mod + "\n";
-  return mod;
-};
-
-const removeMarkdown = (content: string): string => {
-  let mod = content;
-  // Remove bold and italic
-  mod = mod.replace(/\*\*(.+?)\*\*/g, "$1");
-  mod = mod.replace(/\*(.+?)\*/g, "$1");
-  // Remove links
-  mod = mod.replace(/\[(.+?)\]\(.+?\)/g, "$1");
-  // Remove images
-  mod = mod.replace(/!\[(.+?)\]\(.+?\)/g, "$1");
-  // Remove blockquotes
-  mod = mod.replace(/^> (.+?)$/gm, "$1");
-  // Remove code blocks
-  mod = mod.replace(/^```(.+?)```$/gm, "$1");
-  // Remove inline code
-  mod = mod.replace(/`(.+?)`/g, "$1");
-  // Remove extra spaces
-  mod = mod.replace(/ {2,}/g, " ");
-  // Remove empty lines
-  mod = mod.replace(/(?:[\t ]*(?:\r?\n|\r))+/g, "");
-  return mod;
-};
-
 const contentToCover = (
   content: string
 ): { data: MdFileDataCover; content: string } | undefined => {
@@ -243,25 +218,26 @@ const createPostWithMdData = async (data: MdFileData): Promise<string> => {
   // Dowload cover
   if (data.cover) {
     const assetsFolder = path.join(folderPath, "assets");
-    const { fileName } = await downloadAssetWithFolder(
+    const { fileName } = await downloadAssetToFolder(
       data.cover.image,
+      data.cover.caption || "",
       assetsFolder
     );
     data.cover.image = `assets/${fileName}`;
   }
   // Create content
   const frontMatter = mdDataToPostFrontMatter(data);
-  let content = frontMatter + "\n\n" + data.content;
+  let mod = frontMatter + "\n\n" + data.content;
   // Download assets
-  content = await downloadPostAssets(content, folderPath);
+  mod = await downloadPostAssets(mod, folderPath);
   // Write file
-  writeFileSync(filePath, content);
+  writeFileSync(filePath, mod);
   return filePath;
 };
 
 const getPostFolderPath = (data: MdFileData): string => {
   const parts: string[] = [distPath, "blog"];
-  if (data.title) parts.push(titleToSlug(data.title));
+  if (data.title) parts.push(textToSlug(data.title));
   return path.join(...parts);
 };
 
@@ -294,14 +270,13 @@ const mdDataToPostFrontMatter = (data: MdFileData): string => {
   if (data.categories) {
     lines.push(`categories:`);
     for (const category of data.categories) {
-      const str = category.toLocaleLowerCase() !== "diy" ? category : "DIY";
-      lines.push(`  - ${str}`);
+      lines.push(`  - ${category.toLocaleLowerCase()}`);
     }
   }
   if (data.tags) {
     lines.push(`tags:`);
     for (const tag of data.tags) {
-      lines.push(`  - ${firstToUpper(tag)}`);
+      lines.push(`  - ${tag.toLocaleLowerCase()}`);
     }
   }
   if (data.series) {
@@ -327,40 +302,71 @@ const downloadPostAssets = async (
   content: string,
   folderPath: string
 ): Promise<string> => {
-  // Download images
-  const imgReg = /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g;
-  const matches = content.matchAll(imgReg);
-  if (!matches) return content;
   let mod = content;
   const assetsFolder = path.join(folderPath, "assets");
-  for (const match of matches) {
-    const url = match[1];
-    const { fileName } = await downloadAssetWithFolder(url, assetsFolder);
-    mod = mod.replace(url, `assets/${fileName}`);
+  // Download images
+  const imgReg = /!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g;
+  const imgMatches = content.matchAll(imgReg);
+  if (imgMatches) {
+    for (const match of imgMatches) {
+      const alt = match[1];
+      const url = match[2];
+      const caption = match[3];
+      const title = caption || alt;
+      const { fileName } = await downloadAssetToFolder(
+        url,
+        title,
+        assetsFolder
+      );
+      mod = mod.replace(url, `assets/${fileName}`);
+    }
+  }
+  // Download PDFs
+  const pdfReg = /\[([^\]]*)\]\((.*?.pdf)\s*("(?:.*[^"])")?\s*\)/g;
+  const pdfMatches = content.matchAll(pdfReg);
+  if (pdfMatches) {
+    for (const match of pdfMatches) {
+      const alt = match[1];
+      const url = match[2];
+      const caption = match[3];
+      const title = caption || alt;
+      const { fileName } = await downloadAssetToFolder(
+        url,
+        title,
+        assetsFolder
+      );
+      mod = mod.replace(url, `assets/${fileName}`);
+    }
   }
   return mod;
 };
 
 // Download file to folder
-const downloadAssetWithFolder = async (
+
+const downloadAssetToFolder = async (
   url: string,
+  title: string | undefined,
   assetsFolder: string
 ): Promise<{ fileName: string; filePath: string }> =>
   new Promise((resolve, reject) => {
-    mkdirp(assetsFolder);
-    mkdirp(cachePath);
-    const fileName = checkAssetFileName(path.basename(url));
+    const fileName = urlToFileName(url);
+    // Chek if file exists
     const filePath = path.join(assetsFolder, fileName);
+    mkdirp(assetsFolder);
     if (isFileExists(filePath)) {
       log.trace("File exists already: ", fileName);
       return resolve({ fileName, filePath });
     }
-    const cacheFilePath = path.join(cachePath, fileName);
+    // Check if file exists in cache
+    const cacheFileName = md5(url);
+    const cacheFilePath = path.join(cachePath, cacheFileName);
+    mkdirp(cachePath);
     if (isFileExists(cacheFilePath)) {
       log.trace("File found at the cache: ", fileName);
       copyFileSync(cacheFilePath, filePath);
       return resolve({ fileName, filePath });
     }
+    // Download file
     log.info("Downloading asset: ", url);
     const file = createWriteStream(cacheFilePath);
     https
@@ -368,7 +374,6 @@ const downloadAssetWithFolder = async (
         response.pipe(file);
         file.on("finish", () => {
           file.close();
-
           copyFileSync(cacheFilePath, filePath);
           resolve({ fileName, filePath });
         });
@@ -378,172 +383,6 @@ const downloadAssetWithFolder = async (
         reject(err);
       });
   });
-
-const checkAssetFileName = (fileName: string): string => {
-  let mod = fileName.toLocaleLowerCase();
-  // Replace all not allowed symbols
-  mod = mod.replace(/[^a-z0-9_\-\.]/gi, "_");
-  // Replace all double underscores
-  mod = mod.replace(/_+/g, "_");
-  // Remove first and last underscore
-  mod = mod.replace(/^_|_$/g, "");
-  return mod;
-};
-
-// =====================
-// Strings
-// =====================
-
-const titleToSlug = (title: string): string => {
-  let mod = cyrToLat(title).toLowerCase();
-  mod = mod.replace(/['’]/g, "");
-  mod = mod.replace(/[^a-z0-9]/gi, "-");
-  mod = mod.replace(/-+/g, "-");
-  mod = mod.replace(/^-|-$/g, "");
-  return mod;
-};
-
-const cyrToLat = (str: string): string => {
-  const a: Record<string, string> = {};
-  a["а"] = "a";
-  a["А"] = "A";
-  a["Б"] = "B";
-  a["б"] = "b";
-  a["В"] = "V";
-  a["в"] = "v";
-  a["Г"] = "G";
-  a["г"] = "g";
-  a["Ґ"] = "G";
-  a["ґ"] = "g";
-  a["Д"] = "D";
-  a["д"] = "d";
-  a["Е"] = "E";
-  a["е"] = "e";
-  a["Ё"] = "YO";
-  a["ё"] = "yo";
-  a["є"] = "ie";
-  a["Є"] = "Ye";
-  a["Ж"] = "ZH";
-  a["ж"] = "zh";
-  a["З"] = "Z";
-  a["з"] = "z";
-  a["И"] = "I";
-  a["и"] = "i";
-  a["І"] = "I";
-  a["і"] = "i";
-  a["ї"] = "i";
-  a["Ї"] = "Yi";
-  a["Й"] = "I";
-  a["й"] = "i";
-  a["К"] = "K";
-  a["к"] = "k";
-  a["Л"] = "L";
-  a["л"] = "l";
-  a["М"] = "M";
-  a["м"] = "m";
-  a["Н"] = "N";
-  a["н"] = "n";
-  a["О"] = "O";
-  a["о"] = "o";
-  a["П"] = "P";
-  a["п"] = "p";
-  a["Р"] = "R";
-  a["р"] = "r";
-  a["С"] = "S";
-  a["с"] = "s";
-  a["Т"] = "T";
-  a["т"] = "t";
-  a["У"] = "U";
-  a["у"] = "u";
-  a["Ф"] = "F";
-  a["ф"] = "f";
-  a["Х"] = "H";
-  a["х"] = "h";
-  a["Ц"] = "TS";
-  a["ц"] = "ts";
-  a["Ч"] = "CH";
-  a["ч"] = "ch";
-  a["Ш"] = "SH";
-  a["ш"] = "sh";
-  a["Щ"] = "SCH";
-  a["щ"] = "sch";
-  a["Ъ"] = "'";
-  a["ъ"] = "'";
-  a["Ы"] = "I";
-  a["ы"] = "i";
-  a["Ь"] = "'";
-  a["ь"] = "'";
-  a["Э"] = "E";
-  a["э"] = "e";
-  a["Ю"] = "YU";
-  a["ю"] = "yu";
-  a["Я"] = "Ya";
-  a["я"] = "ya";
-  return str
-    .split("")
-    .map((char) => a[char] || char)
-    .join("");
-};
-
-const firstToUpper = (str: string): string =>
-  str.charAt(0).toUpperCase() + str.slice(1);
-
-// =====================
-// File system
-// =====================
-
-const mkdirp = (folderPath: string) =>
-  mkdirSync(folderPath, { recursive: true });
-
-const listFilesInFolder = (
-  folderPath: string,
-  extensions?: string[]
-): string[] => {
-  const res: string[] = [];
-  const items = readdirSync(folderPath);
-  for (const item of items) {
-    const itemPath = path.resolve(folderPath, item);
-    const stat = statSync(itemPath);
-    if (stat.isDirectory()) {
-      const newItems = listFilesInFolder(itemPath, extensions);
-      res.push(...newItems);
-    } else if (isFileExtensionInList(itemPath, extensions)) {
-      res.push(itemPath);
-    }
-  }
-  return res;
-};
-
-const isFileExtensionInList = (
-  filePath: string,
-  extensions?: string[]
-): boolean => {
-  if (!extensions) return true;
-  const ext = path.extname(filePath);
-  if (!ext) return false;
-  return extensions.includes(ext.substring(1).toLocaleLowerCase());
-};
-
-// Is file exists
-const isFileExists = (filePath: string): boolean => {
-  try {
-    accessSync(filePath);
-    return true;
-  } catch (err) {
-    return false;
-  }
-};
-
-// =====================
-// Log
-// =====================
-
-const log = {
-  trace: (...args: unknown[]) => console.log("[*]:", ...args),
-  debug: (...args: unknown[]) => console.log("[-]:", ...args),
-  info: (...args: unknown[]) => console.log("[+]:", ...args),
-  err: (...args: unknown[]) => console.log("[x]:", ...args),
-};
 
 // =====================
 // Run
