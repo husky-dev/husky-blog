@@ -1,20 +1,16 @@
 import {
-  accessSync,
   copyFileSync,
   createWriteStream,
-  mkdirSync,
-  readdirSync,
   readFileSync,
-  statSync,
-  unlink,
   unlinkSync,
   writeFileSync,
 } from "fs";
-import * as path from "path";
 import https from "https";
+import path from "path";
+
 import {
   clearContent,
-  firstToUpper,
+  clearFileName,
   isFileExists,
   listFilesInFolder,
   log,
@@ -22,7 +18,6 @@ import {
   mkdirp,
   removeMarkdown,
   textToSlug,
-  urlToFileName,
 } from "./utils";
 
 const srcPath = path.join(__dirname, "content");
@@ -349,7 +344,9 @@ const downloadAssetToFolder = async (
   assetsFolder: string
 ): Promise<{ fileName: string; filePath: string }> =>
   new Promise((resolve, reject) => {
-    const fileName = urlToFileName(url);
+    const urlFileName = clearFileName(path.basename(url)); // payaty-prosto.jpeg
+    const ext = path.extname(urlFileName).replace(".", ""); // jpg or ''
+    const fileName = title ? assetTitleToFileName(title, ext) : urlFileName; // payaty-prosto.jpg
     // Chek if file exists
     const filePath = path.join(assetsFolder, fileName);
     mkdirp(assetsFolder);
@@ -383,6 +380,15 @@ const downloadAssetToFolder = async (
         reject(err);
       });
   });
+
+const assetTitleToFileName = (title: string, ext: string): string => {
+  let mod = textToSlug(title);
+  // Remove extension from title
+  mod = mod.replace(new RegExp(`${ext}$`), "");
+  // Clear file name
+  mod = clearFileName(mod);
+  return `${mod}.${ext}`;
+};
 
 // =====================
 // Run

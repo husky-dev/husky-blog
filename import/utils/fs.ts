@@ -43,18 +43,17 @@ export const isFileExists = (filePath: string): boolean => {
   }
 };
 
-export const urlToFileName = (url: string): string => {
-  const baseName = path.basename(url); // payaty-prosto.jpeg
-  return clearFileName(baseName);
-};
-
-const clearFileName = (fileName: string): string => {
+export const clearFileName = (fileName: string): string => {
   let mod = fileName.toLocaleLowerCase();
   // Replace all not allowed symbols
   mod = mod.replace(/[^a-z0-9_\-\.]/gi, "_");
+  // Replace all double dashes
+  mod = mod.replace(/-+/g, "-");
   // Replace all double underscores
   mod = mod.replace(/_+/g, "_");
   // Remove first and last underscore
   mod = mod.replace(/^_|_$/g, "");
+  // Remove first and last dash
+  mod = mod.replace(/^-|-$/g, "");
   return mod;
 };
