@@ -1,5 +1,9 @@
-FROM nginx:1.19-alpine
+FROM pagespeed/nginx-pagespeed:1.13
+
 LABEL org.opencontainers.image.source https://github.com/husky-dev/husky-blog
+
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
 COPY ./public /usr/share/nginx/html
 
 HEALTHCHECK --interval=30s --timeout=3s CMD curl --fail http://localhost || exit 1
