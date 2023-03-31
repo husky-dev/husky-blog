@@ -1,4 +1,4 @@
-FROM pagespeed/nginx-pagespeed:1.13
+FROM nginx:1.19-alpine
 
 LABEL org.opencontainers.image.source https://github.com/husky-dev/husky-blog
 
