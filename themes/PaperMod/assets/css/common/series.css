@@ -18,7 +18,13 @@
 }
 
 .series-kilimanjaro {
-  background-color: #62C69880;
+  background-color: #03FFB980;
+  color: white;
+}
+
+.series-namibia {
+  background-color: #FFE9CD;
+  color: #6F7478;
 }
 
 .series-entry:hover {
