@@ -19,6 +19,7 @@ import {
   removeMarkdown,
   textToSlug,
 } from "./utils";
+import { IncomingHttpHeaders } from "http";
 
 const srcPath = path.join(__dirname, "content");
 const distPath = path.join(__dirname, "../content");
@@ -342,52 +343,87 @@ const downloadAssetToFolder = async (
   url: string,
   title: string | undefined,
   assetsFolder: string
-): Promise<{ fileName: string; filePath: string }> =>
+): Promise<{ fileName: string }> =>
   new Promise((resolve, reject) => {
     const urlFileName = clearFileName(path.basename(url)); // payaty-prosto.jpeg
-    const ext = path.extname(urlFileName).replace(".", ""); // jpg or ''
-    const fileName = title ? assetTitleToFileName(title, ext) : urlFileName; // payaty-prosto.jpg
+    const urlExt = path.extname(urlFileName).replace(".", ""); // jpg or ''
+    // Use passed title if it is possible
+    const fileTitle = title
+      ? assetTitleToFileTitle(title, urlExt)
+      : path.parse(urlFileName).name; // payaty-prosto
     // Chek if file exists
-    const filePath = path.join(assetsFolder, fileName);
     mkdirp(assetsFolder);
-    if (isFileExists(filePath)) {
-      log.trace("File exists already: ", fileName);
-      return resolve({ fileName, filePath });
+    const exAssetsFolderFiles = listFilesInFolder(assetsFolder);
+    const exAssetsFilePath = exAssetsFolderFiles.find((name) =>
+      name.includes(fileTitle)
+    );
+    if (exAssetsFilePath) {
+      const fileName = path.basename(exAssetsFilePath);
+      log.debug("File exists already: ", fileName);
+      return resolve({ fileName });
     }
     // Check if file exists in cache
-    const cacheFileName = md5(url);
-    const cacheFilePath = path.join(cachePath, cacheFileName);
     mkdirp(cachePath);
-    if (isFileExists(cacheFilePath)) {
-      log.trace("File found at the cache: ", fileName);
-      copyFileSync(cacheFilePath, filePath);
-      return resolve({ fileName, filePath });
+    const cacheFileName = md5(url);
+    const exCacheFiles = listFilesInFolder(cachePath);
+    const exCacheFilePath = exCacheFiles.find((name) =>
+      name.includes(cacheFileName)
+    );
+    if (exCacheFilePath) {
+      // Gettitn file extension which was was found at the cache
+      const exChacheFileExt = path.extname(exCacheFilePath).replace(".", "");
+      // And use it for the new file
+      // Or use the extension from the url as a fallback
+      const fileExt = exChacheFileExt || urlExt;
+      const fileName = `${fileTitle}.${fileExt}`;
+      const filePath = path.join(assetsFolder, fileName);
+      log.debug("File found at the cache: ", fileName);
+      copyFileSync(exCacheFilePath, filePath);
+      return resolve({ fileName });
     }
     // Download file
     log.info("Downloading asset: ", url);
-    const file = createWriteStream(cacheFilePath);
     https
       .get(url, (response) => {
+        const { headers } = response;
+
+        const newCacheFileExt = headersToFileExt(headers) || "tmp";
+        const newCacheFileName = `${cacheFileName}.${newCacheFileExt}`;
+        const newCacheFilePath = path.join(cachePath, newCacheFileName);
+
+        const file = createWriteStream(newCacheFilePath);
         response.pipe(file);
+
         file.on("finish", () => {
           file.close();
-          copyFileSync(cacheFilePath, filePath);
-          resolve({ fileName, filePath });
+          // TODO: Encoding goes here
+          const fileName = `${fileTitle}.${newCacheFileExt}`;
+          const filePath = path.join(assetsFolder, fileName);
+          copyFileSync(newCacheFilePath, filePath);
+          resolve({ fileName });
         });
       })
       .on("error", (err) => {
-        unlinkSync(filePath);
         reject(err);
       });
   });
 
-const assetTitleToFileName = (title: string, ext: string): string => {
+const assetTitleToFileTitle = (title: string, ext?: string): string => {
   let mod = textToSlug(title);
   // Remove extension from title
-  mod = mod.replace(new RegExp(`${ext}$`), "");
+  if (ext) mod = mod.replace(new RegExp(`${ext}$`), "");
   // Clear file name
   mod = clearFileName(mod);
-  return `${mod}.${ext}`;
+  return `${mod}`;
+};
+
+const headersToFileExt = (headers: IncomingHttpHeaders): string | undefined => {
+  const contentType = headers["content-type"];
+  console.log(contentType);
+  if (!contentType) return;
+  const ext = contentType.split("/").pop();
+  if (ext === "jpeg") return "jpg";
+  return ext;
 };
 
 // =====================
