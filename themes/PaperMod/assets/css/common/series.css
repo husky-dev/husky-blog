@@ -27,6 +27,11 @@
   color: #6F7478;
 }
 
+.series-work-and-travel {
+  background-color: #FF5C5B;
+  color: #fff;
+}
+
 .series-entry:hover {
   opacity: 0.8;
 }
