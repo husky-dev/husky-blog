@@ -7,6 +7,11 @@ import {
 } from "fs";
 import https from "https";
 import path from "path";
+import gm from "gm";
+
+const GraphicsMagick = gm.subClass({
+  imageMagick: true,
+});
 
 import {
   clearContent,
@@ -387,20 +392,34 @@ const downloadAssetToFolder = async (
       .get(url, (response) => {
         const { headers } = response;
 
-        const newCacheFileExt = headersToFileExt(headers) || "tmp";
+        let newCacheFileExt = headersToFileExt(headers) || "tmp";
         const newCacheFileName = `${cacheFileName}.${newCacheFileExt}`;
-        const newCacheFilePath = path.join(cachePath, newCacheFileName);
+        let newCacheFilePath = path.join(cachePath, newCacheFileName);
 
         const file = createWriteStream(newCacheFilePath);
         response.pipe(file);
 
         file.on("finish", () => {
           file.close();
-          // TODO: Encoding goes here
-          const fileName = `${fileTitle}.${newCacheFileExt}`;
-          const filePath = path.join(assetsFolder, fileName);
-          copyFileSync(newCacheFilePath, filePath);
-          resolve({ fileName });
+          const processDownload = async () => {
+            // Convert tiff to jpg
+            if (newCacheFileExt === "tiff") {
+              const newCacheFileJpgName = `${cacheFileName}.jpg`;
+              const newCacheFileJpgPath = path.join(
+                cachePath,
+                newCacheFileJpgName
+              );
+              await convertImage(newCacheFilePath, newCacheFileJpgPath);
+              unlinkSync(newCacheFilePath);
+              newCacheFileExt = "jpg";
+              newCacheFilePath = newCacheFileJpgPath;
+            }
+            const fileName = `${fileTitle}.${newCacheFileExt}`;
+            const filePath = path.join(assetsFolder, fileName);
+            copyFileSync(newCacheFilePath, filePath);
+            resolve({ fileName });
+          };
+          processDownload().catch((err) => reject(err));
         });
       })
       .on("error", (err) => {
@@ -425,6 +444,16 @@ const headersToFileExt = (headers: IncomingHttpHeaders): string | undefined => {
   if (ext === "jpeg") return "jpg";
   return ext;
 };
+
+const convertImage = async (
+  inputFile: string,
+  outputFile: string
+): Promise<void> =>
+  new Promise((resolve, reject) => {
+    GraphicsMagick(inputFile).write(outputFile, (err) =>
+      err ? reject(err) : resolve()
+    );
+  });
 
 // =====================
 // Run

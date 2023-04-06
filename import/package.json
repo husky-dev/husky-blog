@@ -7,7 +7,9 @@
     "start": "ts-node index.ts"
   },
   "dependencies": {
+    "@types/gm": "1.25.1",
     "@types/node": "18.15.3",
+    "gm": "1.25.0",
     "ts-node": "10.9.1",
     "typescript": "4.9.5"
   }
