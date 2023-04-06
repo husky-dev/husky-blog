@@ -18,6 +18,9 @@ menu:
     - identifier: namibia
       name: "🇳🇦 Намібія"
       url: "/series/namibia/"
+    - identifier: work-and-travel
+      name: "🇺🇸 USA"
+      url: "/series/work-and-travel/"
     - identifier: sport
       name: "🏃‍♂️ Спорт"
       url: "/categories/sport/"
