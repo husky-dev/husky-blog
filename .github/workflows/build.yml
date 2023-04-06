@@ -21,13 +21,15 @@ jobs:
         key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-blog-assets-
-    # - name: Install ImageMagick
+    # - name: Setup ImageMagick
     #   run: |
     #     mkdir -p "$HOME/.local/bin"
     #     curl -O 'https://download.imagemagick.org/ImageMagick/download/binaries/magick'
     #     chmod u+x magick
     #     mv magick "$HOME/.local/bin"
     #     echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+    - name: Setup ImageMagick
+      run: sudo apt install imagemagick
     - name: Check ImageMagick
       run: magick -version
     - name: Setup NodeJS
