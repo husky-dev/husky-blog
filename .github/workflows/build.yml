@@ -21,16 +21,16 @@ jobs:
         key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-blog-assets-
-    - name: Setup ImageMagick
-      run: sudo apt install ghostscript
-    - name: Change ImageMagick security policy
-      run: |
-        DQT='"' 
-        SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
-        RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
-        sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
+    # - name: Setup ImageMagick
+    #   run: sudo apt install ghostscript
+    # - name: Change ImageMagick security policy
+    #   run: |
+    #     DQT='"' 
+    #     SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
+    #     RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
+    #     sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
     - name: Check ImageMagick
-      run: magick -version
+      run: convert -version
     - name: Setup NodeJS
       uses: actions/setup-node@v3
       with:
