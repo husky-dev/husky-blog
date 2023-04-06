@@ -21,13 +21,19 @@ jobs:
         key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-blog-assets-
+    - name: Setup NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: '0.111.3'
-    - name: 'Download assets'
+    - name: 'Import assets'
       run: |
-        docker run --rm -v "$(pwd):/usr/src/app" -w "/usr/src/app" node:16-alpine sh -c "cd import && yarn install && yarn start"
+        cd import
+        yarn
+        yarn start
     - name: Build
       run: hugo --minify
     - name: 'Docker: login'
