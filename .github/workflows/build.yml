@@ -11,68 +11,62 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Caching Assets
-      id: blog-cache-assets
-      uses: actions/cache@v3
-      with:
-        path: |
-          resources/_gen
-          import/.cache
-        key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
-        restore-keys: |
-          ${{ runner.os }}-blog-assets-
-    # - name: Setup ImageMagick
-    #   run: sudo apt install ghostscript
-    # - name: Change ImageMagick security policy
+    - name: 'Check Ffmpeg'
+      run: ffmpeg -version
+    # - name: Caching Assets
+    #   id: blog-cache-assets
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: |
+    #       resources/_gen
+    #       import/.cache
+    #     key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-blog-assets-
+    # - name: Check ImageMagick
+    #   run: convert -version
+    # - name: Setup NodeJS
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: 16
+    # - name: Setup Hugo
+    #   uses: peaceiris/actions-hugo@v2
+    #   with:
+    #     hugo-version: '0.111.3'
+    # - name: 'Import assets'
     #   run: |
-    #     DQT='"' 
-    #     SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
-    #     RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
-    #     sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
-    - name: Check ImageMagick
-      run: convert -version
-    - name: Setup NodeJS
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.111.3'
-    - name: 'Import assets'
-      run: |
-        cd import
-        yarn
-        yarn start
-    - name: Build
-      run: hugo --minify
-    - name: 'Docker: login'
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.CR_PAT }}
-    - name: 'Docker: build'
-      run: |
-        docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
-    - name: 'Docker: push'
-      run: |
-        docker push ghcr.io/husky-dev/husky-blog/web:latest
-    - name: 'SSH: deploy'
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          set -ex
-          cd /var/platform
-          docker-compose pull
-          docker-compose up -d
-          docker image prune -f
-    - name: 'Notify: deployded'
-      run: |
-        curl -X POST -H 'Content-type: application/json' \
-        -H "Authorization: Bearer ${{ secrets.NOTIFIER_ACCESS_TOKEN }}" \
-        --data '{"message":"⬆️ *Husky-blog*: deployed"}' \
-        https://notifier.husky-dev.me/notify
+    #     cd import
+    #     yarn
+    #     yarn start
+    # - name: Build
+    #   run: hugo --minify
+    # - name: 'Docker: login'
+    #   uses: docker/login-action@v1
+    #   with:
+    #     registry: ghcr.io
+    #     username: ${{ github.repository_owner }}
+    #     password: ${{ secrets.CR_PAT }}
+    # - name: 'Docker: build'
+    #   run: |
+    #     docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
+    # - name: 'Docker: push'
+    #   run: |
+    #     docker push ghcr.io/husky-dev/husky-blog/web:latest
+    # - name: 'SSH: deploy'
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.SSH_HOST }}
+    #     username: ${{ secrets.SSH_USER }}
+    #     key: ${{ secrets.SSH_KEY }}
+    #     script: |
+    #       set -ex
+    #       cd /var/platform
+    #       docker-compose pull
+    #       docker-compose up -d
+    #       docker image prune -f
+    # - name: 'Notify: deployded'
+    #   run: |
+    #     curl -X POST -H 'Content-type: application/json' \
+    #     -H "Authorization: Bearer ${{ secrets.NOTIFIER_ACCESS_TOKEN }}" \
+    #     --data '{"message":"⬆️ *Husky-blog*: deployed"}' \
+    #     https://notifier.husky-dev.me/notify
