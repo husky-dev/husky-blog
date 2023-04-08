@@ -82,6 +82,8 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     title = removeMarkdown(frontmatterTitleMatch[1]);
     content = content.replace(frontmatterTitleMatch[0], "");
   }
+  // Title slug
+  const titleSlug = textToSlug(title ? title : fileTitle);
   // Date
   let date: Date | undefined;
   const dateMatch = /> Date: (.+?)\n/g.exec(content);
@@ -121,6 +123,13 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     lang = langMatch[1];
     content = content.replace(langMatch[0], "");
   }
+  // Slug
+  let slug: string | undefined;
+  const slugMatch = /> Slug: (.+?)\n/g.exec(content);
+  if (slugMatch) {
+    slug = slugMatch[1];
+    content = content.replace(slugMatch[0], "");
+  }
   // Clear
   content = clearContent(content);
   // Format content
@@ -132,12 +141,10 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     cover = coverMatch.data;
     content = coverMatch.content;
   }
-  // Slug
-  const slug = textToSlug(title ? title : fileTitle);
   // Final clear
   content = clearContent(content);
   return {
-    slug,
+    slug: slug ? slug : titleSlug,
     title,
     content,
     date,
