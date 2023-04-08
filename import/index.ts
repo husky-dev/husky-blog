@@ -1,34 +1,41 @@
 import {
   copyFileSync,
-  createWriteStream,
+  existsSync,
   readFileSync,
   unlinkSync,
   writeFileSync,
 } from "fs";
-import https from "https";
 import path from "path";
-import gm from "gm";
-
-const GraphicsMagick = gm.subClass({
-  imageMagick: true,
-});
 
 import {
+  AssetEntry,
+  assetTitleToFileTitle,
   clearContent,
   clearFileName,
-  isFileExists,
+  convertImage,
+  convertVideo,
+  downloadFileToFolder,
+  getFileHash,
+  getFrontMatter,
+  getImageEntries,
+  getPdfEntries,
+  getVideoEntries,
   listFilesInFolder,
   log,
   md5,
+  MdFileData,
+  MdFileDataCover,
   mkdirp,
+  modImageCaptions,
+  modYoutubeEmbeds as modYoutubeEntries,
   removeMarkdown,
   textToSlug,
 } from "./utils";
-import { IncomingHttpHeaders } from "http";
 
 const srcPath = path.join(__dirname, "content");
 const distPath = path.join(__dirname, "../content");
 const cachePath = path.join(__dirname, ".cache");
+mkdirp(cachePath);
 
 // =====================
 // Main
@@ -57,25 +64,10 @@ const run = async () => {
 // Import
 // =====================
 
-interface MdFileData {
-  date?: Date;
-  title?: string;
-  lang?: string;
-  cover?: MdFileDataCover;
-  series?: string[];
-  categories?: string[];
-  tags?: string[];
-  content: string;
-}
-
-interface MdFileDataCover {
-  image: string;
-  caption?: string;
-}
-
 const readMdFielData = (filePath: string): MdFileData | undefined => {
   let content = readFileSync(filePath, "utf8");
   if (!content) return undefined;
+  const fileTitle = path.parse(filePath).name;
   // Title
   let title: string | undefined;
   // H1 title
@@ -129,18 +121,10 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     lang = langMatch[1];
     content = content.replace(langMatch[0], "");
   }
-  // Suffix
-  let suffix: string | undefined;
-  const suffixMatch = /> Suffix: (.+?)\n/g.exec(content);
-  if (suffixMatch) {
-    suffix = suffixMatch[1];
-    content = content.replace(suffixMatch[0], "");
-  }
   // Clear
   content = clearContent(content);
   // Format content
-  content = changeImageCaptions(content);
-  content = changeYoutubeEmbeds(content);
+  content = modImageCaptions(content);
   // Cover
   let cover: MdFileDataCover | undefined;
   const coverMatch = contentToCover(content);
@@ -148,9 +132,12 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     cover = coverMatch.data;
     content = coverMatch.content;
   }
+  // Slug
+  const slug = textToSlug(title ? title : fileTitle);
   // Final clear
   content = clearContent(content);
   return {
+    slug,
     title,
     content,
     date,
@@ -162,6 +149,11 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
   };
 };
 
+/**
+ * Extract first image from content and return it as cover
+ * @param content - Markdown content
+ * @returns - Cover data and content without cover
+ */
 const contentToCover = (
   content: string
 ): { data: MdFileDataCover; content: string } | undefined => {
@@ -179,123 +171,37 @@ const contentToCover = (
   return { data: { image, caption }, content: newContent };
 };
 
-const changeImageCaptions = (content: string): string => {
-  let mod = content;
-  const imgWithCaptionReg =
-    /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)\n\n\*\*(.+?)\*\*/g;
-  const matches = mod.matchAll(imgWithCaptionReg);
-  for (const match of matches) {
-    const image = match[1];
-    const caption = match[3].replace(/"/gm, '\\"');
-    const newImg = `![${caption}](${image} "${caption}")`;
-    mod = mod.replace(match[0], newImg);
-  }
-  return mod;
-};
-
-const changeYoutubeEmbeds = (content: string): string => {
-  const reg =
-    /\n\[(.*?)\]\((?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})\)\n/g;
-  const matches = content.matchAll(reg);
-  let mod = content;
-  for (const match of matches) {
-    const title = match[1];
-    const id = match[2];
-    const newEmbed = `\n{{< youtube id="${id}" title="${title}" >}}\n`;
-    mod = mod.replace(match[0], newEmbed);
-  }
-  return mod;
-};
-
 // =====================
 // Export
 // =====================
 
 const createPostWithMdData = async (data: MdFileData): Promise<string> => {
-  const folderPath = getPostFolderPath(data);
-  const filePath = path.join(folderPath, "index.md");
+  const postFolderPath = path.join(distPath, "posts", data.slug);
+  const filePath = path.join(postFolderPath, "index.md");
   // Create folder
-  mkdirp(folderPath);
+  mkdirp(postFolderPath);
+  mkdirp(path.join(postFolderPath, "assets"));
   // Dowload cover
   if (data.cover) {
-    const assetsFolder = path.join(folderPath, "assets");
-    const { fileName } = await downloadAssetToFolder(
+    const assetsFolder = path.join(postFolderPath, "assets");
+    const { fileName } = await downloadAsset(
       data.cover.image,
       data.cover.caption || "",
       assetsFolder
     );
     data.cover.image = `assets/${fileName}`;
   }
-  // Create content
-  const frontMatter = mdDataToPostFrontMatter(data);
+  // Create front metter
+  const frontMatter = getFrontMatter(data);
   let mod = frontMatter + "\n\n" + data.content;
   // Download assets
-  mod = await downloadPostAssets(mod, folderPath);
+  mod = await downloadPostAssets(mod, postFolderPath);
+  // Post process content after assets download
+  mod = modYoutubeEntries(mod);
+  mod = await modVideoEntries(mod, postFolderPath);
   // Write file
   writeFileSync(filePath, mod);
   return filePath;
-};
-
-const getPostFolderPath = (data: MdFileData): string => {
-  const parts: string[] = [distPath, "blog"];
-  if (data.title) parts.push(textToSlug(data.title));
-  return path.join(...parts);
-};
-
-/**
- * Returns front matter data as string
- *
- * @example
- * ---
- * title: "День первый | 🇹🇿 Поход на вершину Килиманджаро"
- * date: 2021-07-15T13:21:00+03:00
- * draft: false
- * # cover:
- * #     image: "images/weight-loss-results.jpg"
- * #     alt: "Зкидання ваги"
- * #     caption: "Трохи пропотів"
- * categories:
- *   - Travel
- *   - Kilimanjaro
- * ---
- */
-const mdDataToPostFrontMatter = (data: MdFileData): string => {
-  const lines: string[] = ["---"];
-  if (data.title) {
-    lines.push(`title: "${data.title}"`);
-  }
-  if (data.date) {
-    lines.push(`date: ${data.date.toISOString()}`);
-  }
-  lines.push(`lang: "${!!data.lang ? data.lang?.toLowerCase() : "ua"}"`);
-  if (data.categories) {
-    lines.push(`categories:`);
-    for (const category of data.categories) {
-      lines.push(`  - ${category.toLocaleLowerCase()}`);
-    }
-  }
-  if (data.tags) {
-    lines.push(`tags:`);
-    for (const tag of data.tags) {
-      lines.push(`  - ${tag.toLocaleLowerCase()}`);
-    }
-  }
-  if (data.series) {
-    lines.push(`series:`);
-    for (const itm of data.series) {
-      lines.push(`  - "${itm}"`);
-    }
-  }
-  if (data.cover) {
-    lines.push("cover:");
-    lines.push(`  image: "${data.cover.image}"`);
-    if (data.cover.caption) {
-      lines.push(`  caption: "${data.cover.caption}"`);
-    }
-  }
-  lines.push("draft: false");
-  lines.push("---");
-  return lines.join("\n");
 };
 
 // Download asssets with folder
@@ -305,155 +211,154 @@ const downloadPostAssets = async (
 ): Promise<string> => {
   let mod = content;
   const assetsFolder = path.join(folderPath, "assets");
-  // Download images
-  const imgReg = /!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g;
-  const imgMatches = content.matchAll(imgReg);
-  if (imgMatches) {
-    for (const match of imgMatches) {
-      const alt = match[1];
-      const url = match[2];
-      const caption = match[3];
-      const title = caption || alt;
-      const { fileName } = await downloadAssetToFolder(
-        url,
-        title,
-        assetsFolder
-      );
-      mod = mod.replace(url, `assets/${fileName}`);
-    }
-  }
-  // Download PDFs
-  const pdfReg = /\[([^\]]*)\]\((.*?.pdf)\s*("(?:.*[^"])")?\s*\)/g;
-  const pdfMatches = content.matchAll(pdfReg);
-  if (pdfMatches) {
-    for (const match of pdfMatches) {
-      const alt = match[1];
-      const url = match[2];
-      const caption = match[3];
-      const title = caption || alt;
-      const { fileName } = await downloadAssetToFolder(
-        url,
-        title,
-        assetsFolder
-      );
-      mod = mod.replace(url, `assets/${fileName}`);
-    }
+  mkdirp(assetsFolder);
+  const assetEntries: AssetEntry[] = [
+    ...getImageEntries(mod),
+    ...getPdfEntries(mod),
+    ...getVideoEntries(mod),
+  ];
+  for (const entry of assetEntries) {
+    const { fileName } = await downloadAsset(
+      entry.url,
+      entry.caption,
+      assetsFolder
+    );
+    mod = mod.replace(entry.url, `assets/${fileName}`);
   }
   return mod;
 };
 
 // Download file to folder
 
-const downloadAssetToFolder = async (
+const downloadAsset = async (
   url: string,
   title: string | undefined,
   assetsFolder: string
-): Promise<{ fileName: string }> =>
-  new Promise((resolve, reject) => {
-    const urlFileName = clearFileName(path.basename(url)); // payaty-prosto.jpeg
-    const urlExt = path.extname(urlFileName).replace(".", ""); // jpg or ''
-    // Use passed title if it is possible
-    const fileTitle = title
-      ? assetTitleToFileTitle(title, urlExt)
-      : path.parse(urlFileName).name; // payaty-prosto
-    // Chek if file exists
-    mkdirp(assetsFolder);
-    const exAssetsFolderFiles = listFilesInFolder(assetsFolder);
-    const exAssetsFilePath = exAssetsFolderFiles.find((name) =>
-      name.includes(fileTitle)
-    );
-    if (exAssetsFilePath) {
-      const fileName = path.basename(exAssetsFilePath);
-      log.debug("File exists already: ", fileName);
-      return resolve({ fileName });
-    }
-    // Check if file exists in cache
-    mkdirp(cachePath);
-    const cacheFileName = md5(url);
-    const exCacheFiles = listFilesInFolder(cachePath);
-    const exCacheFilePath = exCacheFiles.find((name) =>
-      name.includes(cacheFileName)
-    );
-    if (exCacheFilePath) {
-      // Gettitn file extension which was was found at the cache
-      const exChacheFileExt = path.extname(exCacheFilePath).replace(".", "");
-      // And use it for the new file
-      // Or use the extension from the url as a fallback
-      const fileExt = exChacheFileExt || urlExt;
-      const fileName = `${fileTitle}.${fileExt}`;
-      const filePath = path.join(assetsFolder, fileName);
-      log.debug("File found at the cache: ", fileName);
-      copyFileSync(exCacheFilePath, filePath);
-      return resolve({ fileName });
-    }
-    // Download file
-    log.info("Downloading asset: ", url);
-    https
-      .get(url, (response) => {
-        const { headers } = response;
+): Promise<{ fileName: string }> => {
+  const urlFileName = clearFileName(path.basename(url)); // payaty-prosto.jpeg
+  const urlExt = path.extname(urlFileName).replace(".", ""); // jpg or ''
+  // Use passed title if it is possible
+  const fileTitle = !!title
+    ? assetTitleToFileTitle(title, urlExt)
+    : path.parse(urlFileName).name; // payaty-prosto
+  // Chek if file exists
+  const exAssetsFolderFiles = listFilesInFolder(assetsFolder);
+  const exAssetsFilePath = exAssetsFolderFiles.find((name) =>
+    name.includes(fileTitle)
+  );
+  if (exAssetsFilePath) {
+    const fileName = path.basename(exAssetsFilePath);
+    log.debug("File exists already: ", fileName);
+    return { fileName };
+  }
+  // Check if file exists in cache
+  const cacheFileTitle = md5(url);
+  const exCacheFiles = listFilesInFolder(cachePath);
+  const exCacheFilePath = exCacheFiles.find((name) =>
+    name.includes(cacheFileTitle)
+  );
+  if (exCacheFilePath) {
+    // Gettitn file extension which was was found at the cache
+    const exChacheFileExt = path.extname(exCacheFilePath).replace(".", "");
+    // And use it for the new file
+    const fileName = exChacheFileExt
+      ? `${fileTitle}.${exChacheFileExt}`
+      : fileTitle;
+    const filePath = path.join(assetsFolder, fileName);
+    log.debug("File found at the cache: ", fileName);
+    copyFileSync(exCacheFilePath, filePath);
+    return { fileName };
+  }
+  // Download file
+  log.info("Downloading asset: ", url);
+  const downloadRes = await downloadFileToFolder(
+    url,
+    cacheFileTitle,
+    cachePath
+  );
+  let newCacheFileExt = downloadRes.fileExt;
+  let newCacheFilePath = downloadRes.filePath;
 
-        let newCacheFileExt = headersToFileExt(headers) || "tmp";
-        const newCacheFileName = `${cacheFileName}.${newCacheFileExt}`;
-        let newCacheFilePath = path.join(cachePath, newCacheFileName);
+  // Convert tiff to jpg
+  if (newCacheFileExt === "tiff") {
+    const cacheFileConvPath = path.join(cachePath, `${cacheFileTitle}.jpg`);
+    await convertImage(newCacheFilePath, cacheFileConvPath);
+    unlinkSync(newCacheFilePath);
+    newCacheFileExt = "jpg";
+    newCacheFilePath = cacheFileConvPath;
+  }
 
-        const file = createWriteStream(newCacheFilePath);
-        response.pipe(file);
-
-        file.on("finish", () => {
-          file.close();
-          const processDownload = async () => {
-            // Convert tiff to jpg
-            if (newCacheFileExt === "tiff") {
-              const newCacheFileJpgName = `${cacheFileName}.jpg`;
-              const newCacheFileJpgPath = path.join(
-                cachePath,
-                newCacheFileJpgName
-              );
-              await convertImage(newCacheFilePath, newCacheFileJpgPath);
-              unlinkSync(newCacheFilePath);
-              newCacheFileExt = "jpg";
-              newCacheFilePath = newCacheFileJpgPath;
-            }
-            const fileName = `${fileTitle}.${newCacheFileExt}`;
-            const filePath = path.join(assetsFolder, fileName);
-            copyFileSync(newCacheFilePath, filePath);
-            resolve({ fileName });
-          };
-          processDownload().catch((err) => reject(err));
-        });
-      })
-      .on("error", (err) => {
-        reject(err);
-      });
-  });
-
-const assetTitleToFileTitle = (title: string, ext?: string): string => {
-  let mod = textToSlug(title);
-  // Remove extension from title
-  if (ext) mod = mod.replace(new RegExp(`${ext}$`), "");
-  // Clear file name
-  mod = clearFileName(mod);
-  return `${mod}`;
+  const fileName = `${fileTitle}.${newCacheFileExt}`;
+  const filePath = path.join(assetsFolder, fileName);
+  copyFileSync(newCacheFilePath, filePath);
+  return { fileName };
 };
 
-const headersToFileExt = (headers: IncomingHttpHeaders): string | undefined => {
-  const contentType = headers["content-type"];
-  console.log(contentType);
-  if (!contentType) return;
-  const ext = contentType.split("/").pop();
-  if (ext === "jpeg") return "jpg";
-  return ext;
+// =====================
+// Run
+// =====================
+
+const modVideoEntries = async (
+  content: string,
+  postFolderPath: string
+): Promise<string> => {
+  let mod = content;
+  const entries = getVideoEntries(content);
+  for (const entry of entries) {
+    const { formats, caption, url } = entry;
+    const assetPath = path.join(postFolderPath, url);
+    const props: string[] = [];
+    if (formats.mov) {
+      props.push(`mov="${formats.mov}"`);
+    } else {
+      const movFilePath = await convertVideoAsset(assetPath, "mov");
+      const mov = path.relative(postFolderPath, movFilePath);
+      props.push(`mov="${mov}"`);
+    }
+    if (formats.mp4) {
+      props.push(`mp4="${formats.mp4}"`);
+    } else {
+      const mp4FilePath = await convertVideoAsset(assetPath, "mp4");
+      const mp4 = path.relative(postFolderPath, mp4FilePath);
+      props.push(`mp4="${mp4}"`);
+    }
+    if (caption) props.push(`caption="${caption}"`);
+    const video = `{{< video ${props.join(" ")} >}}`;
+    mod = mod.replace(entry.raw, video);
+  }
+  return mod;
 };
 
-const convertImage = async (
-  inputFile: string,
-  outputFile: string
-): Promise<void> =>
-  new Promise((resolve, reject) => {
-    GraphicsMagick(inputFile).write(outputFile, (err) =>
-      err ? reject(err) : resolve()
+const convertVideoAsset = async (
+  inputFilePath: string,
+  format: string
+): Promise<string> => {
+  const inputFileExt = path.extname(inputFilePath).replace(".", "");
+  const inputFileName = path.basename(inputFilePath, `.${inputFileExt}`);
+  const inputFileFolderPath = path.dirname(inputFilePath);
+  const inputFileHash = getFileHash(inputFilePath);
+  const outputFilePath = path.join(
+    inputFileFolderPath,
+    `${inputFileName}.${format}`
+  );
+  if (existsSync(outputFilePath)) {
+    log.debug("Converted video asset founded: ", inputFilePath, format);
+    return outputFilePath;
+  }
+  const cacheFilePath = path.join(cachePath, `${inputFileHash}.${format}`);
+  if (!existsSync(cacheFilePath)) {
+    log.debug("Convertiong video asset: ", inputFilePath, format);
+    await convertVideo(inputFilePath, cacheFilePath);
+  } else {
+    log.debug(
+      "Converted video asset founded at cache: ",
+      inputFilePath,
+      format
     );
-  });
+  }
+  copyFileSync(cacheFilePath, outputFilePath);
+  return outputFilePath;
+};
 
 // =====================
 // Run

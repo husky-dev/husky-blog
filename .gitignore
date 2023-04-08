@@ -19,4 +19,5 @@ node_modules
 
 # Generated files
 content/blog
+content/posts
 import/.cache

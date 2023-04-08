@@ -1,5 +1,13 @@
-import { accessSync, mkdirSync, readdirSync, statSync } from "fs";
+import {
+  ReadStream,
+  accessSync,
+  createReadStream,
+  mkdirSync,
+  readdirSync,
+  statSync,
+} from "fs";
 import path from "path";
+import crypto from "crypto";
 
 export const mkdirp = (folderPath: string) =>
   mkdirSync(folderPath, { recursive: true });
@@ -57,3 +65,19 @@ export const clearFileName = (fileName: string): string => {
   mod = mod.replace(/^-|-$/g, "");
   return mod;
 };
+
+export const getFileHash = async (filePath: string): Promise<string> =>
+  new Promise((resolve, reject) => {
+    const stream = createReadStream(filePath);
+    const hash = crypto.createHash("sha256");
+    // Listen to the 'data' event to read the file
+    stream.on("data", (data) => {
+      hash.update(data);
+    });
+    // Listen to the 'end' event to get the hash value
+    stream.on("end", () => {
+      const fileHash = hash.digest("hex");
+      resolve(fileHash);
+    });
+    stream.on("error", (err) => reject(err));
+  });
