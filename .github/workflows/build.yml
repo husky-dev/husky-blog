@@ -37,7 +37,7 @@ jobs:
         hugo-version: '0.111.3'
     - name: 'Import posts and assets'
       run: |
-        cd craft
+        cd import
         yarn
         yarn start
     - name: Build
