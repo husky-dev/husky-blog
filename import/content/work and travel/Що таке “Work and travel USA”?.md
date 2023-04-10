@@ -8,7 +8,7 @@
 
 > Language: UA
 
-![Image.tiff](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/18C9E5F3-0F5B-4AD2-9C4C-C49B37537269/C63851E7-E3A7-4B5A-9C34-794F6D204F4A_2/fvC2kBuSfKIEgnTW3yfJ7ig622pI7BFykdMCDzyJm1gz/Image.tiff)
+![000.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/74BEA53E-4CE8-41E6-B97E-C1E3CF7462B5/14E72017-2FAD-4DF5-9C63-866F7A17B54E_2/xEZ9VycAEym0uxMlZgDxFihnQmv2CKNsVAwwYsjCtksz/000.jpeg)
 
 **Що таке “Work and travel USA”?**
 
@@ -22,7 +22,7 @@
 
 “Work and Travel” - це найкраща можливість для студентів удосконалити знання англійської мови, побачити Америку на власні очі та добре заробити.
 
-![Image.tiff](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/18C9E5F3-0F5B-4AD2-9C4C-C49B37537269/C53BC26E-D555-464F-8E3A-141E68BE4C86_2/ovX2by8zalO1ZskFct0MjVFjWx4cflIw5Ngy39W9RDAz/Image.tiff)
+![001.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/74BEA53E-4CE8-41E6-B97E-C1E3CF7462B5/CA9F415E-C6E8-4F2B-8183-66479499F59C_2/BaxR8CxOXlAHLpgJqAf9AoFg9ajGY8ZAswM9UH9lUxEz/001.jpeg)
 
 **З “Work and Travel” можна поєднувати роботу і подорожі**
 
@@ -30,7 +30,7 @@
 
 Програма допомагає покращити мову. В оточенні американців і постійному спілкуванні з носіями мови вона вчиться набагато швидше і легше. Зазвичай, протягом кількох тижнів спілкування з американцями, людина починає розуміти більшу частину мови.
 
-![Image.tiff](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/18C9E5F3-0F5B-4AD2-9C4C-C49B37537269/56BF0696-EEF6-4A7F-A3D0-45AE5A28B404_2/xo7tuomXHasmHty1ErvgqYrFx05SxhSiPK765XOXW1Qz/Image.tiff)
+![002.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/74BEA53E-4CE8-41E6-B97E-C1E3CF7462B5/F5ED2025-9089-462A-8C56-0004FC4A68E4_2/Gx4OTuI6kQ6y4E6m1vEydO6Y1aemTazJ3UVDTDSDUsgz/002.jpeg)
 
 **“Work and Travel” - найкращий спосіб вивчити англійську**
 
@@ -38,7 +38,7 @@
 
 Програма “Work and Travel” також передбачає можливість самостійного підбору роботи. У такому випадку ви можете визначити сферу діяльності, в якій хотіли б працювати і самі домовитися з роботодавцем про всі умови перебування, оплати та вимоги до кандидата. Якщо Ви самі підбираєте собі місце роботи, то вартість послуг компанії-реєстратора стають значно нижчими.
 
-![Image.tiff](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/18C9E5F3-0F5B-4AD2-9C4C-C49B37537269/789FDE44-964E-444F-B12E-F7CD0E265607_2/bXgBfAZ9qLkAvZbVdRHX0LLxjdoUidhbXHySnua64Fkz/Image.tiff)
+![003.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/74BEA53E-4CE8-41E6-B97E-C1E3CF7462B5/C0D0EF06-008C-4A9D-BA1E-CF8F30ECD821_2/tbme3bZ0iqZYMLT8VGe4an3NUvJck8WuiCzu4b4gbz4z/003.jpeg)
 
 **А ще можна подорожувати і побачити країну**
 
