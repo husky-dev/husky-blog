@@ -2,6 +2,8 @@
 
 > Date: 1 Sept 2011, 09:33
 
+> Slug: scho-take-work-and-travel-usa
+
 > Category: travel
 
 > Series: work-and-travel
