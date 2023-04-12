@@ -10,7 +10,7 @@
   {{ $medium := .Resize "768x" }}
   {{ $big := .Resize "1024x" }}
   <figure class="pswp-gallery">
-    <a href="{{ $img.RelPermalink }}" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}" data-pswp-srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $big.RelPermalink }} 1024w" target="_blank">
+    <a href="{{ $img.RelPermalink }}" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}" target="_blank">
       <img
         src="{{ $img.RelPermalink }}"
         srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $big.RelPermalink }} 1024w"
