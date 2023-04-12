@@ -133,3 +133,17 @@
     });
 </script>
 {{- end }}
+
+{{- /* PhotoSwipe */}}
+{{- $photoswipeLightbox_js := slice (resources.Get "photoswipe/photoswipe-lightbox.esm.js") | resources.Concat "assets/js/photoswipe-lightbox.esm.js" }}
+{{- $photoswipe_js := slice (resources.Get "photoswipe/photoswipe.esm.js") | resources.Concat "assets/js/photoswipe.esm.js" }}
+<script type="module">
+import PhotoSwipeLightbox from '{{ $photoswipeLightbox_js.RelPermalink }}';
+const lightbox = new PhotoSwipeLightbox({
+    gallery: '.pswp-gallery',
+    children: 'a',
+    pswpModule: () => import('{{ $photoswipe_js.RelPermalink }}')
+});
+lightbox.init();
+console.log(lightbox);
+</script>

@@ -247,6 +247,10 @@
     text-align: center;
 }
 
+/* .post-content figure img {
+    max-height: 80vh;
+} */
+
 .post-content figure > figcaption {
     color: var(--secondary);
     font-size: 14px;

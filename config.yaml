@@ -33,6 +33,8 @@ menu:
 
 params:
   defaultTheme: auto
+  assets:
+    disableFingerprinting: true
   DateFormat: "2 January, 2006"
   ShowPostNavLinks: true
   homeInfoParams:

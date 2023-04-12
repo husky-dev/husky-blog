@@ -9,10 +9,9 @@
   {{ $small := .Resize "480x" }}
   {{ $medium := .Resize "768x" }}
   {{ $big := .Resize "1024x" }}
-  <figure>
-    <a href="{{ $img.RelPermalink }}">
+  <figure class="pswp-gallery">
+    <a href="{{ $img.RelPermalink }}" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}" data-pswp-srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $big.RelPermalink }} 1024w" target="_blank">
       <img
-        sizes="100vw"
         src="{{ $img.RelPermalink }}"
         srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $big.RelPermalink }} 1024w"
         alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
