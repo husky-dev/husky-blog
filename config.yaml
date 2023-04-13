@@ -1,7 +1,7 @@
 baseURL: "https://blog.husky-dev.me"
 languageCode: "uk"
 defaultContentLanguage: "uk"
-title: "👨‍💻 Husky Dev Blog"
+title: "👨‍💻 Husky Blog"
 theme: "PaperMod"
 timeout: "5m"
 
@@ -37,6 +37,8 @@ params:
     disableFingerprinting: true
   DateFormat: "2 January, 2006"
   ShowPostNavLinks: true
+  cover:
+    linkFullImages: true
   homeInfoParams:
     Title: "Привіт 🤚"
     Content: "Мене звати Ярослав. Я програміст, люблю спорт і подорожі. А це мій персональний блог"
