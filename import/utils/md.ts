@@ -111,16 +111,19 @@ export interface AssetEntry {
  * Images
  */
 
-export const modImageCaptions = (content: string): string => {
+export const modMediaCaptions = (content: string): string => {
   let mod = content;
-  const imgWithCaptionReg =
-    /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)\n\n\*\*(.+?)\*\*/g;
-  const matches = mod.matchAll(imgWithCaptionReg);
+  const mediaWithCaptionReg =
+    /(!*)\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)\n+\*\*(.+?)\*\*/g;
+  const matches = mod.matchAll(mediaWithCaptionReg);
   for (const match of matches) {
-    const image = match[1];
-    const caption = match[3].replace(/"/gm, '\\"');
-    const newImg = `![${caption}](${image} "${caption}")`;
-    mod = mod.replace(match[0], newImg);
+    const isImg = match[0].startsWith("!"); // image or video
+    const src = match[2];
+    const caption = match[4].replace(/"/g, "");
+    const newCode = isImg
+      ? `![${caption}](${src} "${caption}")`
+      : `[${caption}](${src} "${caption}")`;
+    mod = mod.replace(match[0], newCode);
   }
   return mod;
 };

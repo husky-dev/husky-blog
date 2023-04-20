@@ -26,7 +26,7 @@ import {
   MdFileData,
   MdFileDataCover,
   mkdirp,
-  modImageCaptions,
+  modMediaCaptions,
   modYoutubeEmbeds as modYoutubeEntries,
   removeMarkdown,
   textToSlug,
@@ -133,7 +133,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
   // Clear
   content = clearContent(content);
   // Format content
-  content = modImageCaptions(content);
+  content = modMediaCaptions(content);
   // Cover
   let cover: MdFileDataCover | undefined;
   const coverMatch = contentToCover(content);

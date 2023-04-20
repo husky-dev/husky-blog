@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 import {
   VideoEntry,
   getVideoEntries,
-  modImageCaptions,
+  modMediaCaptions,
   modYoutubeEmbeds,
 } from "./md";
 
@@ -46,11 +46,11 @@ const imgCaptionExpected01 = `
 
 describe("modImageCaptions()", () => {
   test("it should replace a captioned image with a captioned image", () => {
-    expect(modImageCaptions(imgCaptionContent01)).toBe(imgCaptionExpected01);
+    expect(modMediaCaptions(imgCaptionContent01)).toBe(imgCaptionExpected01);
   });
 
   test("it should not replace a captioned image with a captioned image", () => {
-    expect(modImageCaptions("# Hello World")).toBe("# Hello World");
+    expect(modMediaCaptions("# Hello World")).toBe("# Hello World");
   });
 });
 
@@ -59,8 +59,11 @@ const videoContent01 = `[IMG_1549.mov](https://res.craft.do/IMG_1549.mov)`;
 const videoExpected01: VideoEntry[] = [
   {
     raw: "[IMG_1549.mov](https://res.craft.do/IMG_1549.mov)",
+    url: "https://res.craft.do/IMG_1549.mov",
     caption: "IMG_1549.mov",
-    movSrc: "https://res.craft.do/IMG_1549.mov",
+    formats: {
+      mov: "https://res.craft.do/IMG_1549.mov",
+    },
   },
 ];
 
@@ -69,8 +72,11 @@ const videoContent02 = `[IMG_1549.mov](https://res.craft.do/IMG_1549.mov "Hello 
 const videoExpected02: VideoEntry[] = [
   {
     raw: `[IMG_1549.mov](https://res.craft.do/IMG_1549.mov "Hello world")`,
+    url: "https://res.craft.do/IMG_1549.mov",
     caption: "Hello world",
-    movSrc: "https://res.craft.do/IMG_1549.mov",
+    formats: {
+      mov: "https://res.craft.do/IMG_1549.mov",
+    },
   },
 ];
 
@@ -79,8 +85,11 @@ const videoContent03 = `[IMG_1549.mp4](https://res.craft.do/IMG_1549.mp4)`;
 const videoExpected03: VideoEntry[] = [
   {
     raw: "[IMG_1549.mp4](https://res.craft.do/IMG_1549.mp4)",
+    url: "https://res.craft.do/IMG_1549.mp4",
     caption: "IMG_1549.mp4",
-    mp4Src: "https://res.craft.do/IMG_1549.mp4",
+    formats: {
+      mp4: "https://res.craft.do/IMG_1549.mp4",
+    },
   },
 ];
 
