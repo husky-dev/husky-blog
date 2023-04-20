@@ -1,4 +1,4 @@
-import ffmpeg from "fluent-ffmpeg";
+import { exec } from "child_process";
 import { createWriteStream } from "fs";
 import gm from "gm";
 import { IncomingHttpHeaders } from "http";
@@ -50,20 +50,22 @@ const headersToFileExt = (headers: IncomingHttpHeaders): string | undefined => {
  * Video
  */
 
+// You can stream copy if the MOV file contains video and audio that is compatible with MP4:
+// ffmpeg -i input.mov -c copy -movflags +faststart  output.mp4
+// This will convert the MOV to H.264 video and AAC audio:
+// ffmpeg -i input.mov -c:v libx264 -c:a aac -vf format=yuv420p -movflags +faststart output.mp4
 export const convertVideo = async (
   inputFile: string,
   outputFile: string
 ): Promise<void> =>
   new Promise((resolve, reject) => {
-    ffmpeg(inputFile)
-      .output(outputFile)
-      .on("end", () => {
-        resolve();
-      })
-      .on("error", (err) => {
-        reject(err);
-      })
-      .run();
+    exec(
+      `ffmpeg -i "${inputFile}" -c copy -movflags +faststart  "${outputFile}"`,
+      (err, stdout, stderr) => {
+        if (err) return reject(stderr);
+        return resolve();
+      }
+    );
   });
 
 /**

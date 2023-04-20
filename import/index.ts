@@ -343,7 +343,7 @@ const convertVideoAsset = async (
   const inputFileExt = path.extname(inputFilePath).replace(".", "");
   const inputFileName = path.basename(inputFilePath, `.${inputFileExt}`);
   const inputFileFolderPath = path.dirname(inputFilePath);
-  const inputFileHash = getFileHash(inputFilePath);
+  const inputFileHash = await getFileHash(inputFilePath);
   const outputFilePath = path.join(
     inputFileFolderPath,
     `${inputFileName}.${format}`
@@ -354,7 +354,7 @@ const convertVideoAsset = async (
   }
   const cacheFilePath = path.join(cachePath, `${inputFileHash}.${format}`);
   if (!existsSync(cacheFilePath)) {
-    log.debug("Convertiong video asset: ", inputFilePath, format);
+    log.debug("Converting video asset: ", inputFilePath, format);
     await convertVideo(inputFilePath, cacheFilePath);
   } else {
     log.debug(
