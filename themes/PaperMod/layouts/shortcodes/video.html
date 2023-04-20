@@ -1,9 +1,11 @@
-<div class="video-wrap">
-  <video controls>
-    {{ with .Get "mp4" }}<source src="{{ . }}" type="video/mp4">{{ end }}
-    {{ with .Get "webm" }}<source src="{{ . }}" type="video/webm">{{ end }}
-    {{ with .Get "ogg" }}<source src="{{ . }}" type="video/ogg">{{ end }}
-    {{ with .Get "mov" }}<source src="{{ . }}" type="video/quicktime">{{ end }}
-    {{ with .Get "caption" }}<p>{{ . }}</p>{{ end }}
-  </video>  
-</div>
+<figure>
+  <div class="video-wrap">
+    <video controls>
+      {{ with .Get "mp4" }}<source src="{{ . }}" type="video/mp4">{{ end }}
+      {{ with .Get "webm" }}<source src="{{ . }}" type="video/webm">{{ end }}
+      {{ with .Get "ogg" }}<source src="{{ . }}" type="video/ogg">{{ end }}
+      {{ with .Get "mov" }}<source src="{{ . }}" type="video/quicktime">{{ end }}
+    </video> 
+  </div> 
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

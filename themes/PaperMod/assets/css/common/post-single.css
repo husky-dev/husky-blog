@@ -262,6 +262,10 @@
     text-align: center;
 }
 
+.post-content figure > .video-wrap + figcaption {
+    margin-top: 0.5rem;
+}
+
 .post-content figure > figcaption > p {
     color: var(--secondary);
     font-size: 14px;
