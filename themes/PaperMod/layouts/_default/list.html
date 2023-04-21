@@ -42,7 +42,7 @@
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- end }}
 
-{{- if .Data.Term }}
+{{- if and (eq .Kind "term") (eq .Type "series") }}
 {{- $pages = .Pages.Reverse }}
 {{- end }}
 
