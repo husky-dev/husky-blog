@@ -73,7 +73,7 @@
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h2>
   </header>
-  {{- if .Params.Series | and (not $term) }}
+  {{- if .Params.Series }}
     <div class="entry-series series">
       {{- partial "series.html" . -}}
     </div>
