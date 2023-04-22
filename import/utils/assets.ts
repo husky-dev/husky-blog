@@ -3,7 +3,7 @@ import { createWriteStream } from "fs";
 import gm from "gm";
 import { IncomingHttpHeaders } from "http";
 import https from "https";
-import path from "path";
+import path, { resolve } from "path";
 
 import { clearFileName } from "./fs";
 import { textToSlug } from "./str";
@@ -61,6 +61,20 @@ export const convertVideo = async (
   new Promise((resolve, reject) => {
     exec(
       `ffmpeg -i "${inputFile}" -c copy -movflags +faststart  "${outputFile}"`,
+      (err, stdout, stderr) => {
+        if (err) return reject(stderr);
+        return resolve();
+      }
+    );
+  });
+
+export const createVideoScreenshot = async (
+  inputFile: string,
+  outputFile: string
+): Promise<void> =>
+  new Promise((resolve, reject) => {
+    exec(
+      `ffmpeg -i "${inputFile}" -ss 00:00:01 -vframes 1 "${outputFile}"`,
       (err, stdout, stderr) => {
         if (err) return reject(stderr);
         return resolve();

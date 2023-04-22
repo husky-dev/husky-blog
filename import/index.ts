@@ -14,6 +14,7 @@ import {
   clearFileName,
   convertImage,
   convertVideo,
+  createVideoScreenshot,
   downloadFileToFolder,
   getFileHash,
   getFrontMatter,
@@ -35,7 +36,9 @@ import {
 const srcPath = path.join(__dirname, "content");
 const distPath = path.join(__dirname, "../content");
 const cachePath = path.join(__dirname, ".cache");
+const cachePostersPath = path.join(cachePath, "posters");
 mkdirp(cachePath);
+mkdirp(cachePostersPath);
 
 // =====================
 // Main
@@ -329,6 +332,10 @@ const modVideoEntries = async (
       const mp4 = path.relative(postFolderPath, mp4FilePath);
       props.push(`mp4="${mp4}"`);
     }
+    // Poster
+    const posterFilePath = await getVideoPoster(assetPath);
+    props.push(`poster="${path.relative(postFolderPath, posterFilePath)}"`);
+    // Caption
     if (caption) props.push(`caption="${caption}"`);
     const video = `{{< video ${props.join(" ")} >}}`;
     mod = mod.replace(entry.raw, video);
@@ -362,6 +369,27 @@ const convertVideoAsset = async (
       inputFilePath,
       format
     );
+  }
+  copyFileSync(cacheFilePath, outputFilePath);
+  return outputFilePath;
+};
+
+const getVideoPoster = async (inputFilePath: string): Promise<string> => {
+  const inputFileExt = path.extname(inputFilePath).replace(".", "");
+  const inputFileName = path.basename(inputFilePath, `.${inputFileExt}`);
+  const inputFileFolderPath = path.dirname(inputFilePath);
+  const inputFileHash = await getFileHash(inputFilePath);
+  const outputFilePath = path.join(inputFileFolderPath, `${inputFileName}.jpg`);
+  if (existsSync(outputFilePath)) {
+    log.debug("Video poster found: ", outputFilePath);
+    return outputFilePath;
+  }
+  const cacheFilePath = path.join(cachePostersPath, `${inputFileHash}.jpg`);
+  if (!existsSync(cacheFilePath)) {
+    log.debug("Creating video poster: ", inputFilePath);
+    await createVideoScreenshot(inputFilePath, cacheFilePath);
+  } else {
+    log.debug("Video poster founded at cache");
   }
   copyFileSync(cacheFilePath, outputFilePath);
   return outputFilePath;
