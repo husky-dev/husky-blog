@@ -73,6 +73,7 @@ export const getFrontMatter = (data: MdFileData): string => {
     if (data.cover.caption) {
       lines.push(`  caption: "${data.cover.caption}"`);
     }
+    lines.push(`  relative: true`);
   }
   lines.push("draft: false");
   lines.push("---");
