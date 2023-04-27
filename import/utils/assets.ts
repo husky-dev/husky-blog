@@ -102,10 +102,12 @@ export const convertImage = async (
  * Utils
  */
 
-export const assetTitleToFileTitle = (title: string, ext?: string): string => {
+export const assetTitleToFileTitle = (title: string, url: string): string => {
+  const urlFileName = clearFileName(path.basename(url)); // some-photo.jpeg
+  const urlExt = path.extname(urlFileName).replace(".", ""); // jpg or ''
   let mod = textToSlug(title);
   // Remove extension from title
-  if (ext) mod = mod.replace(new RegExp(`${ext}$`), "");
+  if (urlExt) mod = mod.replace(new RegExp(`${urlExt}$`), "");
   // Clear file name
   mod = clearFileName(mod);
   return `${mod}`;

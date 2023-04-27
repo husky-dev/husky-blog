@@ -245,11 +245,11 @@ const downloadAsset = async (
   title: string | undefined,
   assetsFolder: string
 ): Promise<{ fileName: string }> => {
+  // File name extracted from url
   const urlFileName = clearFileName(path.basename(url)); // some-photo.jpeg
-  const urlExt = path.extname(urlFileName).replace(".", ""); // jpg or ''
   // Use passed title if it is possible
   const fileTitle = !!title
-    ? assetTitleToFileTitle(title, urlExt)
+    ? assetTitleToFileTitle(title, url)
     : path.parse(urlFileName).name; // some-photo
   // Chek if file exists
   const exAssetsFolderFiles = listFilesInFolder(assetsFolder);
