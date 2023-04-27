@@ -181,7 +181,7 @@ export interface VideoEntry extends AssetEntry {
 }
 
 export const getVideoEntries = (md: string): VideoEntry[] => {
-  const reg = /\[([^\]]*)\]\((.*?.(mov|mp4))\s*("(?:.*[^"])")?\s*\)/g;
+  const reg = /\[([^\]]*)\]\((.*?.(mov|mp4))\s*("(?:.*[^"])")?\s*\)/gi;
   const matches = md.matchAll(reg);
   if (!matches) return [];
   const items: VideoEntry[] = [];
@@ -189,7 +189,7 @@ export const getVideoEntries = (md: string): VideoEntry[] => {
     const raw = match[0];
     const alt = match[1];
     const url = match[2];
-    const ext = match[3];
+    const ext = match[3].toLowerCase();
     const mov = ext === "mov" ? url : undefined;
     const mp4 = ext === "mp4" ? url : undefined;
     const title = match[4] ? match[4].replace(/(^"|"$)/gm, "") : undefined;

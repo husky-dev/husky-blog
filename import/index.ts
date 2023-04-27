@@ -245,12 +245,12 @@ const downloadAsset = async (
   title: string | undefined,
   assetsFolder: string
 ): Promise<{ fileName: string }> => {
-  const urlFileName = clearFileName(path.basename(url)); // payaty-prosto.jpeg
+  const urlFileName = clearFileName(path.basename(url)); // some-photo.jpeg
   const urlExt = path.extname(urlFileName).replace(".", ""); // jpg or ''
   // Use passed title if it is possible
   const fileTitle = !!title
     ? assetTitleToFileTitle(title, urlExt)
-    : path.parse(urlFileName).name; // payaty-prosto
+    : path.parse(urlFileName).name; // some-photo
   // Chek if file exists
   const exAssetsFolderFiles = listFilesInFolder(assetsFolder);
   const exAssetsFilePath = exAssetsFolderFiles.find((name) =>
@@ -305,7 +305,7 @@ const downloadAsset = async (
 };
 
 // =====================
-// Run
+// Video
 // =====================
 
 const modVideoEntries = async (
@@ -375,16 +375,16 @@ const convertVideoAsset = async (
 };
 
 const getVideoPoster = async (inputFilePath: string): Promise<string> => {
-  const inputFileExt = path.extname(inputFilePath).replace(".", "");
-  const inputFileName = path.basename(inputFilePath, `.${inputFileExt}`);
-  const inputFileFolderPath = path.dirname(inputFilePath);
-  const inputFileHash = await getFileHash(inputFilePath);
-  const outputFilePath = path.join(inputFileFolderPath, `${inputFileName}.jpg`);
+  const inputFileExt = path.extname(inputFilePath).replace(".", ""); // mp4
+  const inputFileName = path.basename(inputFilePath, `.${inputFileExt}`); // video
+  const inputFileFolderPath = path.dirname(inputFilePath); // /path/to/post
+  const inputFileHash = await getFileHash(inputFilePath); // 1234567890
+  const outputFilePath = path.join(inputFileFolderPath, `${inputFileName}.jpg`); // /path/to/post/video.jpg
   if (existsSync(outputFilePath)) {
     log.debug("Video poster found: ", outputFilePath);
     return outputFilePath;
   }
-  const cacheFilePath = path.join(cachePostersPath, `${inputFileHash}.jpg`);
+  const cacheFilePath = path.join(cachePostersPath, `${inputFileHash}.jpg`); // /path/to/cache/1234567890.jpg
   if (!existsSync(cacheFilePath)) {
     log.debug("Creating video poster: ", inputFilePath);
     await createVideoScreenshot(inputFilePath, cacheFilePath);
