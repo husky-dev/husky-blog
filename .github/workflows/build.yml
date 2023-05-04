@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     timeout-minutes: 60
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Caching Assets
@@ -42,41 +42,60 @@ jobs:
         yarn start
     - name: Build
       run: hugo --minify
-    - name: 'Docker: login'
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.CR_PAT }}
-    - name: 'Docker: build'
+    - name: Configure SSH
+      env:
+        SSH_USER: ${{ secrets.SSH_USER }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
       run: |
-        docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
-    - name: 'Docker: push'
+        mkdir -p ~/.ssh/
+        echo "$SSH_KEY" > ~/.ssh/id_rsa.key
+        chmod 600 ~/.ssh/id_rsa.key
+        cat >>~/.ssh/config <<END
+        Host blog
+          HostName $SSH_HOST
+          User $SSH_USER
+          IdentityFile ~/.ssh/id_rsa.key
+          StrictHostKeyChecking no
+        END
+    - name: Deploy
       run: |
-        docker push ghcr.io/husky-dev/husky-blog/web:latest
-    - name: 'SSH: deploy'
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          set -ex
-          cd /var/platform
-          docker-compose pull
-          docker-compose up -d
-          docker image prune -f
+        rsync -avz --delete ./public/ blog:/root/platform/data/blog
+    # - name: 'Docker: login'
+    #   uses: docker/login-action@v1
+    #   with:
+    #     registry: ghcr.io
+    #     username: ${{ github.repository_owner }}
+    #     password: ${{ secrets.CR_PAT }}
+    # - name: 'Docker: build'
+    #   run: |
+    #     docker build -t ghcr.io/husky-dev/husky-blog/web:latest .
+    # - name: 'Docker: push'
+    #   run: |
+    #     docker push ghcr.io/husky-dev/husky-blog/web:latest
+    # - name: 'SSH: deploy'
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.SSH_HOST }}
+    #     username: ${{ secrets.SSH_USER }}
+    #     key: ${{ secrets.SSH_KEY }}
+    #     script: |
+    #       set -ex
+    #       cd /var/platform
+    #       docker-compose pull
+    #       docker-compose up -d
+    #       docker image prune -f
     - name: 'Notify: deployded'
       run: |
         curl -X POST -H 'Content-type: application/json' \
         -H "Authorization: Bearer ${{ secrets.NOTIFIER_ACCESS_TOKEN }}" \
         --data '{"message":"⬆️ *Husky-blog*: deployed"}' \
         https://notifier.husky-dev.me/notify
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_REGION }}
-    - name: Sync files to S3
-      run: aws s3 sync public s3://blog.husky-dev.me --delete
+    # - name: Configure AWS credentials
+    #   uses: aws-actions/configure-aws-credentials@v1
+    #   with:
+    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     aws-region: ${{ secrets.AWS_REGION }}
+    # - name: Sync files to S3
+    #   run: aws s3 sync public s3://blog.husky-dev.me --delete
