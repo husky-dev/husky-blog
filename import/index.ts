@@ -290,7 +290,10 @@ const downloadAsset = async (
   let newCacheFilePath = downloadRes.filePath;
 
   // Convert tiff to jpg
-  if (newCacheFileExt === "tiff") {
+  if (
+    !!newCacheFileExt &&
+    ["tiff", "tif", "octet-stream"].includes(newCacheFileExt)
+  ) {
     const cacheFileConvPath = path.join(cachePath, `${cacheFileTitle}.jpg`);
     await convertImage(newCacheFilePath, cacheFileConvPath);
     unlinkSync(newCacheFilePath);
