@@ -34,7 +34,7 @@ menu:
 params:
   defaultTheme: auto
   assets:
-    disableFingerprinting: true
+    disableFingerprinting: false
   DateFormat: "2 January, 2006"
   ShowPostNavLinks: true
   cover:
