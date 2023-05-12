@@ -7,6 +7,7 @@ export interface MdFileData {
   date?: Date;
   title?: string;
   lang?: string;
+  original?: string;
   cover?: MdFileDataCover;
   series?: string[];
   categories?: string[];

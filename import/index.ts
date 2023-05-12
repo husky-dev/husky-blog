@@ -133,6 +133,13 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     slug = slugMatch[1];
     content = content.replace(slugMatch[0], "");
   }
+  // Original
+  let original: string | undefined;
+  const originalMatch = /> Original: (.+?)\n/g.exec(content);
+  if (originalMatch) {
+    original = originalMatch[1];
+    content = content.replace(originalMatch[0], "");
+  }
   // Clear
   content = clearContent(content);
   // Format content
