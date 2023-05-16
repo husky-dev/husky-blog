@@ -9,7 +9,7 @@
   {{ $small := .Resize "480x" }}
   {{ $medium := .Resize "768x" }}
   {{ $big := .Resize "1024x" }}
-  <figure class="pswp-gallery">
+  <figure class="pswp-single-photo">
     <a href="{{ $img.RelPermalink }}" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}" target="_blank">
       <img
         src="{{ $img.RelPermalink }}"
