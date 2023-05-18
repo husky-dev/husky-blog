@@ -27,6 +27,7 @@ import {
   MdFileData,
   MdFileDataCover,
   mkdirp,
+  modGalleryBlocks,
   modMediaCaptions,
   modYoutubeEmbeds as modYoutubeEntries,
   removeMarkdown,
@@ -163,6 +164,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     lang,
     tags,
     cover,
+    original,
   };
 };
 
@@ -208,16 +210,19 @@ const createPostWithMdData = async (data: MdFileData): Promise<string> => {
     );
     data.cover.image = `assets/${fileName}`;
   }
-  // Create front metter
-  const frontMatter = getFrontMatter(data);
-  let mod = frontMatter + "\n\n" + data.content;
+  // Get content
+  let content = data.content;
   // Download assets
-  mod = await downloadPostAssets(mod, postFolderPath);
+  content = await downloadPostAssets(content, postFolderPath);
   // Post process content after assets download
-  mod = modYoutubeEntries(mod);
-  mod = await modVideoEntries(mod, postFolderPath);
+  content = modYoutubeEntries(content);
+  content = modGalleryBlocks(content);
+  content = await modVideoEntries(content, postFolderPath);
+  // Add frontmatter to content
+  const frontMatter = getFrontMatter(data);
+  content = frontMatter + "\n\n" + content;
   // Write file
-  writeFileSync(filePath, mod);
+  writeFileSync(filePath, content);
   return filePath;
 };
 

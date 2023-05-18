@@ -1,0 +1,18 @@
+{{ $caption := "" }}
+{{ with .Get "caption" }}
+  {{ $caption = . | safeHTML }}
+{{ end }}
+{{ with .Get "src" }}
+  {{ $img := $.Page.Resources.GetMatch ( . | safeURL) }}
+  {{ with $img }}
+    {{ $thumb := .Resize "100x100" }}
+    <figure>
+      <a href="{{ $img.RelPermalink }}" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}" target="_blank">
+        <img
+          src="{{ $thumb.RelPermalink }}"
+          alt="{{ if $caption }}{{ $caption | markdownify | plainify }}{{ end }}"
+        >
+      </a>
+    </figure>
+  {{ end }}
+{{ end }}

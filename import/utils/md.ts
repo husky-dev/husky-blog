@@ -113,6 +113,10 @@ export interface AssetEntry {
  * Images
  */
 
+/**
+ * Get media caption like **Caption** below the media code and add it
+ * to the media code as title attribute
+ */
 export const modMediaCaptions = (content: string): string => {
   let mod = content;
   const mediaWithCaptionReg =
@@ -146,6 +150,32 @@ export const getImageEntries = (md: string): ImageEntry[] => {
     items.push({ raw, url, caption });
   }
   return items;
+};
+
+export const modGalleryBlocks = (content: string): string => {
+  const galleryBodyReg = /----([\s\S]+?)----/g;
+  const matches = content.matchAll(galleryBodyReg);
+  if (!matches) return content;
+  for (const match of matches) {
+    const raw = match[0];
+    const body = match[1];
+    const images = getImageEntries(body);
+    const shortcode = getGalleryShortcode(images);
+    content = content.replace(raw, shortcode);
+  }
+  return content;
+};
+
+const getGalleryShortcode = (images: ImageEntry[]): string => {
+  const lines: string[] = [];
+  lines.push(`{{< gallery >}}`);
+  for (const image of images) {
+    lines.push(
+      `  {{< gallery_item src="${image.url}" caption="${image.caption}" >}}`
+    );
+  }
+  lines.push(`{{< /gallery >}}`);
+  return lines.join("\n");
 };
 
 /**
