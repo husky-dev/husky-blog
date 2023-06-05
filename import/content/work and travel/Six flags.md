@@ -1,4 +1,4 @@
-# Copy of Six flags
+# Six flags
 
 > Date: 03 Aug 2012, 23:01
 
