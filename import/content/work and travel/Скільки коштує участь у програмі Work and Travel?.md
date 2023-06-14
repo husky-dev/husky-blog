@@ -2,6 +2,8 @@
 
 > Date: 11 Apr 2012, 21:13
 
+> Draft: true
+
 > Slug: skilki-koshtuie-uchast-u-programi-work-and-travel
 
 > Category: travel

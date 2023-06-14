@@ -134,6 +134,13 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     slug = slugMatch[1];
     content = content.replace(slugMatch[0], "");
   }
+  // Draft
+  let draft: boolean = false;
+  const draftMatch = /> Draft: (.+?)\n/g.exec(content);
+  if (draftMatch) {
+    draft = draftMatch[1] === "true";
+    content = content.replace(draftMatch[0], "");
+  }
   // Original
   let original: string | undefined;
   const originalMatch = /> Original: (.+?)\n/g.exec(content);
@@ -165,6 +172,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     tags,
     cover,
     original,
+    draft,
   };
 };
 

@@ -8,6 +8,7 @@ export interface MdFileData {
   title?: string;
   lang?: string;
   original?: string;
+  draft?: boolean;
   cover?: MdFileDataCover;
   series?: string[];
   categories?: string[];
@@ -76,7 +77,11 @@ export const getFrontMatter = (data: MdFileData): string => {
     }
     lines.push(`  relative: true`);
   }
-  lines.push("draft: false");
+  if (data.draft) {
+    lines.push(`draft: true`);
+  } else {
+    lines.push(`draft: false`);
+  }
   lines.push("---");
   return lines.join("\n");
 };
