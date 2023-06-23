@@ -12,24 +12,34 @@ taxonomies:
 
 menu:
   main:
-    - identifier: kilimanjaro
-      name: "🇹🇿 Кіліманджаро"
-      url: "/series/kilimanjaro/"
     - identifier: namibia
       name: "🇳🇦 Намібія"
       url: "/series/namibia/"
+      weight: 1
+    - identifier: kilimanjaro
+      name: "🇹🇿 Кіліманджаро"
+      url: "/series/kilimanjaro/"
+      weight: 2
+    - identifier: singapore
+      name: "🇸🇬 Сінгапур"
+      url: "/series/singapore/"
+      weight: 3
     - identifier: work-and-travel
       name: "🇺🇸 USA"
       url: "/series/work-and-travel/"
+      weight: 4
     - identifier: sport
       name: "🏃‍♂️ Спорт"
       url: "/categories/sport/"
+      weight: 5
     - identifier: books
       name: "📚 Книги"
       url: "/categories/books/"
+      weight: 6
     - identifier: diy
       name: "🛠️ DIY"
       url: "/categories/diy/"
+      weight: 7
 
 params:
   defaultTheme: auto

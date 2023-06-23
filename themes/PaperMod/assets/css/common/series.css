@@ -32,6 +32,11 @@
   color: #fff;
 }
 
+.series-singapore {
+  background-color: #D17BF8;
+  color: #fff;
+}
+
 .series-entry:hover {
   opacity: 0.8;
 }
