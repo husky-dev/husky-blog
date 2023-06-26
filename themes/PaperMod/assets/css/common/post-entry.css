@@ -81,9 +81,13 @@
 
 .entry-cover,
 .entry-isdraft {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--secondary);
     font-weight: 500;
+}
+
+.entry-cover > p {
+    padding: 10px;
 }
 
 .entry-cover {
@@ -92,7 +96,7 @@
 }
 
 .entry-cover img {
-    border-radius: var(--radius);
+    border-radius: 16px;
     pointer-events: none;
     width: 100%;
     height: auto;
