@@ -37,6 +37,11 @@
   color: #fff;
 }
 
+.series-new-zealand {
+  background-color: #4192F7;
+  color: #fff;
+}
+
 .series-entry:hover {
   opacity: 0.8;
 }

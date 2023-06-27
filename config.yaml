@@ -24,22 +24,26 @@ menu:
       name: "🇸🇬 Сінгапур"
       url: "/series/singapore/"
       weight: 3
+    - identifier: new-zealand
+      name: "🇳🇿 Нова Зеландія"
+      url: "/series/new-zealand/"
+      weight: 4
     - identifier: work-and-travel
       name: "🇺🇸 USA"
       url: "/series/work-and-travel/"
-      weight: 4
+      weight: 5
     - identifier: sport
       name: "🏃‍♂️ Спорт"
       url: "/categories/sport/"
-      weight: 5
+      weight: 6
     - identifier: books
       name: "📚 Книги"
       url: "/categories/books/"
-      weight: 6
+      weight: 7
     - identifier: diy
       name: "🛠️ DIY"
       url: "/categories/diy/"
-      weight: 7
+      weight: 8
 
 params:
   defaultTheme: auto
