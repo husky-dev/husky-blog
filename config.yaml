@@ -61,13 +61,33 @@ params:
     - name: "instagram"
       url: "https://www.instagram.com/husky.dev/"
     - name: "facebook"
-      url: "https://www.facebook.com/snipter"
+      url: "https://fb.me/huskydev"
     - name: "twitter"
       url: "https://twitter.com/HuskyDevUA"
     - name: "github"
       url: "https://github.com/husky-dev"
     - name: "email"
       url: "mailto:jaroslav@husky-dev.me"
+
+defaultContentLanguage: "uk"
+
+languages:
+  uk:
+    weight: 1
+    languageName: "🇺🇦"
+  en:
+    weight: 2
+    languageName: "🇺🇸"
+    params:
+      homeInfoParams:
+        Title: "Hello!"
+        Content: "My name is Jaroslav. I am a programmer. I love programming, traveling and sports."
+    menu:
+      main:
+        - identifier: diy
+          name: "🛠️ DIY"
+          url: "/categories/diy/"
+          weight: 8
       
 outputs:
   home:

@@ -1,6 +1,6 @@
 ---
 title: "Пошук"
-layout: "search" # is necessary
+layout: "search"
 url: "/search"
 summary: "Пошук по постам"
 placeholder: "Пошук"
