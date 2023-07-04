@@ -1,7 +1,7 @@
 baseURL: "https://blog.husky-dev.me"
 languageCode: "uk"
 defaultContentLanguage: "uk"
-title: "👨‍💻 Husky Blog"
+title: "Husky Blog"
 theme: "PaperMod"
 timeout: "5m"
 
