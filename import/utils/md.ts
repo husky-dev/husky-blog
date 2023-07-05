@@ -14,6 +14,7 @@ export interface MdFileData {
   categories?: string[];
   tags?: string[];
   content: string;
+  social?: string;
 }
 
 export interface MdFileDataCover {

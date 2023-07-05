@@ -148,6 +148,13 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     original = originalMatch[1];
     content = content.replace(originalMatch[0], "");
   }
+  // Social
+  let social: string | undefined;
+  const socialMatch = /> Social: (.+?)\n/g.exec(content);
+  if (socialMatch) {
+    social = socialMatch[1];
+    content = content.replace(socialMatch[0], "");
+  }
   // Clear
   content = clearContent(content);
   // Format content
@@ -173,6 +180,7 @@ const readMdFielData = (filePath: string): MdFileData | undefined => {
     cover,
     original,
     draft,
+    social,
   };
 };
 
