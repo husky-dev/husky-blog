@@ -17,7 +17,7 @@ jobs:
       with:
         path: |
           resources/_gen
-          import/.cache
+          .cache
         key: ${{ runner.os }}-blog-assets-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-blog-assets-
@@ -37,7 +37,6 @@ jobs:
         hugo-version: '0.111.3'
     - name: 'Import posts and assets'
       run: |
-        mv import/.cache .cache
         npx craft-content --dist content/posts
     - name: Build
       run: hugo --minify
