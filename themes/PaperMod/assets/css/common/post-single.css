@@ -235,7 +235,7 @@
 }
 
 .post-content img {
-    border-radius: 16px;
+    border-radius: var(--radius);
     margin: 0 auto;
     max-height: 80vh;
 }
