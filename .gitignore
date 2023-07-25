@@ -21,3 +21,4 @@ node_modules
 content/blog
 content/posts
 import/.cache
+.cache
