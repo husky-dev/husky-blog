@@ -1,12 +1,16 @@
-# Raspberry Pi Zero - розпакування та перший тест
+# Raspberry Pi Zero - розпакування та перший тест - Uk
 
 > Date: 7 Jan 2017, 20:23
 
-> Category: DIY
+> Title: Raspberry Pi Zero - розпакування та перший тест
+
+> Slug: raspberry-pi-zero-unboxing-and-first-test
+
+> Category: diy
 
 > Tags: raspberry
 
-> Language: UA
+> Language: uk
 
 ![Raspberry Pi Zero.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/doc/1DD55037-377D-4D42-B50B-565352546681/D6BBB99C-362F-4782-A203-051B8A39E541_2/aOnINdPbqw7nI39eDfwVryAjqFe1MkN9YPiSWNkDFxwz/Raspberry%20Pi%20Zero.jpeg)
 
