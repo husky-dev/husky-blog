@@ -36,7 +36,7 @@ The hardware is certainly minimalistic. It lacks built-in sound modules or Wi-Fi
 
 I used a flash drive loaded with Raspbian from a Raspberry Pi 2B. Everything functioned smoothly. In fact, I even managed to record a video demonstrating how to play Minecraft on this tiny board – quite an impressive feat! 🙂
 
-[Raspberry Pi Zero  - Minecraft](https://www.youtube.com/watch?v=bHFi4toq_vw&feature=emb_title)
+[Raspberry Pi Zero  - Minecraft](https://youtu.be/bHFi4toq_vw)
 
 I'm excited to employ this mini computer for various small projects. A Wi-Fi module will be connected to the second USB port, allowing me to communicate with the device via SSH.
 

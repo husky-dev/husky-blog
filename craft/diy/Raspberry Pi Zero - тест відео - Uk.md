@@ -1,14 +1,20 @@
-# Raspberry Pi Zero — тест відео
+# Raspberry Pi Zero - тест відео - Uk
 
 > Date: 12 Jan 2017, 21:07
 
+> Slug: raspberry-pi-zero-video-test
+
+> Title: Raspberry Pi Zero - тест відео
+
 > Tags: raspberry
 
-> Category: DIY
+> Category: diy
 
-> Language: UA
+> Language: uk
 
 ![IMG_4536.jpeg](https://res.craft.do/user/full/b5a256f3-51ff-c8e5-10fe-9343b6a0451d/39FFF612-6498-43AA-92AF-865581E01B00_2/3Hss6N8iNhJG5aM5Ly3Lntc4xaxeCoMU077H9XXTEFIz/IMG_4536.jpeg)
+
+**Моя Raspberry Pi Zero за 5 баксів**
 
 У мене вже давно зріє ідея використати Raspberry для одного пет-проджекту, де потрібно відтворювати відео та аудіо. Звичайно хочеться, щоб залізо коштувало по мінімуму. Тож Raspberry Pi Zero, комп за $5 ([в реальності $20](/blog/raspberry-pi-zero-rozpakuvannya-ta-pershii-test/)) - дуже хороший варіант.
 
