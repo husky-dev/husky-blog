@@ -84,6 +84,12 @@ languages:
         Content: "My name is Jaroslav. I am a programmer. I love programming, traveling and sports."
     menu:
       main:
+        - name: "🛠️ Projects"
+          url: "https://husky-dev.me/projects"
+          weight: 1
+        - name: "👨‍💼 CV"
+          url: "https://husky-dev.me/cv"
+          weight: 2
         - identifier: diy
           name: "🛠️ DIY"
           url: "/categories/diy/"
