@@ -17,6 +17,10 @@
     margin-bottom: var(--content-gap);
 }
 
+.post-description a {
+    text-decoration: underline;
+}
+
 .post-meta,
 .breadcrumbs {
     color: var(--secondary);
