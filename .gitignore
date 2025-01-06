@@ -18,7 +18,12 @@ hugo_stats.json
 node_modules
 
 # Generated files
-content/blog
-content/posts
+# /content/posts/*
+/content/posts/**/*.jpg
+/content/posts/**/*.jpeg
+/content/posts/**/*.png
+/content/posts/**/*.mov
+/content/posts/**/*.mp4
+/content/posts/**/*.pdf
 import/.cache
 .cache
