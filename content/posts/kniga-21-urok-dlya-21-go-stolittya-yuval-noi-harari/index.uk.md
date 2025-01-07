@@ -6,7 +6,7 @@ categories:
 tags:
   - psychology
 cover:
-  image: "assets/kniga-21-urok-dlya-21-go-stolittya-yuval-noi-harari.jpg"
+  image: "assets/kniga-21-urok-dlya-21-go-stolittya-yuval-noi-harari-8d4e.jpg"
   caption: "Книга “21 урок для 21-го століття” - Юваль Ної Харарі"
   relative: true
 draft: false

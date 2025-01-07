@@ -6,7 +6,7 @@ categories:
 tags:
   - programming
 cover:
-  image: "assets/example-of-the-img-to-map-utility-result.jpg"
+  image: "assets/example-of-the-img-to-map-utility-result-855f.jpg"
   caption: "Example of the img-to-map utility result"
   relative: true
 draft: false

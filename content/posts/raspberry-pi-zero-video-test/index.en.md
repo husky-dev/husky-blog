@@ -6,7 +6,7 @@ categories:
 tags:
   - raspberry
 cover:
-  image: "assets/my-raspberry-pi-zero-for-5-bucks.jpg"
+  image: "assets/my-raspberry-pi-zero-for-5-bucks-7c38.jpg"
   caption: "My Raspberry Pi Zero for 5 bucks"
   relative: true
 draft: false
@@ -22,7 +22,7 @@ The video you see was downloaded from YouTube, formatted in MP4, 720p. Given mor
 
 One key thing to note about the Raspberry Pi Zero is its lack of an inbuilt sound card. This leaves us with two alternatives - transmitting sound via HDMI (as demonstrated in the video) or resorting to an external sound card. While audio transmission over HDMI works seamlessly right out of the box, getting an external sound card to function might require a bit of fiddling.
 
-![The cheap sound card I used in my tests](assets/the-cheap-sound-card-i-used-in-my-tests.jpg "The cheap sound card I used in my tests")
+![The cheap sound card I used in my tests](assets/the-cheap-sound-card-i-used-in-my-tests-9a21.jpg "The cheap sound card I used in my tests")
 
 Another challenge I've encountered involves finding a method to send sound through the external sound card using the `omxplayer`, which is the recommended player for this setup. I have managed to get sound transmission working with `mpg123` after tweaking some settings, but `omxplayer` remains silent. This area warrants further investigation. At present, the only workaround is to connect the speakers directly to the TV.
 

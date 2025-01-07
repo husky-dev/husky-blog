@@ -4,7 +4,7 @@ date: 2020-05-03T06:18:00.000Z
 categories:
   - diy
 cover:
-  image: "assets/soldering-is-easy-comic-book.png"
+  image: "assets/soldering-is-easy-comic-book-91ca.png"
   caption: "“Soldering is easy” comic book"
   relative: true
 draft: false
@@ -18,10 +18,10 @@ This short comic book of just seven pages shows you step-by-step, with pictures,
 
 Here’s a sample page (click for a bigger version):
 
-![“Soldering is Easy” page example](assets/soldering-is-easy-page-example.png "“Soldering is Easy” page example")
+![“Soldering is Easy” page example](assets/soldering-is-easy-page-example-8121.png "“Soldering is Easy” page example")
 
 The complete comic book is available for download here:
 
-[“Soldering is Easy” Comic Book (PDF)](assets/soldering-is-easy-comic-book-pdf.pdf)
+[“Soldering is Easy” Comic Book (PDF)](assets/soldering-is-easy-comic-book-pdf-eb98.pdf)
 
 [Page with discussions and translations](https://mightyohm.com/blog/2011/04/soldering-is-easy-comic-book/)

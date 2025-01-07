@@ -6,7 +6,7 @@ categories:
 series:
   - "namibia"
 cover:
-  image: "assets/ostannie-foto-z-dzhipom-pered-iogo-povernennyam-3656.jpg"
+  image: "assets/ostannie-foto-z-dzhipom-pered-iogo-povernennyam-cb24.jpg"
   caption: "Останнє фото з джипом перед його поверненням"
   relative: true
 draft: false
@@ -14,68 +14,68 @@ draft: false
 
 Після 14 днів у пустелі ми повернулись в місто. Було важко віддавати джипи. Повернення машини означало кінець однієї з найбільш епічних експедицій за моє життя. За відчуттями, ці два тижні тривали місяць. Джип був нашим маленьким домом на якому ми могли їхати куди завгодно.
 
-![В аренду сдаются різні моделі джипів, можна взяти цілий палац на колесах](assets/v-arendu-sdayutsya-rizni-modeli-dzhipiv-mozhna-vzyati-tsilii-palats-na-kolesah-acd4.jpg "В аренду сдаются різні моделі джипів, можна взяти цілий палац на колесах")
+![В аренду сдаются різні моделі джипів, можна взяти цілий палац на колесах](assets/v-arendu-sdayutsya-rizni-modeli-dzhipiv-mozhna-vzyati-tsilii-palats-na-kolesah-69a1.jpg "В аренду сдаются різні моделі джипів, можна взяти цілий палац на колесах")
 
 Так, у нас не було безлічі зручностей. Доводилося розводити багаття, щоб приготувати вечерю. Приймаючи душ у таборі, до тебе могла залетіти здоровенна комаха. Койоти могли віджати у тебе решту їжі, а нервовий носоріг міг протаранити бік машини. Але в цьому всьому був і величезний кайф. Ми були наодинці з дикою природою. У наших машинах було тільки все найнеобхідніше і нічого зайвого.
 
-![В Намібії суворе все, навіть квіти в магазині](assets/v-namibii-suvore-vse-navit-kviti-v-magazini-858e.jpg "В Намібії суворе все, навіть квіти в магазині")
+![В Намібії суворе все, навіть квіти в магазині](assets/v-namibii-suvore-vse-navit-kviti-v-magazini-1798.jpg "В Намібії суворе все, навіть квіти в магазині")
 
 Подорож на джипах - найкращий спосіб побачити Намібію. Це величезна країна з купою красивих місць. Спочатку я був байдужий до пустель. Я не розумів як може подобатись відсутність життя. Але я був не правий. Попри всю жорстокість, там живуть безліч різних рослин і тварин. Їхнє життя суворе. Але за безліч років вони адаптувались і подають прекрасний приклад як можна задовольнятись малим.
 
 Мені не вистачатиме вечорів біля багаття, переговорів по рації, виснажливих довгих переїздів і великої кількості тварин. Намібія - я буду сумувати... ❤️
 
-{{< video mov="assets/korotko-pro-podozh-2abe.mov" mp4="assets/korotko-pro-podozh-2abe.mp4" poster="assets/korotko-pro-podozh-2abe-1147.jpg" caption="Коротко про подож" >}}
+{{< video mov="assets/korotko-pro-podozh-1147.mov" mp4="assets/korotko-pro-podozh-1147.mp4" poster="assets/korotko-pro-podozh-1147.jpg" caption="Коротко про подож" >}}
 
 P.S. Декілька фото на згадку.
 
-![DSC_6424.jpeg](assets/dsc-6424-7658.jpg)
+![DSC_6424.jpeg](assets/dsc-6424-0176.jpg)
 
-![DSC_6430.jpeg](assets/dsc-6430-b688.jpg)
+![DSC_6430.jpeg](assets/dsc-6430-638a.jpg)
 
-![DSC_6488.jpeg](assets/dsc-6488-445f.jpg)
+![DSC_6488.jpeg](assets/dsc-6488-c495.jpg)
 
-![IMG_5067.jpeg](assets/img-5067-0b14.jpg)
+![IMG_5067.jpeg](assets/img-5067-d74d.jpg)
 
-![IMG_5081.jpeg](assets/img-5081-fcc7.jpg)
+![IMG_5081.jpeg](assets/img-5081-a8e7.jpg)
 
-![IMG_5232.jpeg](assets/img-5232-02ff.jpg)
+![IMG_5232.jpeg](assets/img-5232-31bf.jpg)
 
-![IMG_5268.jpeg](assets/img-5268-8db4.jpg)
+![IMG_5268.jpeg](assets/img-5268-8747.jpg)
 
-![IMG_5296.jpeg](assets/img-5296-edb6.jpg)
+![IMG_5296.jpeg](assets/img-5296-ea21.jpg)
 
-![IMG_5347.jpeg](assets/img-5347-8e52.jpg)
+![IMG_5347.jpeg](assets/img-5347-35a0.jpg)
 
-![IMG_5449.jpeg](assets/img-5449-f120.jpg)
+![IMG_5449.jpeg](assets/img-5449-e4cf.jpg)
 
-![IMG_5511.jpeg](assets/img-5511-b243.jpg)
+![IMG_5511.jpeg](assets/img-5511-58a5.jpg)
 
-![IMG_5605.jpeg](assets/img-5605-a259.jpg)
+![IMG_5605.jpeg](assets/img-5605-43c9.jpg)
 
-![IMG_5708.jpeg](assets/img-5708-29fe.jpg)
+![IMG_5708.jpeg](assets/img-5708-3b71.jpg)
 
-![IMG_5757.jpeg](assets/img-5757-ea6f.jpg)
+![IMG_5757.jpeg](assets/img-5757-045b.jpg)
 
-![IMG_6134.jpeg](assets/img-6134-47ef.jpg)
+![IMG_6134.jpeg](assets/img-6134-b7d6.jpg)
 
-![IMG_6174.jpeg](assets/img-6174-4498.jpg)
+![IMG_6174.jpeg](assets/img-6174-2dc2.jpg)
 
-![IMG_6198.jpeg](assets/img-6198-af78.jpg)
+![IMG_6198.jpeg](assets/img-6198-6ae9.jpg)
 
-![IMG_6481.jpeg](assets/img-6481-66ef.jpg)
+![IMG_6481.jpeg](assets/img-6481-ec39.jpg)
 
-![IMG_6768.jpeg](assets/img-6768-5a47.jpg)
+![IMG_6768.jpeg](assets/img-6768-edcf.jpg)
 
-![IMG_6910.jpeg](assets/img-6910-6b9d.jpg)
+![IMG_6910.jpeg](assets/img-6910-71d8.jpg)
 
-![IMG_7001.jpeg](assets/img-7001-78bd.jpg)
+![IMG_7001.jpeg](assets/img-7001-a263.jpg)
 
-![IMG_20210507_134145.jpeg](assets/img-20210507-134145-34b1.jpg)
+![IMG_20210507_134145.jpeg](assets/img-20210507-134145-9f69.jpg)
 
-![182660973_485751422843574_4130115683499009646_n.jpeg](assets/182660973-485751422843574-4130115683499009646-n-f79c.jpg)
+![182660973_485751422843574_4130115683499009646_n.jpeg](assets/182660973-485751422843574-4130115683499009646-n-3b9f.jpg)
 
-![183125963_237102801504390_1339372942305382055_n.jpeg](assets/183125963-237102801504390-1339372942305382055-n-48c0.jpg)
+![183125963_237102801504390_1339372942305382055_n.jpeg](assets/183125963-237102801504390-1339372942305382055-n-1403.jpg)
 
-![183294687_976353426443628_2504713685316197023_n.jpeg](assets/183294687-976353426443628-2504713685316197023-n-f566.jpg)
+![183294687_976353426443628_2504713685316197023_n.jpeg](assets/183294687-976353426443628-2504713685316197023-n-aa97.jpg)
 
-![183732920_886119305303462_8774197740754947604_n.jpeg](assets/183732920-886119305303462-8774197740754947604-n-b065.jpg)
+![183732920_886119305303462_8774197740754947604_n.jpeg](assets/183732920-886119305303462-8774197740754947604-n-8f22.jpg)

@@ -6,7 +6,7 @@ categories:
 tags:
   - biology
 cover:
-  image: "assets/kniga-mozok-materialnii-pro-korist-tomografa-transkranialnogo-stimulyatora-i-klitin-ravlika-asya-kazantseva.jpg"
+  image: "assets/kniga-mozok-materialnii-pro-korist-tomografa-transkranialnogo-stimulyatora-i-klitin-ravlika-asya-kazantseva-9bf5.jpg"
   caption: "Книга “Мозок матеріальний. Про користь томографа, транскраніального стимулятора і клітин равлика” — Ася Казанцева"
   relative: true
 draft: false

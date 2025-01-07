@@ -6,7 +6,7 @@ categories:
 series:
   - "namibia"
 cover:
-  image: "assets/girskii-masiv-spitskopp-1d53.jpg"
+  image: "assets/girskii-masiv-spitskopp-0fa1.jpg"
   caption: "Гірський масив Спіцкопп"
   relative: true
 draft: false
@@ -14,58 +14,58 @@ draft: false
 
 Ми проснулись рано вранці, пробіглись, поснідали і вирушили з Свакопмунда далі. На нас чекали наскельні малюнки бушменів, які знаходились біля гірського масиву Спіцкопп.
 
-![IMG_6075.jpeg](assets/img-6075-f2b6.jpg)
+![IMG_6075.jpeg](assets/img-6075-d1ac.jpg)
 
-![Наскельні малюнки](assets/naskelni-malyunki-2ce4.jpg "Наскельні малюнки")
+![Наскельні малюнки](assets/naskelni-malyunki-fdcc.jpg "Наскельні малюнки")
 
-{{< video mov="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-669d.mov" mp4="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-669d.mp4" poster="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-669d-31f0.jpg" caption="Ми не все розуміли, що нам розповідав гід, але буле дуже цікаво" >}}
+{{< video mov="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.mov" mp4="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.mp4" poster="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.jpg" caption="Ми не все розуміли, що нам розповідав гід, але буле дуже цікаво" >}}
 
 У районі гір Спіцкопп наскельні малюнки виконували роль стрічки в соцмережах. Тут мисливці малювали інформацію де і кого вони тут бачили. Бушмени були кочівниками. Коли уходила одна група - могла прийти інша і побачити на скелі "оперативну" інформацію що до звірів навколо. Ну і просто залишали інформацію як вони полювали. Так само, за можливості, бушмени закопували в таких місцях ємності з водою. Якщо інше плем'я приходило сюди в більш посушливий сезон - вони могли знайти воду від попередників і вижити.
 
-![IMG_6132.jpeg](assets/img-6132-83fc.jpg)
+![IMG_6132.jpeg](assets/img-6132-fc75.jpg)
 
-![А ще тут класні краєвиди](assets/a-sche-tut-klasni-kraievidi-a9cc.jpg "А ще тут класні краєвиди")
+![А ще тут класні краєвиди](assets/a-sche-tut-klasni-kraievidi-0dcd.jpg "А ще тут класні краєвиди")
 
-![IMG_6090.jpeg](assets/img-6090-0316.jpg)
+![IMG_6090.jpeg](assets/img-6090-3449.jpg)
 
-![І навіть рослинність є](assets/i-navit-roslinnist-ie-f2db.jpg "І навіть рослинність є")
+![І навіть рослинність є](assets/i-navit-roslinnist-ie-7a76.jpg "І навіть рослинність є")
 
 Коли ми побачили малюнки, то думали, що їх було намальовано років так 15 - 18 тис. тому. Виявилося, що їм усього лише приблизно дві тисячі років. Коли в деяких місцях цивілізація на повну розквітала, тут ще кочували племена і малювали наскельні малюнки.
 
-![IMG_6183.jpeg](assets/img-6183-a1b2.jpg)
+![IMG_6183.jpeg](assets/img-6183-b3b8.jpg)
 
 Сьогодні в основному був день переїзду. На сьогодні більше активностей заплановано не було. Тому після цього місця, ми вирушили прямо до нашого готелю.
 
 [**Ai Aiba - The Rock Painting Lodge**](https://goo.gl/maps/KXuX8jXpcqrTxDiq8) - готель розташований під скелею на величезній приватній території. У кожному будиночку по кілька номерів з видом на дику природу. Поруч розташований невеликий водопій із підсвічуванням. Кажуть, що в посушливий сезон сюди приходять місцеві звірі.
 
-![IMG_6224.jpeg](assets/img-6224-fb2b.jpg)
+![IMG_6224.jpeg](assets/img-6224-dc98.jpg)
 
-![IMG_6302.jpeg](assets/img-6302-554c.jpg)
+![IMG_6302.jpeg](assets/img-6302-80cd.jpg)
 
-![IMG_6309.jpeg](assets/img-6309-7a48.jpg)
+![IMG_6309.jpeg](assets/img-6309-9d8c.jpg)
 
-![IMG_6304.jpeg](assets/img-6304-b997.jpg)
+![IMG_6304.jpeg](assets/img-6304-cbf7.jpg)
 
-![IMG_6308.jpeg](assets/img-6308-12ed.jpg)
+![IMG_6308.jpeg](assets/img-6308-d2c1.jpg)
 
 Найкрутіша крутість цього місця - скеля, під якою розташований готель. На її вершину веде стежка і звідти відкривається нереально красивий вид. Ми були тут одну ніч і нам вдалося провести захід сонця і зустріти світанок. Це найкращі захід і світанок за всю поїздку.
 
-![IMG_6210.jpeg](assets/img-6210-cdd8.jpg)
+![IMG_6210.jpeg](assets/img-6210-ee21.jpg)
 
-![IMG_6191.jpeg](assets/img-6191-be94.jpg)
+![IMG_6191.jpeg](assets/img-6191-c9eb.jpg)
 
-![IMG_6201.jpeg](assets/img-6201-7582.jpg)
+![IMG_6201.jpeg](assets/img-6201-846c.jpg)
 
-![IMG_6291.jpeg](assets/img-6291-1e6c.jpg)
+![IMG_6291.jpeg](assets/img-6291-d8be.jpg)
 
-![IMG_6294.jpeg](assets/img-6294-b4a5.jpg)
+![IMG_6294.jpeg](assets/img-6294-fdc7.jpg)
 
-![IMG_6278.jpeg](assets/img-6278-da2b.jpg)
+![IMG_6278.jpeg](assets/img-6278-e0eb.jpg)
 
 Увечері біля басейну розтоплюється багаття і можна до глибокої ночі залипати на зірки.
 
-![Ділимось враженнями за день та спілкуємось з іншими туристами](assets/dilimos-vrazhennyami-za-den-ta-spilkuiemos-z-inshimi-turistami-d32e.jpg "Ділимось враженнями за день та спілкуємось з іншими туристами")
+![Ділимось враженнями за день та спілкуємось з іншими туристами](assets/dilimos-vrazhennyami-za-den-ta-spilkuiemos-z-inshimi-turistami-c928.jpg "Ділимось враженнями за день та спілкуємось з іншими туристами")
 
 А вранці, на території готелю ми зустріли жирафів.
 
-![IMG_6328.jpeg](assets/img-6328-c6e6.jpg)
+![IMG_6328.jpeg](assets/img-6328-9426.jpg)

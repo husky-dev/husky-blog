@@ -6,7 +6,7 @@ categories:
 tags:
   - raspberry
 cover:
-  image: "assets/raspberry-pi-zero-compared-to-a-dollar-bill.jpg"
+  image: "assets/raspberry-pi-zero-compared-to-a-dollar-bill-9ac4.jpg"
   caption: "Raspberry Pi Zero compared to a dollar bill"
   relative: true
 draft: false
@@ -24,11 +24,11 @@ Here's the rundown of its hardware:
 
 Upon holding it for the first time, I was momentarily perplexed. It only had two Micro-USB ports, with one already designated for power supply. I was left wondering how to connect the keyboard, mouse, and Wi-Fi module. The conundrum was resolved when I remembered the existence of USB hubs, which were developed along with USB technology.
 
-![Raspberry Pi Zero compare to hand.jpeg](assets/raspberry-pi-zero-compare-to-hand-jpeg.jpg)
+![Raspberry Pi Zero compare to hand.jpeg](assets/raspberry-pi-zero-compare-to-hand-a0c3.jpg)
 
 The hardware is certainly minimalistic. It lacks built-in sound modules or Wi-Fi, meaning everything must be externally connected via USB. If you need to connect multiple devices, a USB hub becomes a necessity. Luckily, my monitor had one integrated already. All I needed to do was quickly solder an adapter from Micro USB to standard USB.
 
-![Raspberry Pi Zero Connect.jpeg](assets/raspberry-pi-zero-connect-jpeg.jpg)
+![Raspberry Pi Zero Connect.jpeg](assets/raspberry-pi-zero-connect-9555.jpg)
 
 I used a flash drive loaded with Raspbian from a Raspberry Pi 2B. Everything functioned smoothly. In fact, I even managed to record a video demonstrating how to play Minecraft on this tiny board – quite an impressive feat! 🙂
 
@@ -40,4 +40,4 @@ Regarding the price, the manufacturer's website advertised this mini computer at
 
 Furthermore, the package arrived with a personal touch - it was hand-signed! After receiving numerous impersonal parcels from China, this British one truly warmed my heart. It felt like it was personally sent to me 🙂.
 
-![Raspberry Pi Zero Package.jpeg](assets/raspberry-pi-zero-package-jpeg.jpg)
+![Raspberry Pi Zero Package.jpeg](assets/raspberry-pi-zero-package-9788.jpg)

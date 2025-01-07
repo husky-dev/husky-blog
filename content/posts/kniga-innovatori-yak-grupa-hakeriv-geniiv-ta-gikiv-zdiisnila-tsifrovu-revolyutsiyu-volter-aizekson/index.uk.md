@@ -6,7 +6,7 @@ categories:
 tags:
   - programming
 cover:
-  image: "assets/kniga-innovatori-yak-grupa-hakeriv-geniiv-ta-gikiv-zdiisnila-tsifrovu-revolyutsiyu-volter-aizekson.jpg"
+  image: "assets/kniga-innovatori-yak-grupa-hakeriv-geniiv-ta-gikiv-zdiisnila-tsifrovu-revolyutsiyu-volter-aizekson-a091.jpg"
   caption: "Книга “Інноватори. Як група хакерів, геніїв та ґіків здійснила цифрову революцію” - Волтер Айзексон"
   relative: true
 draft: false

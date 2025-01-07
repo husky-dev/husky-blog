@@ -7,7 +7,7 @@ tags:
   - programming
   - self-development
 cover:
-  image: "assets/kniga-yak-pratsyuie-google-erik-shmidt-dzhonatan-rozenberg.jpg"
+  image: "assets/kniga-yak-pratsyuie-google-erik-shmidt-dzhonatan-rozenberg-296f.jpg"
   caption: "Книга “Як працює Google” - Ерік Шмідт, Джонатан Розенберг"
   relative: true
 draft: false

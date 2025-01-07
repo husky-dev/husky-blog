@@ -6,7 +6,7 @@ categories:
 tags:
   - self-development
 cover:
-  image: "assets/kniga-naibagatshii-cholovik-u-vaviloni-dzhordzh-kleison.jpg"
+  image: "assets/kniga-naibagatshii-cholovik-u-vaviloni-dzhordzh-kleison-24a4.jpg"
   caption: "Книга “Найбагатший чоловік у Вавилоні” - Джордж Клейсон"
   relative: true
 draft: false

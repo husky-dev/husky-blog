@@ -6,7 +6,7 @@ categories:
 tags:
   - self-development
 cover:
-  image: "assets/kniga-bendzhamin-franklin-volter-aizekson.jpg"
+  image: "assets/kniga-bendzhamin-franklin-volter-aizekson-47c8.jpg"
   caption: "Книга “Бенджамін Франклін” - Волтер Айзексон"
   relative: true
 draft: false

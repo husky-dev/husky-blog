@@ -6,7 +6,7 @@ categories:
 tags:
   - fantasy
 cover:
-  image: "assets/kniga-garri-potter-i-metodi-ratsionalnosti-eliezer-yudkovskii.png"
+  image: "assets/kniga-garri-potter-i-metodi-ratsionalnosti-eliezer-yudkovskii-fe69.png"
   caption: "Книга “Гаррі Поттер і методи раціональності” - Еліезер Юдковський"
   relative: true
 draft: false

@@ -7,7 +7,7 @@ tags:
   - management
   - self-development
 cover:
-  image: "assets/kniga-rozvernit-korabel-uroki-menedzhmentu-vid-kapitana-pidvodnogo-chovna-devid-marke.jpg"
+  image: "assets/kniga-rozvernit-korabel-uroki-menedzhmentu-vid-kapitana-pidvodnogo-chovna-devid-marke-c9cf.jpg"
   caption: "Книга “Розверніть корабель. Уроки менеджменту від капітана підводного човна” - Девід Марке"
   relative: true
 draft: false
@@ -23,7 +23,7 @@ draft: false
 
 Ще класна ідея - надавати список запитань, які треба задати собі і які відносяться до прочитаного розділу. Дуже раджу на них відповідати. Іноді впадаєш в ностальгію або серйозно задумуєшся.
 
-![Приклад запитань в кінці розділу](assets/priklad-zapitan-v-kintsi-rozdilu.jpg "Приклад запитань в кінці розділу")
+![Приклад запитань в кінці розділу](assets/priklad-zapitan-v-kintsi-rozdilu-cb04.jpg "Приклад запитань в кінці розділу")
 
 Інколи, під час читання, ти бачиш аналогії зі своїм власним досвідом. Починаєш розуміти, що менеджмент підводного човна не так вже й сильно відрізняється від тих же ІТ компаній або стартапів. Ті ж самі проблеми і виклики.
 

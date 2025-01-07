@@ -7,7 +7,7 @@ tags:
   - biography
   - self-development
 cover:
-  image: "assets/kniga-zelene-svitlo-metyu-makkonagi.jpg"
+  image: "assets/kniga-zelene-svitlo-metyu-makkonagi-8c64.jpg"
   caption: "Книга “Зелене світло” - Метью Макконагі"
   relative: true
 draft: false
@@ -23,9 +23,9 @@ draft: false
 
 Дуже сподобалось оформлення книги. Різні особисті фотографії, вирізки з його щоденника. Окремий респект дизайнерам книги.
 
-![IMG_9602.jpeg](assets/img-9602-jpeg.jpg)
+![IMG_9602.jpeg](assets/img-9602-3631.jpg)
 
-![IMG_9601.jpeg](assets/img-9601-jpeg.jpg)
+![IMG_9601.jpeg](assets/img-9601-babe.jpg)
 
 ## Мої улюблені цитати
 

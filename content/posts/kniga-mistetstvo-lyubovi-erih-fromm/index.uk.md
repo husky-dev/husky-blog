@@ -6,7 +6,7 @@ categories:
 tags:
   - self-development
 cover:
-  image: "assets/kniga-mistetstvo-lyubovi-erih-fromm.jpg"
+  image: "assets/kniga-mistetstvo-lyubovi-erih-fromm-b2de.jpg"
   caption: "Книга “Мистецтво любові” - Еріх Фромм"
   relative: true
 draft: false

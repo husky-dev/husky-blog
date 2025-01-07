@@ -6,7 +6,7 @@ categories:
 tags:
   - raspberry
 cover:
-  image: "assets/moya-raspberry-pi-zero-za-5-baksiv.jpg"
+  image: "assets/moya-raspberry-pi-zero-za-5-baksiv-7c38.jpg"
   caption: "Моя Raspberry Pi Zero за 5 баксів"
   relative: true
 draft: false
@@ -22,7 +22,7 @@ draft: false
 
 У RPi Zerro немає вбудованої звукової карти. Тож є два варіанти - передавати звук через HDMI (що я і робив у відео) або використовувати зовнішню звукову карту. Передача звуку по HDMI працює "з коробки". А ось з аудіокартою варто повозитися.
 
-![Дешева звукова карта яку я використовував у своїх тестах](assets/desheva-zvukova-karta-yaku-ya-vikoristovuvav-u-svoih-testah.jpg "Дешева звукова карта яку я використовував у своїх тестах")
+![Дешева звукова карта яку я використовував у своїх тестах](assets/desheva-zvukova-karta-yaku-ya-vikoristovuvav-u-svoih-testah-9a21.jpg "Дешева звукова карта яку я використовував у своїх тестах")
 
 Ще запара в тому, що я поки що не знайшов способу як пускати звук через звукову карту використовуючи `omxplayer` (рекомендований плеєр). Через `mpg123`, після певних налаштувань - працює. omxplayer поки що мовчить. Потрібно виконати більше досліджень в цьому напрямку. Поки тільки варіант підключати колонки до телевізора.
 

@@ -6,7 +6,7 @@ categories:
 tags:
   - self-development
 cover:
-  image: "assets/kgiga-viznachni-roki-vid-20-do-30-vmikai-na-povnu-ta-dosyagai-maksimumu-meg-dzhei.jpg"
+  image: "assets/kgiga-viznachni-roki-vid-20-do-30-vmikai-na-povnu-ta-dosyagai-maksimumu-meg-dzhei-a214.jpg"
   caption: "Кгига “Визначні роки. Від 20 до 30. Вмикай на повну та досягай максимуму” - Мэг Джей"
   relative: true
 draft: false

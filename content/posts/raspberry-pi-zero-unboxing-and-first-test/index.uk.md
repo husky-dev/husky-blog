@@ -6,7 +6,7 @@ categories:
 tags:
   - raspberry
 cover:
-  image: "assets/raspberry-pi-zero-u-porivnyanni-z-dolarovoyu-kupyuroyu.jpg"
+  image: "assets/raspberry-pi-zero-u-porivnyanni-z-dolarovoyu-kupyuroyu-9ac4.jpg"
   caption: "Raspberry Pi Zero у порівнянні з доларовою купюрою"
   relative: true
 draft: false
@@ -24,11 +24,11 @@ draft: false
 
 Щойно її взяв у руки - стався ступор. Тільки два Micro-USB. Причому один використовується для живлення. І як мені підключити клавіатуру, мишку і Wi-Fi модуль? Реально впав у ступор, поки не згадав, що разом з USB винайшли й USB-хаби.
 
-![Raspberry Pi Zero compare to hand.jpeg](assets/raspberry-pi-zero-compare-to-hand-jpeg.jpg)
+![Raspberry Pi Zero compare to hand.jpeg](assets/raspberry-pi-zero-compare-to-hand-a0c3.jpg)
 
 По залізу все по мінімуму. Ніяких звукових модулів або Wi-Fi. Усе потрібно підключати ззовні по USB. Якщо більше одного девайса - потрібен USB-hub. Благо в моєму моніторі один такий був вбудований. Довелося тільки швиденько спаяти перехідник з Micro USB на USB.
 
-![Raspberry Pi Zero Connect.jpeg](assets/raspberry-pi-zero-connect-jpeg.jpg)
+![Raspberry Pi Zero Connect.jpeg](assets/raspberry-pi-zero-connect-9555.jpg)
 
 Вставив флешку з Raspbian на борту зняту з Raspberry Pi 2B. Усе працює. Для прикладу навіть записав відео, як на цій маленькій платці можна грати в Minecraft 🙂
 
@@ -40,4 +40,4 @@ draft: false
 
 І саме мі мі мі мі - бандероль була підписана від руки! Після маси бездушних посилок з Китаю, ця, відправлена з Британії, прям зігріла душу. Мовляв персонально тобі висилали 🙂
 
-![Raspberry Pi Zero Package.jpeg](assets/raspberry-pi-zero-package-jpeg.jpg)
+![Raspberry Pi Zero Package.jpeg](assets/raspberry-pi-zero-package-9788.jpg)

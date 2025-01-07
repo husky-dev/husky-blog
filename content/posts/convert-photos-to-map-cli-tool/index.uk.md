@@ -6,7 +6,7 @@ categories:
 tags:
   - programming
 cover:
-  image: "assets/priklad-roboti-cli-utiliti-img-to-map.jpg"
+  image: "assets/priklad-roboti-cli-utiliti-img-to-map-855f.jpg"
   caption: "Приклад роботи CLI утиліти img-to-map"
   relative: true
 draft: false
