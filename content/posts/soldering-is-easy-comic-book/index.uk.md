@@ -12,8 +12,6 @@ draft: false
 
 Суперовий комікс на тему "як навчитися паяти з нуля". Обожнюю, коли інженерні штуки пояснюють просто і зі смаком.
 
+[Комікс Паяти - просто (PDF)](assets/komiks-payati-prosto-pdf.pdf)
+
 [Сторінка з обговореннями та перекладами](https://mightyohm.com/blog/2011/04/soldering-is-easy-comic-book/)
-
-[PDF файл](assets/pdf-fail.pdf)
-
-[Англійська версія](assets/angliiska-versiya.pdf)
