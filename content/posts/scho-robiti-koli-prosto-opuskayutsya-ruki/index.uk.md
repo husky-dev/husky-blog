@@ -2,7 +2,7 @@
 title: "Що робити, коли просто опускаються руки"
 date: 2020-02-09T18:37:00.000Z
 categories:
-  - sport
+  - life
 cover:
   image: "assets/maxresdefault-66b4-c457.jpg"
   relative: true

@@ -2,7 +2,7 @@
 title: "“Водохреща” в Кременчуці"
 date: 2012-02-06T20:11:00.000Z
 categories:
-  - sport
+  - life
 cover:
   image: "assets/nasha-komanda-798a.jpg"
   caption: "Наша команда"

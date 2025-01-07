@@ -1,6 +1,8 @@
 ---
 title: "Досвід купівлі товару на ROZETKA.COM.UA з доставкою в Кременчук"
 date: 2012-04-21T21:00:00.000Z
+categories:
+  - life
 cover:
   image: "assets/image-40e4-8f66.jpg"
   relative: true
