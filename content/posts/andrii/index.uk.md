@@ -6,7 +6,7 @@ categories:
 series:
   - "kilimanjaro"
 cover:
-  image: "assets/andrii-nash-chlen-komandi-i-trener-z-boiovogo-gopaka-a9d6.jpg"
+  image: "assets/andrii-nash-chlen-komandi-i-trener-z-boiovogo-gopaka-981a.jpg"
   caption: "Андрій - наш член команди і тренер з бойового гопака"
   relative: true
 draft: false

@@ -6,7 +6,7 @@ categories:
 series:
   - "kilimanjaro"
 cover:
-  image: "assets/vid-z-vershini-kilimandzharo-pislya-svitanku-9943.jpg"
+  image: "assets/vid-z-vershini-kilimandzharo-pislya-svitanku-d6de.jpg"
   caption: "Вид з вершини Кіліманджаро після світанку"
   relative: true
 draft: false
@@ -18,25 +18,25 @@ draft: false
 
 На півдорозі нас зустріли портери з нашої команди. Налили соку і забрали наші рюкзаки. Ближче до 12 години дня ми таки дістались табору.
 
-![Онісма - мій найкращий друг на час спуску. Він “віджав” у мене мій рюкзак і допоміг дійти до табору](assets/onisma-mii-naikraschii-drug-na-chas-spusku-vin-vidzhav-u-mene-mii-ryukzak-i-dopomig-diiti-do-taboru-2e22.jpg "Онісма - мій найкращий друг на час спуску. Він “віджав” у мене мій рюкзак і допоміг дійти до табору")
+![Онісма - мій найкращий друг на час спуску. Він “віджав” у мене мій рюкзак і допоміг дійти до табору](assets/onisma-mii-naikraschii-drug-na-chas-spusku-vin-vidzhav-u-mene-mii-ryukzak-i-dopomig-diiti-do-taboru-9dc6.jpg "Онісма - мій найкращий друг на час спуску. Він “віджав” у мене мій рюкзак і допоміг дійти до табору")
 
-![IMG_2858.jpeg](assets/img-2858-1f40.jpg)
+![IMG_2858.jpeg](assets/img-2858-0313.jpg)
 
 Залишатися довго на висоті було не бажано. Тому нам дали годину на сон і потім знову довгий спуск у 10 км.
 
-![IMG_2867.jpeg](assets/img-2867-4211.jpg)
+![IMG_2867.jpeg](assets/img-2867-1a75.jpg)
 
-![IMG_2875.jpeg](assets/img-2875-be83.jpg)
+![IMG_2875.jpeg](assets/img-2875-94c4.jpg)
 
-![Гірські носилки. На них можна швидко спустити людину в низ якщо вже зовсім все погано](assets/girski-nosilki-na-nih-mozhna-shvidko-spustiti-lyudinu-v-niz-yakscho-vzhe-zovsim-vse-pogano-e8a2.jpg "Гірські носилки. На них можна швидко спустити людину в низ якщо вже зовсім все погано")
+![Гірські носилки. На них можна швидко спустити людину в низ якщо вже зовсім все погано](assets/girski-nosilki-na-nih-mozhna-shvidko-spustiti-lyudinu-v-niz-yakscho-vzhe-zovsim-vse-pogano-0dc8.jpg "Гірські носилки. На них можна швидко спустити людину в низ якщо вже зовсім все погано")
 
 Ми вже кілька днів перебували в альпійській пустелі без будь-якої рослинності. Під час зниження висоти почали з'являтися лишайники, трава, кущі, кущі побільше, дерева. Під вечір ми дійшли до табору.
 
-![IMG_2885.jpeg](assets/img-2885-dfd2.jpg)
+![IMG_2885.jpeg](assets/img-2885-ed9b.jpg)
 
-![IMG_2893.jpeg](assets/img-2893-1f32.jpg)
+![IMG_2893.jpeg](assets/img-2893-ea60.jpg)
 
-![IMG_2897.jpeg](assets/img-2897-048e.jpg)
+![IMG_2897.jpeg](assets/img-2897-a785.jpg)
 
 Попередні два дні в нас був обмежений доступ до води. Базовий табір розташований на віддалі від струмків, тому вода була тільки для їжі та пиття. Спустившись, ми повернулися до всіх "благ" наметового життя. Нарешті можна було нормально вмитися і почистити зуби.
 

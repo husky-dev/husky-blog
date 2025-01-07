@@ -6,7 +6,7 @@ categories:
 series:
   - "kilimanjaro"
 cover:
-  image: "assets/onisma-mii-naikraschii-drug-na-chas-spusku-vin-vzyav-u-mene-ryukzak-i-dopomig-diiti-do-taboru-173d.jpg"
+  image: "assets/onisma-mii-naikraschii-drug-na-chas-spusku-vin-vzyav-u-mene-ryukzak-i-dopomig-diiti-do-taboru-96c6.jpg"
   caption: "Онісма - мій найкращий друг на час спуску. Він взяв у мене рюкзак і допоміг дійти до табору"
   relative: true
 draft: false
