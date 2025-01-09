@@ -32,18 +32,22 @@ menu:
       name: "🇺🇸 USA"
       url: "/series/work-and-travel/"
       weight: 5
+    - identifier: travel
+      name: "🛫 Подорожі"
+      url: "/categories/travel/"
+      weight: 6
     - identifier: sport
       name: "🏃‍♂️ Спорт"
       url: "/categories/sport/"
-      weight: 6
+      weight: 7
     - identifier: books
       name: "📚 Книги"
       url: "/categories/books/"
-      weight: 7
+      weight: 8
     - identifier: diy
       name: "🛠️ DIY"
       url: "/categories/diy/"
-      weight: 8
+      weight: 9
 
 params:
   defaultTheme: auto
@@ -90,6 +94,10 @@ languages:
         - name: "👨‍💼 CV"
           url: "https://husky-dev.me/cv"
           weight: 2
+        - identifier: travel
+          name: "🛫 Travel"
+          url: "/categories/travel/"
+          weight: 6
         - identifier: diy
           name: "🛠️ DIY"
           url: "/categories/diy/"
