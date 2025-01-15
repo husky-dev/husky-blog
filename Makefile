@@ -4,7 +4,7 @@ build: FORCE
 	hugo --minify
 
 deploy: FORCE
-	rsync -avz --delete ./public/ husky-api:/srv/data/blog
+	npx wrangler pages deploy public --project-name=husky-blog --branch=main --commit-dirty
 
 build-deploy: build deploy
 

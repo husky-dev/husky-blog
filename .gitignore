@@ -27,3 +27,5 @@ node_modules
 /content/posts/**/*.pdf
 import/.cache
 .cache
+
+.env
