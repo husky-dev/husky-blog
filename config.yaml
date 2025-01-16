@@ -1,0 +1,110 @@
+baseURL: "https://blog.husky-dev.me"
+languageCode: "uk"
+defaultContentLanguage: "uk"
+title: "Husky Blog"
+theme: "PaperMod"
+timeout: "5m"
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+menu:
+  main:
+    - identifier: namibia
+      name: "🇳🇦 Намібія"
+      url: "/series/namibia/"
+      weight: 1
+    - identifier: kilimanjaro
+      name: "🇹🇿 Кіліманджаро"
+      url: "/series/kilimanjaro/"
+      weight: 2
+    - identifier: singapore
+      name: "🇸🇬 Сінгапур"
+      url: "/series/singapore/"
+      weight: 3
+    - identifier: new-zealand
+      name: "🇳🇿 Нова Зеландія"
+      url: "/series/new-zealand/"
+      weight: 4
+    - identifier: work-and-travel
+      name: "🇺🇸 USA"
+      url: "/series/work-and-travel/"
+      weight: 5
+    - identifier: travel
+      name: "🛫 Подорожі"
+      url: "/categories/travel/"
+      weight: 6
+    - identifier: sport
+      name: "🏃‍♂️ Спорт"
+      url: "/categories/sport/"
+      weight: 7
+    - identifier: books
+      name: "📚 Книги"
+      url: "/categories/books/"
+      weight: 8
+    - identifier: diy
+      name: "🛠️ DIY"
+      url: "/categories/diy/"
+      weight: 9
+
+params:
+  defaultTheme: auto
+  assets:
+    disableFingerprinting: false
+  DateFormat: "2 January, 2006"
+  ShowPostNavLinks: true
+  cover:
+    linkFullImages: true
+  homeInfoParams:
+    Title: "Привіт 🤚"
+    Content: "Мене звати Ярослав. Я програміст. Люблю програмування, подорожі і спорт. А це мій персональний блог."
+  showReadingTime: true
+  socialIcons:
+    - name: "instagram"
+      url: "https://www.instagram.com/husky.dev/"
+    - name: "facebook"
+      url: "https://fb.me/huskydev"
+    - name: "twitter"
+      url: "https://twitter.com/HuskyDevUA"
+    - name: "github"
+      url: "https://github.com/husky-dev"
+    - name: "email"
+      url: "mailto:jaroslav@husky-dev.me"
+
+defaultContentLanguage: "uk"
+
+languages:
+  uk:
+    weight: 1
+    languageName: "🇺🇦"
+  en:
+    weight: 2
+    languageName: "🇺🇸"
+    params:
+      homeInfoParams:
+        Title: "Hello!"
+        Content: "My name is Jaroslav. I am a programmer. I love programming, traveling and sports."
+    menu:
+      main:
+        - name: "🛠️ Projects"
+          url: "https://husky-dev.me/projects"
+          weight: 1
+        - name: "👨‍💼 CV"
+          url: "https://husky-dev.me/cv"
+          weight: 2
+        - identifier: travel
+          name: "🛫 Travel"
+          url: "/categories/travel/"
+          weight: 6
+        - identifier: diy
+          name: "🛠️ DIY"
+          url: "/categories/diy/"
+          weight: 8
+      
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON 
