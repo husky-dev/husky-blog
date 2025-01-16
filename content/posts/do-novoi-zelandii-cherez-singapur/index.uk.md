@@ -50,7 +50,7 @@ draft: false
 
 Взагалі як я казав, все розташоване в центрі і досить близько одне до одного. Тому обов’язково виділіть вечір тут прогулятись.
 
-{{< video mov="assets/park-merlion-vvecheri-tut-samii-top-speka-spadaie-i-vse-garno-pidsvichuietsya-498d.mov" mp4="assets/park-merlion-vvecheri-tut-samii-top-speka-spadaie-i-vse-garno-pidsvichuietsya-498d.mp4" poster="assets/park-merlion-vvecheri-tut-samii-top-speka-spadaie-i-vse-garno-pidsvichuietsya-498d.jpg" caption="Парк Merlion. Ввечері тут самий топ. Спека спадає і все гарно підсвічується" >}}
+{{< video mov="https://static.husky-dev.me/blog/facebook-video-2081343581967756-2081343581967756-5315-498d.mov" mp4="https://static.husky-dev.me/blog/facebook-video-2081343581967756-2081343581967756-5315-498d.mp4" poster="assets/park-merlion-vvecheri-tut-samii-top-speka-spadaie-i-vse-garno-pidsvichuietsya-498d.jpg" caption="Парк Merlion. Ввечері тут самий топ. Спека спадає і все гарно підсвічується" >}}
 
 ![IMG_6172.jpeg](assets/img-6172-8776.jpg)
 
@@ -96,7 +96,7 @@ draft: false
 
 ![IMG_6412.jpeg](assets/img-6412-e75b.jpg)
 
-{{< video mov="assets/facebook-video-2081345088634272-2081345088634272-8102.mov" mp4="assets/facebook-video-2081345088634272-2081345088634272-8102.mp4" poster="assets/facebook-video-2081345088634272-2081345088634272-8102.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/facebook-video-2081345088634272-2081345088634272-5a40-8102.mov" mp4="https://static.husky-dev.me/blog/facebook-video-2081345088634272-2081345088634272-5a40-8102.mp4" poster="assets/facebook-video-2081345088634272-2081345088634272-5a40-8102.jpg" >}}
 
 Податки відносно низькі, але продукти і життя дорогі. Ціни на нерухомість постійно зростають. Причина тому - мало території.
 
@@ -136,7 +136,7 @@ draft: false
 
 ![Храм Sri Mariamman](assets/hram-sri-mariamman-5e7e.jpg "Храм Sri Mariamman")
 
-{{< video mov="assets/singapur-vrazhaie-garnoyu-suchasnoyu-arhitekturoyu-i-kreativnistyu-e51c.mov" mp4="assets/singapur-vrazhaie-garnoyu-suchasnoyu-arhitekturoyu-i-kreativnistyu-e51c.mp4" poster="assets/singapur-vrazhaie-garnoyu-suchasnoyu-arhitekturoyu-i-kreativnistyu-e51c.jpg" caption="Сінгапур вражає гарною сучасною архітектурою і креативністю" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6584-4e31-e51c.mov" mp4="https://static.husky-dev.me/blog/img-6584-4e31-e51c.mp4" poster="assets/singapur-vrazhaie-garnoyu-suchasnoyu-arhitekturoyu-i-kreativnistyu-e51c.jpg" caption="Сінгапур вражає гарною сучасною архітектурою і креативністю" >}}
 
 ![IMG_6590.jpeg](assets/img-6590-f093.jpg)
 
@@ -182,7 +182,7 @@ draft: false
 
 Купал що вище - Хмарний ліс. Там створені більш прохолодні та вологі умови для рослин із тропічних гірських районів. Як тільки заходиш - одразу бачиш гору, з якої ллється водоспад. Трохи пройшовши, ти піднімаєшся на ліфті на саму вершину і плавно спускаєшся підвісними доріжками навколо гори. Всі рослини знаходяться на схилах цієї гори, а величезний водоспад створює прохолоду.
 
-{{< video mov="assets/velicheznii-vodospad-na-vhodi-u-hmarnii-lis-ffe1.mov" mp4="assets/velicheznii-vodospad-na-vhodi-u-hmarnii-lis-ffe1.mp4" poster="assets/velicheznii-vodospad-na-vhodi-u-hmarnii-lis-ffe1.jpg" caption="Величезний водоспад на вході у Хмарний ліс" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6761-7ba6-ffe1.mov" mp4="https://static.husky-dev.me/blog/img-6761-7ba6-ffe1.mp4" poster="assets/velicheznii-vodospad-na-vhodi-u-hmarnii-lis-ffe1.jpg" caption="Величезний водоспад на вході у Хмарний ліс" >}}
 
 ![IMG_6762.jpeg](assets/img-6762-b664.jpg)
 
@@ -204,11 +204,11 @@ draft: false
 
 ![IMG_6810.jpeg](assets/img-6810-95ea.jpg)
 
-{{< video mov="assets/os-tak-tut-pidtrimuietsya-vologa-8ae6.mov" mp4="assets/os-tak-tut-pidtrimuietsya-vologa-8ae6.mp4" poster="assets/os-tak-tut-pidtrimuietsya-vologa-8ae6.jpg" caption="Ось так тут підтримується волога" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6825-3f00-8ae6.mov" mp4="https://static.husky-dev.me/blog/img-6825-3f00-8ae6.mp4" poster="assets/os-tak-tut-pidtrimuietsya-vologa-8ae6.jpg" caption="Ось так тут підтримується волога" >}}
 
 ![Камера не передає, але вживу це виглядає дуже ефектно](assets/kamera-ne-peredaie-ale-vzhivu-tse-viglyadaie-duzhe-efektno-1a4c.jpg "Камера не передає, але вживу це виглядає дуже ефектно")
 
-{{< video mov="assets/img-6838-da24.mov" mp4="assets/img-6838-da24.mp4" poster="assets/img-6838-da24.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6838-6ee0-da24.mov" mp4="https://static.husky-dev.me/blog/img-6838-6ee0-da24.mp4" poster="assets/img-6838-6ee0-da24.jpg" >}}
 
 ![Офігезна робота](assets/ofigezna-robota-0a86.jpg "Офігезна робота")
 
@@ -218,7 +218,7 @@ draft: false
 
 ![IMG_6864.jpeg](assets/img-6864-21f1.jpg)
 
-{{< video mov="assets/img-6856-c973.mov" mp4="assets/img-6856-c973.mp4" poster="assets/img-6856-c973.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6856-05fe-c973.mov" mp4="https://static.husky-dev.me/blog/img-6856-05fe-c973.mp4" poster="assets/img-6856-05fe-c973.jpg" >}}
 
 ![IMG_6855.jpeg](assets/img-6855-f0cb.jpg)
 

@@ -16,7 +16,7 @@ draft: false
 
 Вранці на плануванні ми розділилися на дві групи і за картою накидали маршрут. Виїжджати потрібно було до сходу сонця. У Намібії діє правило: ворота парку відчиняються на світанку і зачиняються на заході. Не встиг - залишаєшся в парку. Вночі звірі найактивніші і можна ненароком врізатись у слона.
 
-{{< video mov="assets/rankove-planuvannya-7b69.mov" mp4="assets/rankove-planuvannya-7b69.mp4" poster="assets/rankove-planuvannya-7b69.jpg" caption="Ранкове планування" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6620-7af9-7b69.mov" mp4="https://static.husky-dev.me/blog/img-6620-7af9-7b69.mp4" poster="assets/rankove-planuvannya-7b69.jpg" caption="Ранкове планування" >}}
 
 Сафарі на джипі - це унікальний досвід. Ти сам їдеш за кермом і всіма очима шукаєш тварин. Немає гіда який буде тобі тикати: "дивись сюди". Усе потрібно робити самим. І в цьому є свій кайф.
 
@@ -24,7 +24,7 @@ draft: false
 
 ![DSC_6499.jpeg](assets/dsc-6499-c41d.jpg)
 
-{{< video mov="assets/img-6623-df87.mov" mp4="assets/img-6623-df87.mp4" poster="assets/img-6623-df87.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6623-4e9a-df87.mov" mp4="https://static.husky-dev.me/blog/img-6623-4e9a-df87.mp4" poster="assets/img-6623-4e9a-df87.jpg" >}}
 
 Але головна моя мрія була, що б лев пройшов поблизу від моєї машини. Я багато разів бачив їх поблизу в зоопарках. Але це не те. Хотілося їх побачити в дикій природі. І мрія збулася! Коли друга група натрапила на прайд - ми одразу ж помчали до них.
 
@@ -32,7 +32,7 @@ draft: false
 
 ![IMG_6638.jpeg](assets/img-6638-d161.jpg)
 
-{{< video mov="assets/img-6640-d4e5.mov" mp4="assets/img-6640-d4e5.mp4" poster="assets/img-6640-d4e5.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6640-7924-d4e5.mov" mp4="https://static.husky-dev.me/blog/img-6640-7924-d4e5.mp4" poster="assets/img-6640-7924-d4e5.jpg" >}}
 
 ![IMG_6644.jpeg](assets/img-6644-433e.jpg)
 
@@ -46,11 +46,11 @@ draft: false
 
 Там я повністю усвідомив чому левів називають "царями звірів". Наш джип стояв посеред прайду і їм було абсолютно все одно на нас. Ми були на їх території, а не вони на нашій. Левиці розосередилися по великій території. Вони активно спостерігали за зграєю антилоп, яка проходила недалеко від нас. Усі вікна в машині були зачинені. Як леви нас не виманювали, але виходити із "зони комфорту" нам не хотілось.
 
-{{< video mov="assets/i-tut-nam-povidomili-scho-nashi-natrapili-na-nosoriga-9ed2.mov" mp4="assets/i-tut-nam-povidomili-scho-nashi-natrapili-na-nosoriga-9ed2.mp4" poster="assets/i-tut-nam-povidomili-scho-nashi-natrapili-na-nosoriga-9ed2.jpg" caption="І тут нам повідомили, що наші натрапили на носоріга" >}}
+{{< video mov="https://static.husky-dev.me/blog/vid-20210511-091054-fb8e-9ed2.mov" mp4="https://static.husky-dev.me/blog/vid-20210511-091054-fb8e-9ed2.mp4" poster="assets/i-tut-nam-povidomili-scho-nashi-natrapili-na-nosoriga-9ed2.jpg" caption="І тут нам повідомили, що наші натрапили на носоріга" >}}
 
 Нам повідомили по рації, що один з наших джипів натрапив на носоріга. Нам довелось покинути левів і вирушити туди. Але сафарі - це не зоопарк. Везе не завжди. І коли ми дістались до точки - носоріга вже не було. Але інший джип встиг його зафільмувати.
 
-{{< video mov="assets/mashina-6a37.mov" mp4="assets/mashina-6a37.mp4" poster="assets/mashina-6a37.jpg" caption="Машина" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5148-1aec-6a37.mov" mp4="https://static.husky-dev.me/blog/img-5148-1aec-6a37.mp4" poster="assets/mashina-6a37.jpg" caption="Машина" >}}
 
 Хоч хтось на відео і пропонував під’їхати до нього ближче, але слава богу ніхто так не зробив, бо це було небезпечно. Це агресивні тварини, і відчувши небезпеку він міг би піти на таран. Але все обійшлось.
 
@@ -72,7 +72,7 @@ draft: false
 
 ![DSC_6474.jpeg](assets/dsc-6474-94f5.jpg)
 
-{{< video mov="assets/mozhna-bulo-sposterigati-tsili-stada-riznih-tvarin-374b.mov" mp4="assets/mozhna-bulo-sposterigati-tsili-stada-riznih-tvarin-374b.mp4" poster="assets/mozhna-bulo-sposterigati-tsili-stada-riznih-tvarin-374b.jpg" caption="Можна було спостерігати цілі стада різних тварин" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6629-ed9e-374b.mov" mp4="https://static.husky-dev.me/blog/img-6629-ed9e-374b.mp4" poster="assets/mozhna-bulo-sposterigati-tsili-stada-riznih-tvarin-374b.jpg" caption="Можна було спостерігати цілі стада різних тварин" >}}
 
 В обід стало спекотно і всі звірі поховались. Ми вирішили повертатись назад. Після активного "полювання", весь мій джип розморило і всі заснули. І тільки водієві, тобто мені, доводилось спати однією півкулею мозку, а другою стежити за дорогою.
 
@@ -80,4 +80,4 @@ draft: false
 
 Поспати часу не було, на нас чекав переїзд до готелю. Другу половину дня ми були весь час в дорозі. Нам треба було гарно відпочити, бо завтра на нас чекав фінальний день пригод - [відвідування гепардів та невеличке сафарі](/posts/rezervatsiya-gepardiv-i-poshuk-sloniv) по ще одному парку.
 
-{{< video mov="assets/golovnii-kaif-buti-vodiiem-tse-postiino-bachiti-taki-kraievidi-9970.mov" mp4="assets/golovnii-kaif-buti-vodiiem-tse-postiino-bachiti-taki-kraievidi-9970.mp4" poster="assets/golovnii-kaif-buti-vodiiem-tse-postiino-bachiti-taki-kraievidi-9970.jpg" caption="Головний кайф бути водієм - це постійно бачити такі краєвиди" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6766-ba65-9970.mov" mp4="https://static.husky-dev.me/blog/img-6766-ba65-9970.mp4" poster="assets/golovnii-kaif-buti-vodiiem-tse-postiino-bachiti-taki-kraievidi-9970.jpg" caption="Головний кайф бути водієм - це постійно бачити такі краєвиди" >}}

@@ -11,7 +11,7 @@ draft: false
 
 У всіх бувають важкі моменти. Усі, навіть найсильніші, знають це почуття, коли просто опускаються руки. Коли хочеться просто прилягти на диванчик і перечекати це все. Є різні способи боротьби з цим почуттям. Для мене рятівним колом у таких ситуаціях стала пробіжка.
 
-{{< video mov="assets/scho-robiti-koli-prosto-opuskayutsya-ruki-0f54.mov" mp4="assets/scho-robiti-koli-prosto-opuskayutsya-ruki-0f54.mp4" poster="assets/scho-robiti-koli-prosto-opuskayutsya-ruki-0f54.jpg" caption="Що робити, коли просто опускаються руки" >}}
+{{< video mov="https://static.husky-dev.me/blog/jarik-full-final2-0514-0f54.mov" mp4="https://static.husky-dev.me/blog/jarik-full-final2-0514-0f54.mp4" poster="assets/scho-robiti-koli-prosto-opuskayutsya-ruki-0f54.jpg" caption="Що робити, коли просто опускаються руки" >}}
 
 У моєму випадку вона приносить не стільки фізичну користь, скільки психологічну. Тобі важко. Голова забита думками. Страх, образа, злість. Ти одягаєш затасканий спортивний одяг і виходиш на вулицю. Вмикаєш улюблену музику. Вмикаєш трекер пробіжки і починаєш трохи швидше звичайного переставляти ноги.
 

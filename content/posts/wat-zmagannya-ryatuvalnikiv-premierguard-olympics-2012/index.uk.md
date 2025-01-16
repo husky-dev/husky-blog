@@ -139,7 +139,7 @@ _Етап 6 - перегони супервайзерів_
 
 Оскільки у нашого супервайзера були всі шанси стати першим, то ми були найактивнішими вболівальниками:
 
-{{< video mov="assets/peregoni-na-chovnah-ac06.mov" mp4="assets/peregoni-na-chovnah-ac06.mp4" poster="assets/peregoni-na-chovnah-ac06.jpg" caption="Перегони на човнах" >}}
+{{< video mov="https://static.husky-dev.me/blog/peregoni-na-lodkah-2012-premier-guard-olympics-96cc-ac06.mov" mp4="https://static.husky-dev.me/blog/peregoni-na-lodkah-2012-premier-guard-olympics-96cc-ac06.mp4" poster="assets/peregoni-na-chovnah-ac06.jpg" caption="Перегони на човнах" >}}
 
 {{< youtube id="5C8Y5ZuusKk" title="Гонки на лодках - 2012 Premier Guard Olympics" >}}
 
@@ -161,7 +161,7 @@ _Етап 6 - перегони супервайзерів_
 
 А поки що всі шикувались:
 
-{{< video mov="assets/ukraine-5793.mov" mp4="assets/ukraine-5793.mp4" poster="assets/ukraine-5793.jpg" caption="Ukraine" >}}
+{{< video mov="https://static.husky-dev.me/blog/ukraine-2012-premier-guard-olympics-28f9-5793.mov" mp4="https://static.husky-dev.me/blog/ukraine-2012-premier-guard-olympics-28f9-5793.mp4" poster="assets/ukraine-5793.jpg" caption="Ukraine" >}}
 
 {{< youtube id="xWNmwUcKjUw" title="Ukraine - 2012 Premier Guard Olympics" >}}
 

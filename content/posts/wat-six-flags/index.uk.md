@@ -70,7 +70,7 @@ draft: false
 
 Краще один раз побачити, ніж сто разів почути:
 
-{{< video mov="assets/hvilya-7335.mov" mp4="assets/hvilya-7335.mp4" poster="assets/hvilya-7335.jpg" caption="Хвиля" >}}
+{{< video mov="https://static.husky-dev.me/blog/hvilya-six-flags-virginia-2d9f-7335.mov" mp4="https://static.husky-dev.me/blog/hvilya-six-flags-virginia-2d9f-7335.mp4" poster="assets/hvilya-7335.jpg" caption="Хвиля" >}}
 
 {{< youtube id="KSmZFiWmVh8" title="Волна - Six flags, Virginia" >}}
 
@@ -84,7 +84,7 @@ draft: false
 
 У деяких моментах я думав, що зараз моя грудна клітка з'єднається з хребтом. Швидкість неймовірна! Земля! Небо! Знову земля!!! Аааааааа! У такі моменти починаєш замислюватися про сенс життя.
 
-{{< video mov="assets/the-mind-fresher-six-flags-virginia-d960.mov" mp4="assets/the-mind-fresher-six-flags-virginia-d960.mp4" poster="assets/the-mind-fresher-six-flags-virginia-d960.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/the-mind-fresher-six-flags-virginia-e728-d960.mov" mp4="https://static.husky-dev.me/blog/the-mind-fresher-six-flags-virginia-e728-d960.mp4" poster="assets/the-mind-fresher-six-flags-virginia-e728-d960.jpg" >}}
 
 {{< youtube id="Z8p2fSTY4MY" title="The mind fresher - Six flags, Virginia" >}}
 
@@ -110,7 +110,7 @@ draft: false
 
 Сідаєш учотирьох на одне велике надувне коло, розганяєшся до великої швидкості і вилітаєш в “унітаз”. Як же ж це круто 🙂
 
-{{< video mov="assets/zliv-six-flags-virginia-a7cf.mov" mp4="assets/zliv-six-flags-virginia-a7cf.mp4" poster="assets/zliv-six-flags-virginia-a7cf.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/zliv-six-flags-virginia-55ce-a7cf.mov" mp4="https://static.husky-dev.me/blog/zliv-six-flags-virginia-55ce-a7cf.mp4" poster="assets/zliv-six-flags-virginia-55ce-a7cf.jpg" >}}
 
 {{< youtube id="r9m9TWMdNII" title="Слив - Six flags, Virginia" >}}
 
@@ -126,7 +126,7 @@ draft: false
 
 Сідаєш у вагонетку, нічого не підозрюєш. І тут вона зі старту розганяється до неймовірної швидкості! Потім повний винос мозку... Купа поворотів, перекрутів, і розгонів до неймовірних швидкостей! Кожен з нас прокотився на ній по три рази. І з кожним разом хотілося ще, ще і ще!
 
-{{< video mov="assets/joker-six-flags-virginia-d705.mov" mp4="assets/joker-six-flags-virginia-d705.mp4" poster="assets/joker-six-flags-virginia-d705.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/joker-six-flags-virginia-9b89-d705.mov" mp4="https://static.husky-dev.me/blog/joker-six-flags-virginia-9b89-d705.mp4" poster="assets/joker-six-flags-virginia-9b89-d705.jpg" >}}
 
 {{< youtube id="hVoHvEJ_Zic" title="Joker - Six flags, Virginia" >}}
 

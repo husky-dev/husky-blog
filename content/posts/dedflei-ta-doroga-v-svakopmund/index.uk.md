@@ -32,7 +32,7 @@ draft: false
 
 ![IMG_5433.jpeg](assets/img-5433-ef3e.jpg)
 
-{{< video mov="assets/2021-05-05-09-51-55-1e5e.mov" mp4="assets/2021-05-05-09-51-55-1e5e.mp4" poster="assets/2021-05-05-09-51-55-1e5e.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/2021-05-05-09-51-55-8c6d-1e5e.mov" mp4="https://static.husky-dev.me/blog/2021-05-05-09-51-55-8c6d-1e5e.mp4" poster="assets/2021-05-05-09-51-55-8c6d-1e5e.jpg" >}}
 
 Ми швидко впоралися, тому як бонус ще заїхали в Сесріємський каньйон. Тут стоїть вода і сюди приходять звірі на водопій. Було дивно іноді між дюн без краплі води бачити стада тварин. Часом навіть левів. Тепер стало зрозуміло, що вода тут є. Потрібно тільки вміти її шукати.
 
@@ -64,13 +64,13 @@ draft: false
 
 Ми цілий день були за кермом. Увечері потрібно було бути в Свакопмунді, де на нас чекали два дні відпочинку в готелі. Але на жаль одна з машин пробила колесо.
 
-{{< video mov="assets/probittya-odnogo-kolesa-bulo-zastrahovano-tomu-treba-bulo-zrobiti-foto-9337.mov" mp4="assets/probittya-odnogo-kolesa-bulo-zastrahovano-tomu-treba-bulo-zrobiti-foto-9337.mp4" poster="assets/probittya-odnogo-kolesa-bulo-zastrahovano-tomu-treba-bulo-zrobiti-foto-9337.jpg" caption="Пробиття одного колеса було застраховано, тому треба було зробити фото" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5577-9de4-9337.mov" mp4="https://static.husky-dev.me/blog/img-5577-9de4-9337.mp4" poster="assets/probittya-odnogo-kolesa-bulo-zastrahovano-tomu-treba-bulo-zrobiti-foto-9337.jpg" caption="Пробиття одного колеса було застраховано, тому треба було зробити фото" >}}
 
 Для безпеки ми завжди намагалися триматися середини дороги. Але коли ти їдеш 100 кілометрів в одному напрямку посеред пустелі - можна відволіктися і не помітити камінь. Так і сталось.
 
 Спочатку ми думали, що пробито тільки заднє. Переднє загрузло в пісок. Але коли машина трохи від'їхала - помітили, що пробито і переднє. Добре, що у нас команда була велика і ми всі разом оперативно поміняли колеса. У кожного джипа було з собою дві запаски. Якраз дві і стали в пригоді.
 
-{{< video mov="assets/dzhekpot-9546.mov" mp4="assets/dzhekpot-9546.mp4" poster="assets/dzhekpot-9546.jpg" caption="Джекпот" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5580-112d-9546.mov" mp4="https://static.husky-dev.me/blog/img-5580-112d-9546.mp4" poster="assets/dzhekpot-9546.jpg" caption="Джекпот" >}}
 
 Ми приїхали в Свакопмунд пізно вночі. Але зате провели захід сонця в пустелі і зробили класні фотографії.
 

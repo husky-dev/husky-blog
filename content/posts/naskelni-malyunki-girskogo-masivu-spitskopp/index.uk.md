@@ -18,7 +18,7 @@ draft: false
 
 ![Наскельні малюнки](assets/naskelni-malyunki-fdcc.jpg "Наскельні малюнки")
 
-{{< video mov="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.mov" mp4="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.mp4" poster="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.jpg" caption="Ми не все розуміли, що нам розповідав гід, але буле дуже цікаво" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6078-669d-31f0.mov" mp4="https://static.husky-dev.me/blog/img-6078-669d-31f0.mp4" poster="assets/mi-ne-vse-rozumili-scho-nam-rozpovidav-gid-ale-bule-duzhe-tsikavo-31f0.jpg" caption="Ми не все розуміли, що нам розповідав гід, але буле дуже цікаво" >}}
 
 У районі гір Спіцкопп наскельні малюнки виконували роль стрічки в соцмережах. Тут мисливці малювали інформацію де і кого вони тут бачили. Бушмени були кочівниками. Коли уходила одна група - могла прийти інша і побачити на скелі "оперативну" інформацію що до звірів навколо. Ну і просто залишали інформацію як вони полювали. Так само, за можливості, бушмени закопували в таких місцях ємності з водою. Якщо інше плем'я приходило сюди в більш посушливий сезон - вони могли знайти воду від попередників і вижити.
 

@@ -15,15 +15,15 @@ draft: false
 
 Це Маша і Даша. Вони переселенки з Харькова які зараз живуть у екопарку "Ковалівка". Дуже милі, активні і справжні майбутні ягуари. Наразі вони не дуже усвідомлюють, що виростуть тихими вбивцями. Тому ведуть себе як звичайні кошеня. Але варто втратити звиду когось - і вже в наступну секунду тебе атакують зі спини. Проведений час був чистою радістю як для нас так і для них.
 
-{{< video mov="assets/img-1360-4376.mov" mp4="assets/img-1360-4376.mp4" poster="assets/img-1360-4376.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-1360-764b-4376.mov" mp4="https://static.husky-dev.me/blog/img-1360-764b-4376.mp4" poster="assets/img-1360-764b-4376.jpg" >}}
 
-{{< video mov="assets/3021820481783102213-19ac.mov" mp4="assets/3021820481783102213-19ac.mp4" poster="assets/3021820481783102213-19ac.jpg" >}}
-{{< video mov="assets/8412821508464148273-f32c.mov" mp4="assets/8412821508464148273-f32c.mp4" poster="assets/8412821508464148273-f32c.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/3021820481783102213-27e2-19ac.mov" mp4="https://static.husky-dev.me/blog/3021820481783102213-27e2-19ac.mp4" poster="assets/3021820481783102213-27e2-19ac.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/8412821508464148273-e52e-f32c.mov" mp4="https://static.husky-dev.me/blog/8412821508464148273-e52e-f32c.mp4" poster="assets/8412821508464148273-e52e-f32c.jpg" >}}
 ![Наслідки](assets/naslidki-eca8.jpg "Наслідки")
 
 Доречі, в екопарку багато інших цікавих звірів котрих можна погодувати або погладити. Корм треба купувати на місці. Тому дуже раджу до відвідування, особливо якщо у вас є діти.
 
-{{< video mov="assets/img-1024-80fd.mov" mp4="assets/img-1024-80fd.mp4" poster="assets/img-1024-80fd.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-1024-eec7-80fd.mov" mp4="https://static.husky-dev.me/blog/img-1024-eec7-80fd.mp4" poster="assets/img-1024-eec7-80fd.jpg" >}}
 
 ![IMG_1041.jpeg](assets/img-1041-d354.jpg)
 
@@ -33,6 +33,6 @@ draft: false
 
 ![IMG_1277.jpeg](assets/img-1277-7098.jpg)
 
-{{< video mov="assets/img-1311-1127.mov" mp4="assets/img-1311-1127.mp4" poster="assets/img-1311-1127.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-1311-d739-1127.mov" mp4="https://static.husky-dev.me/blog/img-1311-d739-1127.mp4" poster="assets/img-1311-d739-1127.jpg" >}}
 
 На фоні постійно висить думка: "Чи варто локально мандрувати та радіти, коли в країні війна?!". Але логіка сурово відповідає: "Треба". Кожен куплений квиток - це корм тваринам або зарплата співробітникам. Багато хто зараз живе з "провиною вцілілого". Але треба завжди пам'ятати про ближніх, про їх сім'ї і не давати зруйнувати економічно те, що було великою ціною захищенно від орків.

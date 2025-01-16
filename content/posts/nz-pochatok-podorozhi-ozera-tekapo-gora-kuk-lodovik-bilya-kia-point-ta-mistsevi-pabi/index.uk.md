@@ -44,7 +44,7 @@ draft: false
 
 ![Вид на гори просто неймовірний](assets/vid-na-gori-prosto-neimovirnii-7f6f.jpg "Вид на гори просто неймовірний")
 
-{{< video mov="assets/ne-znayu-scho-za-roslini-ale-na-foni-gir-duzhe-kruto-viglyadayut-7142.mov" mp4="assets/ne-znayu-scho-za-roslini-ale-na-foni-gir-duzhe-kruto-viglyadayut-7142.mp4" poster="assets/ne-znayu-scho-za-roslini-ale-na-foni-gir-duzhe-kruto-viglyadayut-7142.jpg" caption="Не знаю що за рослини, але на фоні гір дуже круто виглядають" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-7340-eb64-7142.mov" mp4="https://static.husky-dev.me/blog/img-7340-eb64-7142.mp4" poster="assets/ne-znayu-scho-za-roslini-ale-na-foni-gir-duzhe-kruto-viglyadayut-7142.jpg" caption="Не знаю що за рослини, але на фоні гір дуже круто виглядають" >}}
 
 Їдемо далі і зупиняємось біля озера Пукакі. Саме озеро дуже гарне. Але в нього є ще одна особливість - з його берега відкривається вид на найвищу точка в Новій Зеландії - Гора Кука.
 

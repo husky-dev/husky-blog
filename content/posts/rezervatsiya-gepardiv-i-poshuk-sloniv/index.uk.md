@@ -20,7 +20,7 @@ draft: false
 
 Екскурсію нам проводили на джипах для сафарі без решіток і стекол. Гепарди безпечні для людей і при зустрічі в дикій природі скоріше за все втечуть. Але про всяк випадок палиця у гіда все ж була 🙂 Поводяться вони як типові кішки - хтось підпускає, хтось тримає на відстані.
 
-{{< video mov="assets/u-gida-bula-palitsya-schob-u-razi-chogo-vidpugnuti-gepardiv-a318.mov" mp4="assets/u-gida-bula-palitsya-schob-u-razi-chogo-vidpugnuti-gepardiv-a318.mp4" poster="assets/u-gida-bula-palitsya-schob-u-razi-chogo-vidpugnuti-gepardiv-a318.jpg" caption="У гіда була палиця щоб у разі чого відпугнути гепардів" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6793-0b8c-a318.mov" mp4="https://static.husky-dev.me/blog/img-6793-0b8c-a318.mp4" poster="assets/u-gida-bula-palitsya-schob-u-razi-chogo-vidpugnuti-gepardiv-a318.jpg" caption="У гіда була палиця щоб у разі чого відпугнути гепардів" >}}
 
 ![На джипах не було сіток або решіток, гепарди безпечні для людей](assets/na-dzhipah-ne-bulo-sitok-abo-reshitok-gepardi-bezpechni-dlya-lyudei-f082.jpg "На джипах не було сіток або решіток, гепарди безпечні для людей")
 
@@ -30,17 +30,17 @@ draft: false
 
 ![IMG_6831.jpeg](assets/img-6831-b3b4.jpg)
 
-{{< video mov="assets/img-6821-31c4.mov" mp4="assets/img-6821-31c4.mp4" poster="assets/img-6821-31c4.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6821-d539-31c4.mov" mp4="https://static.husky-dev.me/blog/img-6821-d539-31c4.mp4" poster="assets/img-6821-d539-31c4.jpg" >}}
 
-{{< video mov="assets/yak-zhe-distali-tsi-lyudi-3aa6.mov" mp4="assets/yak-zhe-distali-tsi-lyudi-3aa6.mp4" poster="assets/yak-zhe-distali-tsi-lyudi-3aa6.jpg" caption="Як же дістали ці люди" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6825-f3f7-3aa6.mov" mp4="https://static.husky-dev.me/blog/img-6825-f3f7-3aa6.mp4" poster="assets/yak-zhe-distali-tsi-lyudi-3aa6.jpg" caption="Як же дістали ці люди" >}}
 
-{{< video mov="assets/img-6827-d201.mov" mp4="assets/img-6827-d201.mp4" poster="assets/img-6827-d201.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6827-7bad-d201.mov" mp4="https://static.husky-dev.me/blog/img-6827-7bad-d201.mp4" poster="assets/img-6827-7bad-d201.jpg" >}}
 
-{{< video mov="assets/img-6842-c8fc.mov" mp4="assets/img-6842-c8fc.mp4" poster="assets/img-6842-c8fc.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6842-706e-c8fc.mov" mp4="https://static.husky-dev.me/blog/img-6842-706e-c8fc.mp4" poster="assets/img-6842-706e-c8fc.jpg" >}}
 
-{{< video mov="assets/a-tse-nandi-zvichaina-liniva-kishka-ale-trohi-bilsha-c740.mov" mp4="assets/a-tse-nandi-zvichaina-liniva-kishka-ale-trohi-bilsha-c740.mp4" poster="assets/a-tse-nandi-zvichaina-liniva-kishka-ale-trohi-bilsha-c740.jpg" caption="А це Нанді, звичайна лінива кішка, але трохи більша" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6843-d159-c740.mov" mp4="https://static.husky-dev.me/blog/img-6843-d159-c740.mp4" poster="assets/a-tse-nandi-zvichaina-liniva-kishka-ale-trohi-bilsha-c740.jpg" caption="А це Нанді, звичайна лінива кішка, але трохи більша" >}}
 
-{{< video mov="assets/troshki-moih-vrazhen-13d2.mov" mp4="assets/troshki-moih-vrazhen-13d2.mp4" poster="assets/troshki-moih-vrazhen-13d2.jpg" caption="Трошки моїх вражень" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6861-35d7-13d2.mov" mp4="https://static.husky-dev.me/blog/img-6861-35d7-13d2.mp4" poster="assets/troshki-moih-vrazhen-13d2.jpg" caption="Трошки моїх вражень" >}}
 
 Донедавна гепардів жорстко винищували. Якщо фермер вранці знаходив убиту тварину і бачив десь вдалині гепарда - він негайно його вбивав. Але це найбільш нешкідливі хижаки в Намібії. У них невелика щелепа і вони не можуть вбивати великих тварин. Найчастіше їх плутають із леопардами - справжніми місцевими машинами смерті. Можна знайти безліч відео, де гепарди ловлять якусь невелику тваринку, а гієни або леви в них її віджимають. Це одна з причин, чому вони такі швидкі.
 
@@ -62,7 +62,7 @@ draft: false
 
 ![DSC_6430.jpeg](assets/dsc-6430-2595.jpg)
 
-{{< video mov="assets/zhiraf-buv-ne-duzhe-radii-nas-bachiti-95c1.mov" mp4="assets/zhiraf-buv-ne-duzhe-radii-nas-bachiti-95c1.mp4" poster="assets/zhiraf-buv-ne-duzhe-radii-nas-bachiti-95c1.jpg" caption="Жираф був не дуже радий нас бачити" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6917-c168-95c1.mov" mp4="https://static.husky-dev.me/blog/img-6917-c168-95c1.mp4" poster="assets/zhiraf-buv-ne-duzhe-radii-nas-bachiti-95c1.jpg" caption="Жираф був не дуже радий нас бачити" >}}
 
 Але один гештальт все ж був не закритий - слони. Спочатку нам здалось що ми їх побачили в далині. Через бінокль було погано видно. Дрона на жаль поруч не було. Ми вмовили нашого гіда відправитись туди. Але приїхавиши ми зрозуміли - що то були страуси… Все було марно.
 
@@ -74,7 +74,7 @@ draft: false
 
 ![DSC_6417.jpeg](assets/dsc-6417-82d0.jpg)
 
-{{< video mov="assets/rodina-sloniv-z-samkoyu-na-choli-rodini-47c0.mov" mp4="assets/rodina-sloniv-z-samkoyu-na-choli-rodini-47c0.mp4" poster="assets/rodina-sloniv-z-samkoyu-na-choli-rodini-47c0.jpg" caption="Родина слонів з самкою на чолі родини" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6936-887e-47c0.mov" mp4="https://static.husky-dev.me/blog/img-6936-887e-47c0.mp4" poster="assets/rodina-sloniv-z-samkoyu-na-choli-rodini-47c0.jpg" caption="Родина слонів з самкою на чолі родини" >}}
 
 Ми повернулись в лодж до наших джипів. Це була остання пригода за нашу поїздку. Було трохи сумно, так як вже [завтра треба було здавати джипи](/posts/ostannii-den-v-namibii) і прощатись з Намібією. Але було відчуття що ми вже тут місяц. Ми так багато зробили і побачили, що вже можна було зі спокійною душею вирушати додому 👌😌
 

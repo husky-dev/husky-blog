@@ -28,7 +28,7 @@ draft: false
 
 Вийшов з аеропорту. До готелю було п’ятнадцять хвилин пішки. Тому вирішив прогулятись. Перше враження - я ніби [знову в Штатах](/series/work-and-travel/), тільки в якійсь іншій версії. Наче у якійсь більш добрій. Ті самі бетонні тротуари, підстрижений газон, красиво підстрижені дерева. Навіть знаки чимось схожі. А головне - на вулиці весна. Все цвіте і пахне. Настрій відразу піднявся на тисячу поділок.
 
-{{< video mov="assets/pershi-vrazhennya-635a.mov" mp4="assets/pershi-vrazhennya-635a.mp4" poster="assets/pershi-vrazhennya-635a.jpg" caption="Перші враження" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-6973-ec47-635a.mov" mp4="https://static.husky-dev.me/blog/img-6973-ec47-635a.mp4" poster="assets/pershi-vrazhennya-635a.jpg" caption="Перші враження" >}}
 
 ![У Новій Зеландії основні джерела прибутку це сільске господарство і туризм](assets/u-novii-zelandii-osnovni-dzherela-pributku-tse-silske-gospodarstvo-i-turizm-3e53.jpg "У Новій Зеландії основні джерела прибутку це сільске господарство і туризм")
 
@@ -44,7 +44,7 @@ draft: false
 
 ![Вулкан Таранакі який з повітря виглядає як рівне коло](assets/vulkan-taranaki-yakii-z-povitrya-viglyadaie-yak-rivne-kolo-6892.jpg "Вулкан Таранакі який з повітря виглядає як рівне коло")
 
-{{< video mov="assets/vin-duzhe-pripav-meni-do-dushi-b714.mov" mp4="assets/vin-duzhe-pripav-meni-do-dushi-b714.mp4" poster="assets/vin-duzhe-pripav-meni-do-dushi-b714.jpg" caption="Він дуже припав мені до душі" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-7048-de74-b714.mov" mp4="https://static.husky-dev.me/blog/img-7048-de74-b714.mp4" poster="assets/vin-duzhe-pripav-meni-do-dushi-b714.jpg" caption="Він дуже припав мені до душі" >}}
 
 ![IMG_7060.jpeg](assets/img-7060-f798.jpg)
 

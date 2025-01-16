@@ -44,7 +44,7 @@ draft: false
 
 {{< youtube id="-iCoZ7A3lYQ" title="Potomac river в День Независимости" >}}
 
-{{< video mov="assets/vsi-v-ochikuvanni-feierverku-02b9.mov" mp4="assets/vsi-v-ochikuvanni-feierverku-02b9.mp4" poster="assets/vsi-v-ochikuvanni-feierverku-02b9.jpg" caption="Всі в очікуванні феєрверку" >}}
+{{< video mov="https://static.husky-dev.me/blog/potomac-river-v-den-nezavisimosti-icoz7a3lyq-32a2-02b9.mov" mp4="https://static.husky-dev.me/blog/potomac-river-v-den-nezavisimosti-icoz7a3lyq-32a2-02b9.mp4" poster="assets/vsi-v-ochikuvanni-feierverku-02b9.jpg" caption="Всі в очікуванні феєрверку" >}}
 
 Під'їжджаємо ближче до центру, і знову сюрприз! Усе місто оточено!
 
@@ -108,7 +108,7 @@ draft: false
 
 {{< youtube id="1nV4Zcrkfbs" title="Коротко об фейерверке" >}}
 
-{{< video mov="assets/korotko-pro-feierverk-6464.mov" mp4="assets/korotko-pro-feierverk-6464.mp4" poster="assets/korotko-pro-feierverk-6464.jpg" caption="Коротко про феєрверк" >}}
+{{< video mov="https://static.husky-dev.me/blog/korotko-ob-feierverke-1nv4zcrkfbs-e897-6464.mov" mp4="https://static.husky-dev.me/blog/korotko-ob-feierverke-1nv4zcrkfbs-e897-6464.mp4" poster="assets/korotko-pro-feierverk-6464.jpg" caption="Коротко про феєрверк" >}}
 
 Праворуч лунає приємна і м’яка мова - французи. Ззаду постійно хтось кричить і розмахує руками - латино. Зліва постійно видно безліч спалахів фотокамер - китайці. Було весело 🙂
 
@@ -132,13 +132,13 @@ draft: false
 
 {{< youtube id="hAEB_WYSyec" title="4 июля 2012, Фейерверк, Вашингтон - США - часть 1" >}}
 
-{{< video mov="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-1-cc79.mov" mp4="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-1-cc79.mp4" poster="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-1-cc79.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/4-iyulya-2012-fei-erverk-vashington-ssha-chast-1-14ed-cc79.mov" mp4="https://static.husky-dev.me/blog/4-iyulya-2012-fei-erverk-vashington-ssha-chast-1-14ed-cc79.mp4" poster="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-1-14ed-cc79.jpg" >}}
 
 І найцікавіше, фінальна частина (півтори хвилини):
 
 {{< youtube id="_aqScmi7ONY" title="4 июля 2012, Фейерверк, Вашингтон - США - часть 2" >}}
 
-{{< video mov="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-2-10ed.mov" mp4="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-2-10ed.mp4" poster="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-2-10ed.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/4-iyulya-2012-fei-erverk-vashington-ssha-chast-2-0ef8-10ed.mov" mp4="https://static.husky-dev.me/blog/4-iyulya-2012-fei-erverk-vashington-ssha-chast-2-0ef8-10ed.mp4" poster="assets/4-iyulya-2012-fei-erverk-vashington-ssha-chast-2-0ef8-10ed.jpg" >}}
 
 Після 20 хвилин сидіння з відкритим ротом, мої нові американські знайомі запитали: “Ну як?” - “It's been amazing!”. На більше мене не вистачило 🙂
 

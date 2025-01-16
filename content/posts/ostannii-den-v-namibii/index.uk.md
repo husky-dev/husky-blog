@@ -24,7 +24,7 @@ draft: false
 
 Мені не вистачатиме вечорів біля багаття, переговорів по рації, виснажливих довгих переїздів і великої кількості тварин. Намібія - я буду сумувати... ❤️
 
-{{< video mov="assets/korotko-pro-podozh-1147.mov" mp4="assets/korotko-pro-podozh-1147.mp4" poster="assets/korotko-pro-podozh-1147.jpg" caption="Коротко про подож" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-7046-2abe-1147.mov" mp4="https://static.husky-dev.me/blog/img-7046-2abe-1147.mp4" poster="assets/korotko-pro-podozh-1147.jpg" caption="Коротко про подож" >}}
 
 P.S. Декілька фото на згадку.
 

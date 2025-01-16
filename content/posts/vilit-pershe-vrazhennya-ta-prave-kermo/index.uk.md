@@ -48,7 +48,7 @@ draft: false
 
 Нас забрали з аеропорту на мікроавтобусах і повезли в столицю Намібії - Віндхук. Дивлячись на узбіччя, складалося відчуття, що ми десь на Херсонщині, або в Криму. Суха трава і степ. Якби не специфічні дерева савани - не відрізнити. Дорожні знаки та рекламні банери англійською. А ще лівосторонній рух. Дивна суміш Африки, Англії та Німеччини в одному флаконі.
 
-{{< video mov="assets/namibiiski-uzbichchya-skladaietsya-vidchuttya-scho-mi-des-na-hersonschini-abo-v-krimu-6f94.mov" mp4="assets/namibiiski-uzbichchya-skladaietsya-vidchuttya-scho-mi-des-na-hersonschini-abo-v-krimu-6f94.mp4" poster="assets/namibiiski-uzbichchya-skladaietsya-vidchuttya-scho-mi-des-na-hersonschini-abo-v-krimu-6f94.jpg" caption="Намібійські узбіччя. Складається відчуття, що ми десь на Херсонщині або в Криму" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5014-e9cf-6f94.mov" mp4="https://static.husky-dev.me/blog/img-5014-e9cf-6f94.mp4" poster="assets/namibiiski-uzbichchya-skladaietsya-vidchuttya-scho-mi-des-na-hersonschini-abo-v-krimu-6f94.jpg" caption="Намібійські узбіччя. Складається відчуття, що ми десь на Херсонщині або в Криму" >}}
 
 Коли приїхали в готель, сонце вже досить піднялось і від +7 градусів не було й сліду. Довелося знімати кофту і мазатися сонцезахисним кремом. Так я вперше відчув різницю температур у пустелі.
 
@@ -76,7 +76,7 @@ draft: false
 
 Спочатку нам показали відео, в якому в загальних рисах розповідалося як варто їздити, а як ні. Головна причина аварій - перевищення швидкості. Коли ти їдеш 100 км рівною дорогою через пустелю - звісно хочеться натиснути на газ. Але потім люди втрачають керування, збивають тварин і виходить біда. І добре коли це десь не далеко від міста. У пустелі без живої душі на багато кілометрів - може закінчитись плачевно. Ще нам розповіли, що не варто їздити вночі, бо саме в цей час усі звірі активні і можна не розминутися зі слоном.
 
-{{< video mov="assets/img-5043-5bb2.mov" mp4="assets/img-5043-5bb2.mp4" poster="assets/img-5043-5bb2.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5043-4872-5bb2.mov" mp4="https://static.husky-dev.me/blog/img-5043-4872-5bb2.mp4" poster="assets/img-5043-4872-5bb2.jpg" >}}
 
 ![Цей хлопець неуважно дивився навчальне відео](assets/tsei-hlopets-neuvazhno-divivsya-navchalne-video-9f9d.jpg "Цей хлопець неуважно дивився навчальне відео")
 
@@ -104,11 +104,11 @@ draft: false
 
 ![Наші красавці](assets/nashi-krasavtsi-25ff.jpg "Наші красавці")
 
-{{< video mov="assets/img-5070-b14b.mov" mp4="assets/img-5070-b14b.mp4" poster="assets/img-5070-b14b.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5070-11a7-b14b.mov" mp4="https://static.husky-dev.me/blog/img-5070-11a7-b14b.mp4" poster="assets/img-5070-11a7-b14b.jpg" >}}
 
 ![IMG_5072.jpeg](assets/img-5072-b9a8.jpg)
 
-{{< video mov="assets/img-5075-2177.mov" mp4="assets/img-5075-2177.mp4" poster="assets/img-5075-2177.jpg" >}}
+{{< video mov="https://static.husky-dev.me/blog/img-5075-bf6b-2177.mov" mp4="https://static.husky-dev.me/blog/img-5075-bf6b-2177.mp4" poster="assets/img-5075-bf6b-2177.jpg" >}}
 
 Я 100500 разів бачив їх у зоопарках. Але побачити жирафів у дикій природі - це зовсім інший рівень. Вас не відділяє огорожа. Картинка як на відео з Discovery, тільки все наживо. На жаль, для нормальних фото потрібна серйозна техніка. У мене був тільки телефон. Але і з ним вийшло трохи назнімати.
 
